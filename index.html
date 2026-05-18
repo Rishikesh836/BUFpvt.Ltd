@@ -12,43 +12,38 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <svg class="logo-icon" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                    <!-- Sun Rays (Uday - sunrise) fanning out at top -->
-                    <g fill="#C9922A">
-                        <polygon points="70,4 67,36 73,36"/>
-                        <polygon points="54,8 61,37 65,36"/>
-                        <polygon points="86,8 79,37 75,36"/>
-                        <polygon points="38,18 54,40 57,38"/>
-                        <polygon points="102,18 86,40 83,38"/>
-                        <polygon points="24,34 49,46 51,43"/>
-                        <polygon points="116,34 91,46 89,43"/>
+                <svg class="logo-icon" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                    <!-- Heraldic Shield body -->
+                    <path d="M70 6 L18 22 L18 70 Q18 104 70 134 Q122 104 122 70 L122 22 Z"
+                          fill="#0D2B55" stroke="#C9922A" stroke-width="2.5"/>
+                    <!-- Inner shield border -->
+                    <path d="M70 14 L26 28 L26 68 Q26 96 70 120 Q114 96 114 68 L114 28 Z"
+                          fill="none" stroke="#C9922A" stroke-width="0.8" opacity="0.45"/>
+
+                    <!-- Sun rays bursting upward -->
+                    <g stroke="#C9922A" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="70" y1="30" x2="70" y2="44"/>
+                        <line x1="52" y1="34" x2="58" y2="46"/>
+                        <line x1="88" y1="34" x2="82" y2="46"/>
+                        <line x1="38" y1="44" x2="48" y2="52"/>
+                        <line x1="102" y1="44" x2="92" y2="52"/>
+                        <line x1="32" y1="60" x2="42" y2="62"/>
+                        <line x1="108" y1="60" x2="98" y2="62"/>
                     </g>
 
-                    <!-- Ashoka Chakra outer ring (Bharat) -->
-                    <circle cx="70" cy="74" r="20" fill="none" stroke="#0D2B55" stroke-width="2.8"/>
+                    <!-- Rising sun (semicircle) -->
+                    <path d="M48 76 A22 22 0 0 1 92 76 Z" fill="#C9922A"/>
 
-                    <!-- 12 Spokes of the Chakra -->
-                    <g stroke="#0D2B55" stroke-width="1.6" stroke-linecap="round">
-                        <line x1="70" y1="56" x2="70" y2="92"/>
-                        <line x1="52" y1="74" x2="88" y2="74"/>
-                        <line x1="57" y1="61" x2="83" y2="87"/>
-                        <line x1="83" y1="61" x2="57" y2="87"/>
-                        <line x1="61" y1="57" x2="79" y2="91"/>
-                        <line x1="79" y1="57" x2="61" y2="91"/>
-                        <line x1="53" y1="65" x2="87" y2="83"/>
-                        <line x1="53" y1="83" x2="87" y2="65"/>
-                    </g>
+                    <!-- Horizon line -->
+                    <line x1="34" y1="76" x2="106" y2="76" stroke="#C9922A" stroke-width="1.8" stroke-linecap="round"/>
 
-                    <!-- Chakra hub -->
-                    <circle cx="70" cy="74" r="3.5" fill="#0D2B55"/>
-
-                    <!-- Upward Growth Arrow (Finserve) -->
-                    <path d="M95 22 L78 48 L84 48 L84 58 L92 58 L92 48 L100 48 Z" fill="#0D2B55"/>
-                    <path d="M95 22 L100 48 L96 48 L96 42 Z" fill="#C9922A"/>
+                    <!-- BUF Monogram -->
+                    <text x="70" y="104" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="16" fill="#C9922A" letter-spacing="2">BUF</text>
                 </svg>
                 <div class="logo-text">
                     <span class="logo-text-primary">BHARAT UDAY</span>
                     <span class="logo-text-secondary">FINSERVE PVT LTD</span>
+                    <span class="logo-text-tagline">Shiksha se Bharat ka Uday</span>
                 </div>
             </div>
 
@@ -73,36 +68,26 @@
     <section class="hero" id="home">
         <div class="hero-background"></div>
         <div class="hero-watermark">
-            <svg class="logo-watermark" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <!-- Sun Rays watermark -->
-                <g fill="white" opacity="0.1">
-                    <polygon points="70,4 67,36 73,36"/>
-                    <polygon points="54,8 61,37 65,36"/>
-                    <polygon points="86,8 79,37 75,36"/>
-                    <polygon points="38,18 54,40 57,38"/>
-                    <polygon points="102,18 86,40 83,38"/>
-                    <polygon points="24,34 49,46 51,43"/>
-                    <polygon points="116,34 91,46 89,43"/>
+            <svg class="logo-watermark" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <g opacity="0.12">
+                    <path d="M70 6 L18 22 L18 70 Q18 104 70 134 Q122 104 122 70 L122 22 Z"
+                          fill="none" stroke="white" stroke-width="3"/>
+                    <g stroke="white" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="70" y1="30" x2="70" y2="44"/>
+                        <line x1="52" y1="34" x2="58" y2="46"/>
+                        <line x1="88" y1="34" x2="82" y2="46"/>
+                        <line x1="38" y1="44" x2="48" y2="52"/>
+                        <line x1="102" y1="44" x2="92" y2="52"/>
+                    </g>
+                    <path d="M48 76 A22 22 0 0 1 92 76 Z" fill="white"/>
+                    <line x1="34" y1="76" x2="106" y2="76" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
                 </g>
-
-                <!-- Chakra watermark -->
-                <circle cx="70" cy="74" r="20" fill="none" stroke="white" stroke-width="2.8" opacity="0.1"/>
-                <g stroke="white" stroke-width="1.6" stroke-linecap="round" opacity="0.1">
-                    <line x1="70" y1="56" x2="70" y2="92"/>
-                    <line x1="52" y1="74" x2="88" y2="74"/>
-                    <line x1="57" y1="61" x2="83" y2="87"/>
-                    <line x1="83" y1="61" x2="57" y2="87"/>
-                </g>
-                <circle cx="70" cy="74" r="3.5" fill="white" opacity="0.1"/>
-
-                <!-- Arrow watermark -->
-                <path d="M95 22 L78 48 L84 48 L84 58 L92 58 L92 48 L100 48 Z" fill="white" opacity="0.1"/>
             </svg>
         </div>
 
         <div class="hero-content">
-            <h1 class="hero-headline">Financing India's Brightest Futures — Har Sapne Ko Udaan</h1>
-            <p class="hero-subheadline">Collateral-free education loans for students, parents, and school proprietors across India. Fast. Simple. Trusted.</p>
+            <h1 class="hero-headline">Financing India's Brightest Futures — <em>Shiksha se Bharat ka Uday</em></h1>
+            <p class="hero-subheadline">Full-spectrum EduFinance for India's learning ecosystem — student loans, overseas education funding, school improvement capital, fee financing for parents, and skilling pathways. Funding paired with value enhancement at every step.</p>
 
 
 
@@ -113,7 +98,7 @@
     <!-- Marquee Trust Bar -->
     <section class="marquee-bar">
         <div class="marquee-content">
-            <span>RBI Registered NBFC &nbsp;•&nbsp; Collateral-Free Loans &nbsp;•&nbsp; Pan-India Presence &nbsp;•&nbsp; Education-Only Lending &nbsp;•&nbsp; Digital Paperless Process &nbsp;•&nbsp; Transparent Interest Rates &nbsp;•&nbsp; RBI Registered NBFC &nbsp;•&nbsp; Collateral-Free Loans &nbsp;•&nbsp; Pan-India Presence &nbsp;•&nbsp;</span>
+            <span>Full-Spectrum EduFinance &nbsp;•&nbsp; Student Loans &nbsp;•&nbsp; Overseas Education Funding &nbsp;•&nbsp; School Improvement Capital &nbsp;•&nbsp; Parent Fee Financing &nbsp;•&nbsp; Skilling & Vocational Pathways &nbsp;•&nbsp; Value Enhancement Beyond Lending &nbsp;•&nbsp; Pan-India Presence &nbsp;•&nbsp; Full-Spectrum EduFinance &nbsp;•&nbsp;</span>
         </div>
     </section>
 
@@ -127,47 +112,47 @@
 
             <div class="about-content">
                 <div class="about-left">
-                    <p>Bharat Uday Finserve is an RBI-registered Non-Banking Financial Company (NBFC) established in 2018, dedicated exclusively to financing education across India. We bridge the gap between aspiration and access, enabling students from Tier-1 to Tier-3 cities to pursue their dreams without financial barriers.</p>
-                    <p>Our commitment is simple: collateral-free, digital-first lending for domestic higher education, overseas studies, school infrastructure development, and skill-based vocational training. We believe quality education should never be hindered by financial constraints.</p>
-                    <p>With a pan-India presence across 15+ states and 200+ cities, we serve thousands of students, parents, and educational institutions. Our transparent, paperless process and dedicated relationship managers ensure every borrower gets personalized support from application to disbursement.</p>
+                    <p>Bharat Uday Finserve is a dedicated EduFinance company built around a single conviction — India's rise depends on the quality and reach of its education. We don't view ourselves as a lender alone; we are a full-spectrum partner across the country's learning ecosystem.</p>
+                    <p>Our model brings together <strong>funding</strong> and <strong>value enhancement</strong> across five interconnected pillars: domestic higher-education loans, overseas education financing, school improvement capital for affordable private schools, fee financing for parents, and skilling pathways for emerging-economy careers. Capital is one piece — we pair it with school capacity building, teacher development support, and student mentorship so every rupee deployed multiplies in impact.</p>
+                    <p>From metros to Tier-3 towns, we work alongside students, parents, school proprietors, training partners, and impact investors to widen access to quality education — and to make educational outcomes, not just disbursals, the metric we are measured by.</p>
                 </div>
 
                 <div class="about-right">
                     <div class="info-card">
                         <div class="info-card-title">Key Facts About Us</div>
                         <div class="info-item">
-                            <span class="info-icon">📋</span>
+                            <span class="info-icon">🛡️</span>
                             <div>
-                                <strong>RBI Registered NBFC</strong>
-                                <p>CIN: U65910MH2018PTC312456</p>
+                                <strong>Full-Spectrum EduFinance</strong>
+                                <p>Funding + value enhancement, end-to-end</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">🎓</span>
                             <div>
-                                <strong>Education-Only Lending Focus</strong>
-                                <p>100% dedicated to education finance</p>
+                                <strong>Education-Only Focus</strong>
+                                <p>100% dedicated to learning outcomes</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏫</span>
+                            <div>
+                                <strong>School Ecosystem Partner</strong>
+                                <p>Capital + capacity building for affordable schools</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">🌏</span>
                             <div>
                                 <strong>Pan-India — 15+ States, 200+ Cities</strong>
-                                <p>Serving students nationwide</p>
+                                <p>From metros to Tier-3 towns</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">📱</span>
                             <div>
-                                <strong>100% Digital, Paperless Application</strong>
-                                <p>Apply from anywhere, anytime</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">💰</span>
-                            <div>
-                                <strong>Collateral-Free Loans Up to ₹40 Lakhs</strong>
-                                <p>No security required</p>
+                                <strong>Digital-First, Paperless</strong>
+                                <p>Apply, track, and disburse — fully online</p>
                             </div>
                         </div>
                     </div>
@@ -180,8 +165,9 @@
     <section class="products" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">WHAT WE OFFER</span>
-                <h2 class="section-title">Education Loan Products Designed for Every Need</h2>
+                <span class="section-label">FULL-SPECTRUM EDUFINANCE</span>
+                <h2 class="section-title">Funding & Value Enhancement Across the Learning Chain</h2>
+                <p class="section-subtitle">Five interlocking pillars — capital where it unlocks opportunity, plus the support that turns disbursals into outcomes.</p>
             </div>
 
             <div class="products-grid">
@@ -286,7 +272,7 @@
                     <h3 class="director-name">Mr. Arjun Singhania</h3>
                     <p class="director-designation">Director — Technology & Operations</p>
                     <div class="director-divider"></div>
-                    <p class="director-bio">IIT Bombay alumnus. 20+ years in fintech and digital lending. Former CTO of a top-10 Indian NBFC. Drives Bharat Uday's digital-first, AI-powered loan processing engine.</p>
+                    <p class="director-bio">IIT Bombay alumnus. 20+ years in fintech and digital lending. Former CTO of a leading Indian financial-services platform. Drives Bharat Uday's digital-first, AI-powered loan processing engine.</p>
                     <a href="#" class="director-linkedin">in</a>
                 </div>
             </div>
@@ -382,9 +368,9 @@
                 </div>
 
                 <div class="feature-box">
-                    <div class="feature-icon">🏦</div>
-                    <h3>RBI Regulated</h3>
-                    <p>Fully compliant, transparent, and trusted since 2018</p>
+                    <div class="feature-icon">📈</div>
+                    <h3>Value Enhancement</h3>
+                    <p>Beyond loans — capacity building, mentorship, and outcome support</p>
                 </div>
             </div>
         </div>
@@ -397,42 +383,37 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <svg class="footer-logo-icon" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                            <!-- Sun Rays (Uday) -->
-                            <g fill="#C9922A">
-                                <polygon points="70,4 67,36 73,36"/>
-                                <polygon points="54,8 61,37 65,36"/>
-                                <polygon points="86,8 79,37 75,36"/>
-                                <polygon points="38,18 54,40 57,38"/>
-                                <polygon points="102,18 86,40 83,38"/>
-                                <polygon points="24,34 49,46 51,43"/>
-                                <polygon points="116,34 91,46 89,43"/>
+                        <svg class="footer-logo-icon" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                            <!-- Shield -->
+                            <path d="M70 6 L18 22 L18 70 Q18 104 70 134 Q122 104 122 70 L122 22 Z"
+                                  fill="#0D2B55" stroke="#C9922A" stroke-width="2.5"/>
+                            <path d="M70 14 L26 28 L26 68 Q26 96 70 120 Q114 96 114 68 L114 28 Z"
+                                  fill="none" stroke="#C9922A" stroke-width="0.8" opacity="0.45"/>
+
+                            <!-- Sun rays -->
+                            <g stroke="#C9922A" stroke-width="2.5" stroke-linecap="round">
+                                <line x1="70" y1="30" x2="70" y2="44"/>
+                                <line x1="52" y1="34" x2="58" y2="46"/>
+                                <line x1="88" y1="34" x2="82" y2="46"/>
+                                <line x1="38" y1="44" x2="48" y2="52"/>
+                                <line x1="102" y1="44" x2="92" y2="52"/>
+                                <line x1="32" y1="60" x2="42" y2="62"/>
+                                <line x1="108" y1="60" x2="98" y2="62"/>
                             </g>
 
-                            <!-- Ashoka Chakra (Bharat) -->
-                            <circle cx="70" cy="74" r="20" fill="none" stroke="#ffffff" stroke-width="2.8"/>
-                            <g stroke="#ffffff" stroke-width="1.6" stroke-linecap="round">
-                                <line x1="70" y1="56" x2="70" y2="92"/>
-                                <line x1="52" y1="74" x2="88" y2="74"/>
-                                <line x1="57" y1="61" x2="83" y2="87"/>
-                                <line x1="83" y1="61" x2="57" y2="87"/>
-                                <line x1="61" y1="57" x2="79" y2="91"/>
-                                <line x1="79" y1="57" x2="61" y2="91"/>
-                                <line x1="53" y1="65" x2="87" y2="83"/>
-                                <line x1="53" y1="83" x2="87" y2="65"/>
-                            </g>
-                            <circle cx="70" cy="74" r="3.5" fill="#ffffff"/>
+                            <!-- Rising sun -->
+                            <path d="M48 76 A22 22 0 0 1 92 76 Z" fill="#C9922A"/>
+                            <line x1="34" y1="76" x2="106" y2="76" stroke="#C9922A" stroke-width="1.8" stroke-linecap="round"/>
 
-                            <!-- Upward Growth Arrow (Finserve) -->
-                            <path d="M95 22 L78 48 L84 48 L84 58 L92 58 L92 48 L100 48 Z" fill="#ffffff"/>
-                            <path d="M95 22 L100 48 L96 48 L96 42 Z" fill="#C9922A"/>
+                            <!-- BUF monogram -->
+                            <text x="70" y="104" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="16" fill="#C9922A" letter-spacing="2">BUF</text>
                         </svg>
                         <div class="footer-logo-text">
                             <div class="footer-company-name">Bharat Uday Finserve</div>
-                            <div class="footer-tagline">Udaan Har Sapne Ki</div>
+                            <div class="footer-tagline">Shiksha se Bharat ka Uday</div>
                         </div>
                     </div>
-                    <p class="footer-description">Empowering India's students and institutions through accessible, transparent education finance.</p>
+                    <p class="footer-description">Full-spectrum EduFinance for India — funding paired with value enhancement, from student aspirations to school transformation.</p>
                 </div>
 
                 <div class="footer-col">
@@ -462,7 +443,7 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">© 2026 Bharat Uday Finserve Pvt. Ltd. All Rights Reserved.</p>
-                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. is a Non-Banking Financial Company registered with the Reserve Bank of India. CIN: U65910MH2018PTC312456. Loan products are subject to credit assessment, KYC verification, and eligibility criteria. Interest rates are subject to change without prior notice.</p>
+                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. is a private limited education-finance company operating across India. All loan products are subject to credit assessment, KYC verification, and eligibility criteria. Indicative rates and tenures may be revised based on borrower profile and prevailing market conditions.</p>
             </div>
         </div>
     </footer>
