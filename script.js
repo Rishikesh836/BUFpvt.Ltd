@@ -9,20 +9,63 @@ document.documentElement.style.scrollBehavior = 'smooth';
 const navbar = document.getElementById('navbar');
 const navMenu = document.getElementById('navMenu');
 const hamburger = document.getElementById('hamburger');
+const navOverlay = document.getElementById('navOverlay');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Hamburger menu toggle
+function openMenu() {
+    hamburger.classList.add('active');
+    navMenu.classList.add('active');
+    if (navOverlay) navOverlay.classList.add('active');
+    document.body.classList.add('menu-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close navigation menu');
+}
+
+function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open navigation menu');
+}
+
+// Hamburger toggle
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    if (navMenu.classList.contains('active')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
 });
 
-// Close menu when nav link is clicked
+// Close menu when any link is clicked
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+    link.addEventListener('click', closeMenu);
+});
+
+// Close menu when the inner "Apply Now" CTA inside drawer is clicked
+document.querySelectorAll('.nav-menu-cta a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Close menu when overlay is tapped
+if (navOverlay) {
+    navOverlay.addEventListener('click', closeMenu);
+}
+
+// Close menu on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMenu();
+    }
+});
+
+// Close menu if window resizes to desktop width
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+        closeMenu();
+    }
 });
 
 // ===========================
@@ -114,6 +157,12 @@ const footerCols = document.querySelectorAll('.footer-col');
 footerCols.forEach(col => {
     observer.observe(col);
 });
+
+// Observe new section cards
+document.querySelectorAll('.growth-card, .network-card, .data-card, .cta-card').forEach(el => {
+    observer.observe(el);
+});
+
 
 // ===========================
 // Prevent default for anchor links that are just placeholders
