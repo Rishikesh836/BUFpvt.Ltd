@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharat Uday Finserve Pvt. Ltd. — Education Loans for India</title>
+    <title>Bharat Uday EduFinance | Physital Education Loans for India</title>
+    <meta name="description" content="Bharat Uday EduFinance helps schools, parents, students, and investors access full-spectrum education finance across India's growing education market.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="logo-transparent.png" alt="Bharat Uday Finserve Pvt Ltd" class="logo-img" />
+            <a href="#home" class="nav-logo" aria-label="Bharat Uday EduFinance home">
+                <img src="logo-transparent.png" alt="Bharat Uday EduFinance" class="logo-img">
                 <span class="logo-abbr">BUFL</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#products" class="nav-link">Loans</a></li>
+                <li class="nav-dropdown" id="loansDropdown">
+                    <button class="nav-link nav-dropdown-toggle" id="loansMenuButton" type="button" aria-expanded="false" aria-controls="loansDropdownMenu">
+                        Loans <span class="dropdown-caret" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="loan-dropdown" id="loansDropdownMenu" aria-labelledby="loansMenuButton">
+                        <a href="/school-improvement-loan/"><span aria-hidden="true">&#127979;</span> School Improvement Loan</a>
+                        <a href="/school-fee-loan/"><span aria-hidden="true">&#128100;</span> School Fee Loan</a>
+                        <a href="/student-loan/"><span aria-hidden="true">&#127891;</span> Student Loan</a>
+                        <a href="/overseas-education-loan/"><span aria-hidden="true">&#9992;</span> Overseas Education Loan</a>
+                        <a href="/vocational-skills-loan/"><span aria-hidden="true">&#128187;</span> Vocational &amp; Skills Loan</a>
+                    </div>
+                </li>
                 <li><a href="#school-growth" class="nav-link">Growth Program</a></li>
-                <li><a href="#why-us" class="nav-link">Why Us</a></li>
-                <li><a href="#partner" class="nav-link">Partner</a></li>
+                <li><a href="#physital" class="nav-link">Physital</a></li>
+                <li><a href="#emi-calculator" class="nav-link">EMI Calculator</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li class="nav-menu-cta"><a href="#partner" class="btn btn-primary">Apply Now</a></li>
             </ul>
 
@@ -38,453 +52,555 @@
     </nav>
     <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <span class="hero-eyebrow">Empowering India, One Education at a Time</span>
-            <h1 class="hero-headline">Full-Spectrum Education Finance for <em>Bharat</em></h1>
-            <p class="hero-subheadline">We partner with schools, parents, and financial institutions to provide full-spectrum education financing — making quality education accessible for every child.</p>
-            <div class="hero-ctas">
-                <a href="#products" class="btn btn-primary">Apply for a Student Loan</a>
-                <a href="#products" class="btn btn-secondary">Apply for a School Loan</a>
+    <main>
+        <section class="hero hero-carousel" id="home" aria-label="Bharat Uday EduFinance loan products">
+            <div class="carousel-track" id="heroCarousel">
+                <a class="carousel-slide active" href="#school-improvement-card" data-carousel-slide>
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=72" alt="Affordable private school classroom" class="carousel-image" loading="eager">
+                    <span class="carousel-overlay"></span>
+                    <span class="carousel-content">
+                        <span class="hero-eyebrow">$225B+ India Education Market | Physital EduFinance <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></span>
+                        <span class="hero-product">School Improvement Loan</span>
+                        <span class="hero-headline">Capital for Every Classroom</span>
+                        <span class="hero-subheadline">Infrastructure loans for India's 450,000+ affordable private schools. Avg. ticket &#8377;23 lakhs. Cashflow-based underwriting &mdash; no traditional collateral required.</span>
+                        <span class="btn btn-primary">Apply for School Loan</span>
+                    </span>
+                </a>
+
+                <a class="carousel-slide" href="#school-fee-card" data-carousel-slide>
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=72" alt="Parent helping child prepare for school" class="carousel-image" loading="lazy">
+                    <span class="carousel-overlay"></span>
+                    <span class="carousel-content">
+                        <span class="hero-eyebrow">Tier-1 to Tier-3 | Digital + Field Counsel</span>
+                        <span class="hero-product">Parent Fee Financing</span>
+                        <span class="hero-headline">Pay School Fees &mdash; Your Way</span>
+                        <span class="hero-subheadline">Flexible fee loans for families earning &#8377;15,000&ndash;40,000/month. Affordable EMIs. No financial stress on admission day.</span>
+                        <span class="btn btn-primary">Explore Fee Loans</span>
+                    </span>
+                </a>
+
+                <a class="carousel-slide" href="#student-loan-card" data-carousel-slide>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=72" alt="Graduates at a university campus" class="carousel-image" loading="lazy">
+                    <span class="carousel-overlay"></span>
+                    <span class="carousel-content">
+                        <span class="hero-eyebrow">Domestic Higher Education | PM Vidyalaxmi Guidance</span>
+                        <span class="hero-product">Student Loan</span>
+                        <span class="hero-headline">Fund Your Future</span>
+                        <span class="hero-subheadline">Domestic higher education loans for IITs, IIMs, medical colleges, and private universities. India's higher ed market is growing to $134.8B by 2033.</span>
+                        <span class="btn btn-primary">Check Eligibility</span>
+                    </span>
+                </a>
+
+                <a class="carousel-slide" href="#overseas-loan-card" data-carousel-slide>
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=72" alt="Students planning international education" class="carousel-image" loading="lazy">
+                    <span class="carousel-overlay"></span>
+                    <span class="carousel-content">
+                        <span class="hero-eyebrow">Destination-Agnostic Study Abroad Finance</span>
+                        <span class="hero-product">Overseas Education Loan</span>
+                        <span class="hero-headline">Study Abroad, Stress-Free</span>
+                        <span class="hero-subheadline">1.8 million Indians study abroad annually. We finance education across UK, Germany, Australia, Ireland, UAE, and more &mdash; not just the US.</span>
+                        <span class="btn btn-primary">Explore Overseas Loans</span>
+                    </span>
+                </a>
+
+                <a class="carousel-slide" href="#skills-loan-card" data-carousel-slide>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=72" alt="Learner using a laptop for skill training" class="carousel-image" loading="lazy">
+                    <span class="carousel-overlay"></span>
+                    <span class="carousel-content">
+                        <span class="hero-eyebrow">NSDC-Partnered Pathways | Short-Course Credit</span>
+                        <span class="hero-product">Vocational &amp; Skills Loan</span>
+                        <span class="hero-headline">Reskill India. Reimagine Careers.</span>
+                        <span class="hero-subheadline">104 million Indians need reskilling by 2030. Loans of &#8377;12,000&ndash;40,000 for NSDC-partnered skill and vocational courses.</span>
+                        <span class="btn btn-primary">Explore Skills Loans</span>
+                    </span>
+                </a>
             </div>
-        </div>
-    </section>
 
-    <!-- Marquee Trust Bar -->
-    <section class="marquee-bar">
-        <div class="marquee-content">
-            <span>Full-Spectrum EduFinance &nbsp;•&nbsp; Student Loans &nbsp;•&nbsp; Overseas Education Funding &nbsp;•&nbsp; School Improvement Capital &nbsp;•&nbsp; Parent Fee Financing &nbsp;•&nbsp; Skilling & Vocational Pathways &nbsp;•&nbsp; Value Enhancement Beyond Lending &nbsp;•&nbsp; Pan-India Presence &nbsp;•&nbsp; Full-Spectrum EduFinance &nbsp;•&nbsp;</span>
-        </div>
-    </section>
+            <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous loan product" data-carousel-prev>‹</button>
+            <button class="carousel-arrow carousel-next" type="button" aria-label="Next loan product" data-carousel-next>›</button>
+            <div class="carousel-dots" aria-label="Choose carousel slide" data-carousel-dots></div>
+        </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">OUR MISSION</span>
-                <h2 class="section-title">Making Quality Education Accessible for Every Child</h2>
-            </div>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">VISION &amp; MISSION</span>
+                    <h2 class="section-title">Bridging India's Education Finance Gap</h2>
+                    <p class="section-subtitle">The National Education Policy 2020 targets 50% GER in higher education by 2035; affordable, trusted credit is a core access layer for that growth. <sup class="source-pill" title="Source: Ministry of Education, NEP 2020 target for higher education GER">i</sup></p>
+                </div>
 
-            <!-- Full-Width Pillars Section -->
-            <div class="pillars-section">
-                <div class="pillars-visual">
-                    <div class="pillars-colonnade">
-                        <div class="pillar">
-                            <div class="pillar-capital"></div>
-                            <div class="pillar-shaft"><span class="pillar-icon">🏫</span></div>
-                            <div class="pillar-base"></div>
-                            <p class="pillar-label">School<br>Improvement<br>Capital</p>
-                        </div>
-                        <div class="pillar">
-                            <div class="pillar-capital"></div>
-                            <div class="pillar-shaft"><span class="pillar-icon">👨‍👩‍👧</span></div>
-                            <div class="pillar-base"></div>
-                            <p class="pillar-label">Fee Finance<br>for Parents</p>
-                        </div>
-                        <div class="pillar">
-                            <div class="pillar-capital"></div>
-                            <div class="pillar-shaft"><span class="pillar-icon">🎓</span></div>
-                            <div class="pillar-base"></div>
-                            <p class="pillar-label">Student<br>Loans</p>
-                        </div>
-                        <div class="pillar">
-                            <div class="pillar-capital"></div>
-                            <div class="pillar-shaft"><span class="pillar-icon">💻</span></div>
-                            <div class="pillar-base"></div>
-                            <p class="pillar-label">Vocational &amp;<br>Skill Loans</p>
-                        </div>
-                        <div class="pillar">
-                            <div class="pillar-capital"></div>
-                            <div class="pillar-shaft"><span class="pillar-icon">🌱</span></div>
-                            <div class="pillar-base"></div>
-                            <p class="pillar-label">School Growth<br>Program</p>
+                <div class="mission-vision-grid">
+                    <article class="statement-card">
+                        <span class="statement-label">Vision</span>
+                        <p>To be India's most trusted EduFinance platform &mdash; bridging the $4.4 billion financing gap in affordable education through technology, human counsel, and institutional partnerships.</p>
+                    </article>
+                    <article class="statement-card">
+                        <span class="statement-label">Mission</span>
+                        <p>Making quality education accessible for every child &mdash; by financing schools, empowering parents, and funding students across every tier of India.</p>
+                    </article>
+                </div>
+
+                <div class="pillars-section" aria-label="Interconnected EduFinance pillars">
+                    <div class="pillars-visual">
+                        <div class="pillars-colonnade">
+                            <a class="pillar" href="#school-improvement-card">
+                                <div class="pillar-capital"></div>
+                                <div class="pillar-shaft"><span class="pillar-icon" aria-hidden="true">&#127979;</span></div>
+                                <div class="pillar-base"></div>
+                                <p class="pillar-label">School<br>Improvement<br>Capital</p>
+                            </a>
+                            <a class="pillar" href="#school-fee-card">
+                                <div class="pillar-capital"></div>
+                                <div class="pillar-shaft"><span class="pillar-icon" aria-hidden="true">&#128100;</span></div>
+                                <div class="pillar-base"></div>
+                                <p class="pillar-label">Fee Finance<br>for Parents</p>
+                            </a>
+                            <a class="pillar" href="#student-loan-card">
+                                <div class="pillar-capital"></div>
+                                <div class="pillar-shaft"><span class="pillar-icon" aria-hidden="true">&#127891;</span></div>
+                                <div class="pillar-base"></div>
+                                <p class="pillar-label">Student<br>Loans</p>
+                            </a>
+                            <a class="pillar" href="#skills-loan-card">
+                                <div class="pillar-capital"></div>
+                                <div class="pillar-shaft"><span class="pillar-icon" aria-hidden="true">&#128187;</span></div>
+                                <div class="pillar-base"></div>
+                                <p class="pillar-label">Vocational &amp;<br>Skill Loans</p>
+                            </a>
+                            <a class="pillar" href="#school-growth">
+                                <div class="pillar-capital"></div>
+                                <div class="pillar-shaft"><span class="pillar-icon" aria-hidden="true">&#128200;</span></div>
+                                <div class="pillar-base"></div>
+                                <p class="pillar-label">School Growth<br>Program</p>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="pillars-foundation">
-                    <p>"Capital alone is not enough, we pair with schools with growth program, teacher and leader development, peer network, and learner-driven monitoring."</p>
-                </div>
-            </div>
-
-            <div class="about-content">
-                <div class="about-left">
-                    <p class="mission-quote">"We partner with schools, parents, and financial institutions to provide full-spectrum education financing — making quality education accessible for every child."</p>
-                    <p>Bharat Uday Finserve (BUFL) is an EduFinance organization built around a single conviction — India's rise depends on the quality and reach of its education. We are not a lender alone; we are a full-spectrum partner across the country's learning ecosystem.</p>
-                    <p>Our model brings together <strong>funding</strong> and <strong>value enhancement</strong> across five interconnected pillars: school improvement capital, fee financing for parents, domestic student loans, overseas education loans, and vocational and skills loans. Capital alone is not enough — we pair it with school growth programs, teacher and leader development, peer networks, and data-driven monitoring so every rupee deployed multiplies in real educational outcomes.</p>
-                    <p>From metros to Tier-3 towns, we work alongside students, parents, school proprietors, training partners, and impact investors to widen access to quality education — and to make student outcomes, not just disbursals, the metric we are measured by.</p>
+                    <div class="pillars-foundation">
+                        <p>Capital alone is not enough. We pair lending with school growth programs, teacher and leader development, peer networks, and learner-driven monitoring.</p>
+                    </div>
                 </div>
 
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Loan Products Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">FULL-SPECTRUM EDUFINANCE</span>
-                <h2 class="section-title">Funding & Value Enhancement Across the Learning Chain</h2>
-                <p class="section-subtitle">Five interlocking pillars — capital deployed where it unlocks opportunity, paired with the support that turns disbursals into student outcomes.</p>
-            </div>
-
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">🏫</div>
-                    <h3>School Improvement Loan</h3>
-                    <div class="product-amount">Up to ₹25 Lakhs</div>
-                    <div class="product-for">For school owners building better learning environments</div>
-                    <ul class="product-highlights">
-                        <li>Classrooms, labs &amp; equipment</li>
-                        <li>Water, bathrooms &amp; safe sanitation</li>
-                        <li>Desks, furniture &amp; learning materials</li>
-                        <li>Cashflow-based underwriting — no conventional collateral</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for a School Loan</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">👨‍👩‍👧</div>
-                    <h3>School Fee Loan</h3>
-                    <div class="product-amount">₹5,000 – ₹20,000</div>
-                    <div class="product-for">For parents managing term fees so children stay in school</div>
-                    <ul class="product-highlights">
-                        <li>Helps prevent fee-driven dropouts</li>
-                        <li>Minimal documentation</li>
-                        <li>Flexible EMI aligned to income cycles</li>
-                        <li>Quick disbursal in 48–72 hours</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for Fee Loan</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">🎓</div>
-                    <h3>Student Loan</h3>
-                    <div class="product-amount">Up to ₹40 Lakhs</div>
-                    <div class="product-for">For domestic higher education across India</div>
-                    <ul class="product-highlights">
-                        <li>IITs, IIMs, AIIMS, NITs, private universities</li>
-                        <li>Moratorium through course duration</li>
-                        <li>Competitive rates with co-applicant</li>
-                        <li>End-to-end digital application</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for a Student Loan</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">✈️</div>
-                    <h3>Overseas Education Loan</h3>
-                    <div class="product-amount">Up to ₹80 Lakhs</div>
-                    <div class="product-for">For study-abroad aspirants — USA, UK, Canada, Australia, Germany, Ireland</div>
-                    <ul class="product-highlights">
-                        <li>Collateral-free up to ₹40L</li>
-                        <li>Processing in 7–15 days</li>
-                        <li>Forex &amp; visa-letter support included</li>
-                        <li>Counsellor network for placement support</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for Overseas Loan</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">💻</div>
-                    <h3>Vocational &amp; Skills Loan</h3>
-                    <div class="product-amount">₹12,000 – ₹40,000</div>
-                    <div class="product-for">For short-duration skill &amp; certification courses</div>
-                    <ul class="product-highlights">
-                        <li>NSDC-aligned skilling partners</li>
-                        <li>Data science, IT, healthcare, manufacturing</li>
-                        <li>3-day approval, no collateral</li>
-                        <li>Placement-linked repayment options</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for Skills Loan</a>
+                <div class="who-grid" aria-label="Who we are">
+                    <article class="who-card">
+                        <div class="who-icon" aria-hidden="true">&#127970;</div>
+                        <h3>Who We Are</h3>
+                        <p>A full-spectrum EduFinance platform operating at the intersection of financial services and social impact &mdash; serving students, parents, and school operators across India's $225B education market. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                    </article>
+                    <article class="who-card">
+                        <div class="who-icon" aria-hidden="true">&#128161;</div>
+                        <h3>Our Philosophy</h3>
+                        <p>We believe education finance is the critical enabler of India's education growth story. We eliminate the structural gap between demand for and supply of well-priced education finance.</p>
+                    </article>
+                    <article class="who-card">
+                        <div class="who-icon" aria-hidden="true">&#129309;</div>
+                        <h3>Our Core Values</h3>
+                        <p>Access over exclusivity. Trust over transactions. Technology with a human touch. Impact alongside returns.</p>
+                    </article>
+                    <article class="who-card">
+                        <div class="who-icon" aria-hidden="true">&#128242;</div>
+                        <h3>Our Approach &mdash; The Physital Model</h3>
+                        <p>We combine a mobile-first digital platform with a trained field agent network (EFRMs) across Tier-1, Tier-2, and Tier-3 markets. Technology finds the borrower. Human counsel funds them.</p>
+                    </article>
+                    <article class="who-card who-card-wide">
+                        <div class="who-icon" aria-hidden="true">&#128202;</div>
+                        <h3>Our Impact</h3>
+                        <p>Serving 450,000+ affordable private schools, 42.5 million higher education students, and 104 million reskilling aspirants &mdash; the numbers behind our purpose. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- School Growth Program Section -->
-    <section class="school-growth" id="school-growth">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">BEYOND CAPITAL</span>
-                <h2 class="section-title">School Growth Program</h2>
-                <p class="section-subtitle">A 3-year holistic partnership with affordable private schools — combining capital, capability, and community to lift learning outcomes.</p>
-            </div>
-
-            <div class="growth-grid">
-                <div class="growth-card">
-                    <div class="growth-step">01</div>
-                    <h3>3-Year Holistic Support</h3>
-                    <p>Each partner school enters a structured three-year journey — annual growth plans, milestone reviews, and access to capital tied to measurable improvement.</p>
+        <section class="physital" id="physital">
+            <div class="container">
+                <div class="section-header section-header-light">
+                    <span class="section-label">OUR PHYSITAL APPROACH</span>
+                    <h2 class="section-title">The Physital Difference</h2>
+                    <p class="section-subtitle">Technology finds the borrower. Human counsel funds them.</p>
                 </div>
-                <div class="growth-card">
-                    <div class="growth-step">02</div>
-                    <h3>Teacher &amp; Leader Training</h3>
-                    <p>Workshops and coaching for teachers and school leaders on pedagogy, classroom management, assessment, and child-safe practices.</p>
+                <div class="physital-grid">
+                    <article class="physital-card">
+                        <span class="physital-layer">Layer 1</span>
+                        <div class="physital-icon" aria-hidden="true">&#128242;</div>
+                        <h3>Digital Platform <span>The Tech</span></h3>
+                        <p>A mobile-first, multilingual platform. Compare loans across NBFCs, banks, and fintechs. Run EMI calculations. Apply with Aadhaar/PAN pre-fill. Receive school credit offers within 48 hours.</p>
+                    </article>
+                    <article class="physital-card">
+                        <span class="physital-layer">Layer 2</span>
+                        <div class="physital-icon" aria-hidden="true">&#128188;</div>
+                        <h3>Field Agent Network <span>The Touch</span></h3>
+                        <p>200+ trained Education Finance Relationship Managers (EFRMs) across 12 states. On-ground counselling, document collection, and post-disbursement servicing. Conversion rates 3&ndash;4x higher than pure-digital channels. <sup class="source-pill" title="Source: Bharat Uday EduFinance operating plan, 2026">i</sup></p>
+                    </article>
+                    <article class="physital-card">
+                        <span class="physital-layer">Layer 3</span>
+                        <div class="physital-icon" aria-hidden="true">&#127970;</div>
+                        <h3>Institutional Partnerships <span>The Network</span></h3>
+                        <p>Partnerships with colleges, school associations, and NSDC-affiliated vocational centres. Every partner institution is a de facto branch &mdash; at a fraction of the cost of a dedicated service centre.</p>
+                    </article>
                 </div>
-                <div class="growth-card">
-                    <div class="growth-step">03</div>
-                    <h3>Quality in Low-Resource Schools</h3>
-                    <p>Targeted at low-fee private schools serving Tier-2 and Tier-3 students — bringing structured frameworks usually reserved for elite institutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- School Network & Collaboration Section -->
-    <section class="school-network" id="school-network">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">PEER LEARNING</span>
-                <h2 class="section-title">School Network &amp; Collaboration</h2>
-                <p class="section-subtitle">School leaders learn fastest from each other. We organise our partner schools into small, local clusters that share challenges, solutions, and accountability.</p>
-            </div>
-
-            <div class="network-grid">
-                <div class="network-card">
-                    <div class="network-icon">🔗</div>
-                    <h3>Local Peer Clusters</h3>
-                    <p>Small networks of 8–12 nearby schools that meet regularly to share what's working, what isn't, and how to improve together.</p>
-                </div>
-                <div class="network-card">
-                    <div class="network-icon">💡</div>
-                    <h3>Best-Practice Exchange</h3>
-                    <p>Structured forums for sharing pedagogical innovations, operational hacks, and parent-engagement strategies across the cluster.</p>
-                </div>
-                <div class="network-card">
-                    <div class="network-icon">👥</div>
-                    <h3>Education Specialists</h3>
-                    <p>Each cluster is anchored by a local Education Specialist — an experienced practitioner who facilitates sessions and provides on-the-ground guidance.</p>
+                <div class="physital-stat-bar" aria-label="Physital operating targets">
+                    <span>12 States</span>
+                    <span>200+ EFRMs</span>
+                    <span>50,000 Loan Applications <small>Year 1 Target</small></span>
+                    <span>5 NBFC Partners</span>
+                    <span>&#8377;15&ndash;20 Cr Revenue Target <small>Year 1</small></span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Data-Driven Impact Section -->
-    <section class="data-monitoring" id="data-monitoring">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">ACCOUNTABILITY</span>
-                <h2 class="section-title">Data-Driven Impact</h2>
-                <p class="section-subtitle">We measure the things that matter and we publish what we find.</p>
-            </div>
-
-            <div class="data-grid">
-                <div class="data-card">
-                    <div class="data-icon">📊</div>
-                    <h3>Track Every Loan, Every School</h3>
-                    <p>From application through repayment and learning outcomes — each loan is monitored against a defined set of educational and financial indicators.</p>
-                </div>
-                <div class="data-card">
-                    <div class="data-icon">📑</div>
-                    <h3>Regular Reporting &amp; Evaluation</h3>
-                    <p>Quarterly impact dashboards, annual third-party evaluations, and transparent disclosures to investors, partner schools, and the public.</p>
-                </div>
-                <div class="data-card">
-                    <div class="data-icon">🔄</div>
-                    <h3>Continuous Improvement</h3>
-                    <p>Findings feed back into product design, underwriting, and the School Growth Program — so the model gets sharper with every cohort.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Directors Section -->
-    <section class="directors" id="directors">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">LEADERSHIP</span>
-                <h2 class="section-title">Our Board of Directors</h2>
-                <p class="section-subtitle">Guided by decades of experience in banking, education policy, and financial technology</p>
-            </div>
-
-            <div class="directors-grid">
-                <div class="director-card">
-                    <div class="director-avatar">RM</div>
-                    <h3 class="director-name">Mr. Rajiv Mehta</h3>
-                    <p class="director-designation">Chairman & Managing Director</p>
-                    <div class="director-divider"></div>
-                    <p class="director-bio">28+ years in Indian banking and financial services. Former Executive Director at a leading public sector bank. Visionary behind Bharat Uday Finserve (BUFL)'s education-first lending model.</p>
-                    <a href="#" class="director-linkedin">in</a>
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-header section-header-light">
+                    <span class="section-label">FULL-SPECTRUM EDUFINANCE</span>
+                    <h2 class="section-title">Loan Products Built for Bharat</h2>
+                    <p class="section-subtitle">Five focused lending journeys, supported by counsellors who understand the borrower, the institution, and the local market.</p>
                 </div>
 
-                <div class="director-card">
-                    <div class="director-avatar">SK</div>
-                    <h3 class="director-name">Dr. Sunita Krishnamurthy</h3>
-                    <p class="director-designation">Independent Director</p>
-                    <div class="director-divider"></div>
-                    <p class="director-bio">PhD in Economics, Delhi School of Economics. Former policy advisor to the Ministry of Education, GoI. Expert in rural credit access and education finance for Bharat.</p>
-                    <a href="#" class="director-linkedin">in</a>
-                </div>
+                <div class="products-grid product-showcase">
+                    <article class="product-card product-card-school" id="school-improvement-card">
+                        <div class="product-header"><span aria-hidden="true">&#127979;</span></div>
+                        <div class="product-body">
+                            <h3>School Improvement Loan</h3>
+                            <p class="product-for"><strong>Who it is for:</strong> Affordable private school proprietors investing in classrooms, labs, toilets, ICT, and learning infrastructure.</p>
+                            <ul class="product-highlights">
+                                <li>Cashflow-based underwriting</li>
+                                <li>No traditional collateral required for eligible schools</li>
+                                <li>Credit support for infrastructure and quality upgrades</li>
+                            </ul>
+                            <p class="market-stat">$4.4B unmet financing demand | Avg. ticket &#8377;23 lakhs <sup class="source-pill" title="Source: Opportunity EduFinance, 2023; Bharat Uday sector report, 2026">i</sup></p>
+                            <div class="product-actions">
+                                <a href="/school-improvement-loan/" class="btn btn-primary">Learn More</a>
+                                <a href="#emi-calculator" class="btn btn-outline">Estimate EMI</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="director-card">
-                    <div class="director-avatar">AS</div>
-                    <h3 class="director-name">Mr. Arjun Singhania</h3>
-                    <p class="director-designation">Director — Technology & Operations</p>
-                    <div class="director-divider"></div>
-                    <p class="director-bio">IIT Bombay alumnus. 20+ years in fintech and digital lending. Former CTO of a leading Indian financial-services platform. Drives Bharat Uday's digital-first, AI-powered loan processing engine.</p>
-                    <a href="#" class="director-linkedin">in</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <article class="product-card product-card-fee" id="school-fee-card">
+                        <div class="product-header"><span aria-hidden="true">&#128100;</span></div>
+                        <div class="product-body">
+                            <h3>School Fee Loan</h3>
+                            <p class="product-for"><strong>Who it is for:</strong> Parents managing admission, term, or annual school fees without delaying their child's education.</p>
+                            <ul class="product-highlights">
+                                <li>Flexible EMIs aligned to household cashflows</li>
+                                <li>Fast digital application with counsellor support</li>
+                                <li>Designed for fee continuity and school retention</li>
+                            </ul>
+                            <p class="market-stat">Serving families earning &#8377;15,000&ndash;40,000/month <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                            <div class="product-actions">
+                                <a href="/school-fee-loan/" class="btn btn-primary">Learn More</a>
+                                <a href="#emi-calculator" class="btn btn-outline">Estimate EMI</a>
+                            </div>
+                        </div>
+                    </article>
 
-    <!-- Eligibility Section -->
-    <section class="eligibility" id="eligibility">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">WHO CAN APPLY</span>
-                <h2 class="section-title">Requirements</h2>
-            </div>
+                    <article class="product-card product-card-student" id="student-loan-card">
+                        <div class="product-header"><span aria-hidden="true">&#127891;</span></div>
+                        <div class="product-body">
+                            <h3>Student Loan</h3>
+                            <p class="product-for"><strong>Who it is for:</strong> Students enrolling in IITs, IIMs, medical colleges, engineering colleges, and private universities in India.</p>
+                            <ul class="product-highlights">
+                                <li>Bank, NBFC, and fintech options compared together</li>
+                                <li>Moratorium and co-applicant structures</li>
+                                <li>PM Vidyalaxmi guidance for QI-enrolled students</li>
+                            </ul>
+                            <p class="market-stat">42.5M students enrolled in Indian higher education <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                            <div class="product-actions">
+                                <a href="/student-loan/" class="btn btn-primary">Learn More</a>
+                                <a href="#emi-calculator" class="btn btn-outline">Estimate EMI</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <div class="eligibility-grid">
-                <div class="eligibility-column">
-                    <div class="eligibility-icon">🎓</div>
-                    <h3>Students</h3>
-                    <ul>
-                        <li>Indian citizen aged 18–35</li>
-                        <li>Admission confirmed at a recognized institution</li>
-                        <li>Co-applicant (parent or guardian) required above ₹7.5L</li>
-                        <li>No minimum income requirement for student</li>
-                    </ul>
-                </div>
+                    <article class="product-card product-card-overseas" id="overseas-loan-card">
+                        <div class="product-header"><span aria-hidden="true">&#9992;</span></div>
+                        <div class="product-body">
+                            <h3>Overseas Education Loan</h3>
+                            <p class="product-for"><strong>Who it is for:</strong> Students pursuing degrees in the UK, Germany, Australia, Ireland, UAE, Canada, and other destinations.</p>
+                            <ul class="product-highlights">
+                                <li>Destination-agnostic counselling</li>
+                                <li>Visa, cost-of-living, and repayment guidance</li>
+                                <li>Collateral and collateral-free pathways by lender</li>
+                            </ul>
+                            <p class="market-stat">1.8M Indians study abroad annually | 57% of all edu loans <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                            <div class="product-actions">
+                                <a href="/overseas-education-loan/" class="btn btn-primary">Learn More</a>
+                                <a href="#emi-calculator" class="btn btn-outline">Estimate EMI</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="eligibility-column">
-                    <div class="eligibility-icon">🏫</div>
-                    <h3>School Proprietors</h3>
-                    <ul>
-                        <li>Privately operated school</li>
-                        <li>Minimum 3 years in operation</li>
-                        <li>Fee collection proof available</li>
-                        <li>No existing loan default history</li>
-                    </ul>
-                </div>
-
-                <div class="eligibility-column">
-                    <div class="eligibility-icon">👨‍👩‍👧</div>
-                    <h3>Parents</h3>
-                    <ul>
-                        <li>Monthly income above ₹15,000</li>
-                        <li>Child enrolled in a recognized institution</li>
-                        <li>Valid Aadhaar, PAN, and address proof</li>
-                        <li>Age between 25–60 years</li>
-                    </ul>
+                    <article class="product-card product-card-skills" id="skills-loan-card">
+                        <div class="product-header"><span aria-hidden="true">&#128187;</span></div>
+                        <div class="product-body">
+                            <h3>Vocational &amp; Skills Loan</h3>
+                            <p class="product-for"><strong>Who it is for:</strong> Working professionals and graduates pursuing short-duration, career-linked skill upgrades.</p>
+                            <ul class="product-highlights">
+                                <li>&#8377;12,000&ndash;40,000 loan ticket</li>
+                                <li>NSDC-partnered training pathways</li>
+                                <li>Built for data, computing, and advanced manufacturing</li>
+                            </ul>
+                            <p class="market-stat">104M Indians need reskilling by 2030 | NSDC-partnered <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                            <div class="product-actions">
+                                <a href="/vocational-skills-loan/" class="btn btn-primary">Learn More</a>
+                                <a href="#emi-calculator" class="btn btn-outline">Estimate EMI</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="eligibility-help">
-                <p><strong>Not sure if you qualify?</strong> Call our loan advisors at <strong>1800-200-UDAY (8329)</strong> — Mon to Sat, 9 AM to 6 PM. Free consultation, no obligation.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-us" id="why-us">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">OUR EDGE</span>
-                <h2 class="section-title">Why Bharat Uday Finserve (BUFL)?</h2>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Loan decisions in 48 hours, disbursal in 7–15 days</p>
+        <section class="school-growth" id="school-growth">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">BEYOND CAPITAL</span>
+                    <h2 class="section-title">School Growth Program</h2>
+                    <p class="section-subtitle">Capital paired with capacity, community, and operating support for affordable private schools.</p>
                 </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">📄</div>
-                    <h3>Paperless Process</h3>
-                    <p>100% digital application, no branch visit needed</p>
-                </div>
-
-                <div class="feature-box">
-                    <div class="feature-icon">🔓</div>
-                    <h3>Collateral-Free</h3>
-                    <p>No security required for loans up to ₹40 Lakhs</p>
-                </div>
-
-                <div class="feature-box">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Pan-India Reach</h3>
-                    <p>Serving 200+ cities across 15+ states</p>
-                </div>
-
-                <div class="feature-box">
-                    <div class="feature-icon">💬</div>
-                    <h3>Personal Manager</h3>
-                    <p>A dedicated relationship manager for every borrower</p>
-                </div>
-
-                <div class="feature-box">
-                    <div class="feature-icon">📈</div>
-                    <h3>Value Enhancement</h3>
-                    <p>Beyond loans — capacity building, mentorship, and outcome support</p>
+                <div class="growth-grid visual-card-grid">
+                    <article class="image-stat-card">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=70" alt="School corridor and classrooms" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">School Infrastructure</span>
+                            <h3>Build the learning environment</h3>
+                            <p>450,000+ affordable private schools in India; 33% of K-12 enrollment is now private. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                        </div>
+                    </article>
+                    <article class="image-stat-card">
+                        <img src="https://images.unsplash.com/photo-1596496181848-3091d4878b24?auto=format&fit=crop&w=800&q=70" alt="Parent reviewing school documents" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">Parent Fee Financing</span>
+                            <h3>Make school fees manageable</h3>
+                            <p>Avg. household income: &#8377;25,000/month. Structured EMIs make fees manageable. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                        </div>
+                    </article>
+                    <article class="image-stat-card">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=70" alt="School operators planning classroom upgrades" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">Beyond Capital</span>
+                            <h3>Finance what improves outcomes</h3>
+                            <p>School operators report 75% of capital need is for infrastructure &mdash; classrooms, labs, toilets, tech. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- Partner & Contact CTA Section -->
-    <section class="partner-cta" id="partner">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">WORK WITH US</span>
-                <h2 class="section-title">Join Us in Building Bharat's Education Backbone</h2>
-                <p class="section-subtitle">Whether you're a financial institution, an impact investor, or a school looking for the right partner — there's a role for you here.</p>
-            </div>
-
-            <div class="cta-grid">
-                <div class="cta-card">
-                    <div class="cta-icon">🏦</div>
-                    <h3>Financial Institutions</h3>
-                    <p>Co-lend, on-lend, or syndicate with us to extend EduFinance to underserved markets across India.</p>
-                    <a href="mailto:partnerships@bharatudayfinserve.in" class="btn btn-primary">Partner With Us</a>
+        <section class="school-network" id="school-network">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">SCHOOL NETWORK &amp; COLLABORATION</span>
+                    <h2 class="section-title">Every Partner School Becomes Part of a Learning Network</h2>
+                    <p class="section-subtitle">Clusters, specialists, and local institutions help turn financing into repeatable school improvement.</p>
                 </div>
-                <div class="cta-card">
-                    <div class="cta-icon">🌱</div>
-                    <h3>Investors &amp; ESG Capital</h3>
-                    <p>Deploy capital where it produces measurable educational outcomes. Transparent reporting and third-party evaluation included.</p>
-                    <a href="mailto:invest@bharatudayfinserve.in" class="btn btn-primary">Contact Us</a>
+
+                <div class="network-grid visual-card-grid">
+                    <article class="image-stat-card compact">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=70" alt="School leaders in a local peer group" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">Peer Clusters</span>
+                            <h3>8&ndash;12 schools per cluster</h3>
+                            <p>Local school leaders compare fee collection, parent engagement, teacher capacity, and operating practices.</p>
+                        </div>
+                    </article>
+                    <article class="image-stat-card compact">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=70" alt="Education finance counsellor meeting a customer" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">EFRM Support</span>
+                            <h3>200+ field counsellors</h3>
+                            <p>On-ground document collection, local-language counselling, and post-disbursement servicing across 12 states. <sup class="source-pill" title="Source: Bharat Uday EduFinance operating plan, 2026">i</sup></p>
+                        </div>
+                    </article>
+                    <article class="image-stat-card compact">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=70" alt="Team reviewing school performance data" loading="lazy">
+                        <div class="image-stat-overlay">
+                            <span class="card-kicker">Data &amp; Accountability</span>
+                            <h3>Quarterly impact dashboards</h3>
+                            <p>Loan performance, school improvements, and student outcomes are tracked so every rupee learns.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section class="emi-section" id="emi-calculator">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">PLAN YOUR REPAYMENT</span>
+                    <h2 class="section-title">Education Loan EMI Calculator</h2>
+                    <p class="section-subtitle">Compare indicative EMIs across loan sizes, NBFC-style rates, and tenures up to 12 years.</p>
+                </div>
+
+                <div class="emi-widget">
+                    <button class="emi-toggle" type="button" aria-expanded="true" aria-controls="emiPanel">
+                        <span>Open EMI Calculator</span>
+                        <span class="toggle-icon" aria-hidden="true">−</span>
+                    </button>
+                    <div class="emi-panel" id="emiPanel">
+                        <div class="emi-controls">
+                            <label>
+                                <span>Loan Amount</span>
+                                <strong id="loanAmountOutput">&#8377;10,00,000</strong>
+                                <input type="range" id="loanAmount" min="50000" max="15000000" step="50000" value="1000000">
+                            </label>
+                            <label>
+                                <span>Interest Rate</span>
+                                <strong id="interestRateOutput">11.5%</strong>
+                                <input type="range" id="interestRate" min="8" max="15" step="0.1" value="11.5">
+                            </label>
+                            <label>
+                                <span>Tenure</span>
+                                <strong id="tenureOutput">84 months</strong>
+                                <input type="range" id="tenureMonths" min="12" max="144" step="6" value="84">
+                            </label>
+                        </div>
+                        <div class="emi-results">
+                            <div>
+                                <span>Monthly EMI</span>
+                                <strong id="monthlyEmi">&#8377;17,302</strong>
+                            </div>
+                            <div>
+                                <span>Total Interest Payable</span>
+                                <strong id="totalInterest">&#8377;4,53,368</strong>
+                            </div>
+                            <div>
+                                <span>Total Amount Payable</span>
+                                <strong id="totalPayable">&#8377;14,53,368</strong>
+                            </div>
+                        </div>
+                        <p class="emi-note">Public sector banks offer 8&ndash;10.5% | NBFCs offer 10.5&ndash;15% | Fintechs offer 12&ndash;18%. Rates vary by loan type and lender. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">FAQ</span>
+                    <h2 class="section-title">Education Finance Questions, Answered Simply</h2>
+                </div>
+
+                <div class="faq-list" data-accordion>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">What types of education loans does Bharat Uday EduFinance offer?</button>
+                        <div class="faq-answer"><p>We offer five loan categories: School Improvement Loans, School Fee Loans, Student Loans, Overseas Education Loans, and Vocational &amp; Skills Loans through NSDC-partnered short courses.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">Who can apply for a School Improvement Loan?</button>
+                        <div class="faq-answer"><p>Proprietors of affordable private unaided schools charging fees between &#8377;500&ndash;&#8377;3,000/month. Average loan ticket is &#8377;23 lakhs. We use cashflow-based underwriting; traditional collateral is not mandatory for eligible schools.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">What is the interest rate on education loans?</button>
+                        <div class="faq-answer"><p>Rates depend on the lender type. Public sector banks: 8&ndash;10.5%. Private banks: 9.5&ndash;13%. NBFCs: 10.5&ndash;15%. Fintechs: 12&ndash;18%. Use our EMI Calculator to compare. <sup class="source-pill" title="Source: Bharat Uday EduFinance sector report, 2026">i</sup></p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">Can I get a loan to study in a country other than the US?</button>
+                        <div class="faq-answer"><p>Yes. We finance overseas education across the UK, Germany, Australia, Ireland, UAE, and other destinations &mdash; not just the US.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">What is the maximum loan amount available?</button>
+                        <div class="faq-answer"><p>Up to &#8377;1.5 Cr from public and private sector banks, up to &#8377;80 lakhs from NBFCs, and up to &#8377;50 lakhs from fintech platforms, depending on eligibility.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">What is the PM Vidyalaxmi scheme and am I eligible?</button>
+                        <div class="faq-answer"><p>PM Vidyalaxmi provides collateral-free, guarantor-free education loans for meritorious students admitted to eligible Quality Higher Education Institutions. Students with annual family income up to &#8377;8 lakhs may receive 3% interest subvention on loans up to &#8377;10 lakhs. Ask our counsellors whether your institution qualifies. <sup class="source-pill" title="Source: Department of Higher Education, Ministry of Education PM-Vidyalaxmi page, last updated March 25, 2026">i</sup></p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">How long does loan approval take?</button>
+                        <div class="faq-answer"><p>Public sector banks: 30&ndash;45 days. Private banks: 20&ndash;30 days. NBFCs: 7&ndash;15 days. Fintech platforms: 1&ndash;3 days.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">What is a Vocational &amp; Skills Loan?</button>
+                        <div class="faq-answer"><p>Loans of &#8377;12,000&ndash;&#8377;40,000 for short-duration skill courses offered through NSDC-partnered institutions. Designed for working professionals seeking to reskill in data science, computing, and advanced manufacturing.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <div class="section-header section-header-light">
+                    <span class="section-label">OUR EDGE</span>
+                    <h2 class="section-title">Why Bharat Uday EduFinance?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
+                        <h3>Fast Matching</h3>
+                        <p>Compare lenders and receive the right next step for your loan type, city, income profile, and institution.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">&#128196;</div>
+                        <h3>Guided Documentation</h3>
+                        <p>Aadhaar, PAN, DigiLocker, school cashflows, and fee records collected with counsellor support.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">&#128172;</div>
+                        <h3>Human Counsel</h3>
+                        <p>EFRMs explain eligibility, rates, processing timelines, and repayment choices in plain language.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-cta" id="partner">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">WORK WITH US</span>
+                    <h2 class="section-title">Build Bharat's Education Finance Backbone</h2>
+                    <p class="section-subtitle">Whether you are a borrower, school operator, financial institution, or impact investor, there is a role for you in widening access to quality education.</p>
+                </div>
+
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <div class="cta-icon" aria-hidden="true">&#127979;</div>
+                        <h3>Borrowers &amp; Schools</h3>
+                        <p>Explore the right loan product, calculate your EMI, and connect with a counsellor who understands your context.</p>
+                        <a href="#products" class="btn btn-primary">Explore Loans</a>
+                    </div>
+                    <div class="cta-card">
+                        <div class="cta-icon" aria-hidden="true">&#127974;</div>
+                        <h3>Institutions &amp; Investors</h3>
+                        <p>Co-lend, partner, or deploy impact capital with transparent reporting and on-ground servicing.</p>
+                        <a href="mailto:partnerships@bharatudayfinserve.in" class="btn btn-primary">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sources-note" aria-label="Sources">
+            <div class="container">
+                <p><strong>Sources used across market notes:</strong> Bharat Uday EduFinance sector report, 2026; Opportunity EduFinance, 2023; Ministry of Education NEP 2020 materials; Department of Higher Education PM-Vidyalaxmi page, updated March 25, 2026. Loan rates and timelines are indicative and subject to lender policy and borrower profile.</p>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img" />
+                        <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img">
                     </div>
                     <div class="footer-tagline">Empowering India, One Education at a Time</div>
-                    <p class="footer-description">Full-spectrum EduFinance for India — funding paired with value enhancement, from student aspirations to school transformation.</p>
+                    <p class="footer-description">Full-spectrum Physital EduFinance for India &mdash; funding paired with human counsel, from student aspirations to school transformation.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Loan Products</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Loan Products</a></li>
-                        <li><a href="#school-growth">School Growth Program</a></li>
-                        <li><a href="#school-network">School Network</a></li>
-                        <li><a href="#data-monitoring">Data &amp; Monitoring</a></li>
-                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="/school-improvement-loan/">School Improvement Loan</a></li>
+                        <li><a href="/school-fee-loan/">School Fee Loan</a></li>
+                        <li><a href="/student-loan/">Student Loan</a></li>
+                        <li><a href="/overseas-education-loan/">Overseas Education Loan</a></li>
+                        <li><a href="/vocational-skills-loan/">Vocational &amp; Skills Loan</a></li>
                     </ul>
                 </div>
 
-
-
                 <div class="footer-col">
                     <h4>Contact Info</h4>
-                    <p><strong>Registered Office:</strong> 7th Floor, Uday Bhavan, Bandra Kurla Complex, Mumbai – 400051</p>
+                    <p><strong>Registered Office:</strong> 7th Floor, Uday Bhavan, Bandra Kurla Complex, Mumbai &ndash; 400051</p>
                     <p><strong>Toll Free:</strong> 1800-200-UDAY (8329)</p>
                     <p><strong>Email:</strong> info@bharatudayfinserve.in</p>
                 </div>
@@ -493,11 +609,40 @@
             <div class="footer-divider"></div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 Bharat Uday Finserve Pvt. Ltd. (BUFL) All Rights Reserved.</p>
-                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is a private limited education-finance company operating across India. All loan products are subject to credit assessment, KYC verification, and eligibility criteria. Indicative rates and tenures may be revised based on borrower profile and prevailing market conditions.</p>
+                <p class="footer-copyright">&copy; 2026 Bharat Uday Finserve Pvt. Ltd. (BUFL). All Rights Reserved.</p>
+                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is a private limited education-finance company operating across India. All loan products are subject to credit assessment, KYC verification, eligibility criteria, and final approval by lending partners.</p>
             </div>
         </div>
     </footer>
+
+    <div class="chatbot" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Open EduFinance Assistant" aria-expanded="false">
+            <span aria-hidden="true">&#128172;</span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow" aria-live="polite">
+            <div class="chatbot-header">
+                <div>
+                    <strong>EduFinance Assistant</strong>
+                    <span>Rule-based support</span>
+                </div>
+                <button type="button" id="chatbotClose" aria-label="Close chat">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="bot-message">Hi! I'm your EduFinance Assistant. I can help you explore loan options, check eligibility, and connect you with a counsellor. What are you looking for?</div>
+            </div>
+            <div class="quick-replies">
+                <button type="button" data-chat-topic="school">School Improvement Loan</button>
+                <button type="button" data-chat-topic="student">Student / Overseas Loan</button>
+                <button type="button" data-chat-topic="fee">Parent Fee Financing</button>
+                <button type="button" data-chat-topic="skills">Skills &amp; Vocational Loan</button>
+                <button type="button" data-chat-topic="counsellor">Talk to a Counsellor</button>
+            </div>
+            <form class="chatbot-input" id="chatbotForm">
+                <input type="text" id="chatbotText" placeholder="Ask about rates, eligibility, PM Vidyalaxmi..." aria-label="Ask EduFinance Assistant">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
