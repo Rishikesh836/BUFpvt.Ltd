@@ -77,7 +77,8 @@ if (loansDropdownToggle) {
 dropdownLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         const productKey = link.dataset.productKey;
-        if (productKey) {
+        const linkTarget = link.getAttribute('href') || '';
+        if (productKey && linkTarget.startsWith('#')) {
             event.preventDefault();
             showProductDetail(productKey, true);
         }
@@ -331,6 +332,15 @@ function showProductDetail(productKey, shouldScroll = false) {
     }
 }
 
+if (productDetailView) {
+    const initialProductKey = new URLSearchParams(window.location.search).get('product');
+    if (initialProductKey && productCatalog[initialProductKey]) {
+        showProductDetail(initialProductKey, false);
+    } else {
+        showProductDetail(productDetailView.dataset.productKey || 'school-improvement', false);
+    }
+}
+
 document.querySelectorAll('[data-product-key]').forEach(trigger => {
     if (trigger.classList.contains('dropdown-link') || trigger.classList.contains('product-slide')) return;
     trigger.addEventListener('click', (event) => {
@@ -416,6 +426,11 @@ if (applicationLoanType) {
         renderApplicationFields(applicationLoanType.value);
     });
     renderApplicationFields(applicationLoanType.value);
+
+    const activeProduct = productDetailView ? productCatalog[productDetailView.dataset.productKey] : null;
+    if (activeProduct) {
+        setApplicationLoanType(activeProduct.applyType, false);
+    }
 }
 
 document.addEventListener('click', (event) => {

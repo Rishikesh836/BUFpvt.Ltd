@@ -4856,3 +4856,269 @@ section,
         text-align: center;
     }
 }
+
+.loan-detail-page {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfaf6 100%);
+}
+
+.loan-detail-hero {
+    padding: 8.5rem 0 2.5rem;
+    background:
+        linear-gradient(135deg, rgba(13, 43, 85, 0.96), rgba(6, 28, 56, 0.94)),
+        linear-gradient(90deg, rgba(201, 146, 42, 0.2), transparent);
+    color: var(--color-white);
+}
+
+.loan-detail-hero h1 {
+    margin: 0.45rem 0;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    line-height: 1;
+}
+
+.loan-detail-hero p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.loan-detail-hero .section-label {
+    color: var(--color-accent-light);
+}
+
+.detail-back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.detail-back-link::before {
+    content: '<';
+    margin-right: 0.5rem;
+    color: var(--color-accent-light);
+}
+
+.detail-back-link:hover {
+    color: var(--color-accent-light);
+}
+
+.loan-detail-main {
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ===========================
+   Vision, Philosophy, Approach & Values Cleanup
+   =========================== */
+.about .section-header:has(+ .vision-mission-lines) {
+    margin-bottom: 1rem;
+}
+
+.vision-mission-lines {
+    max-width: 960px;
+    margin: 0 auto clamp(2.2rem, 4vw, 3rem);
+    padding: clamp(1.25rem, 2.6vw, 1.8rem);
+    border-radius: 14px;
+    border: 1px solid rgba(13, 43, 85, 0.1);
+    border-top: 6px solid var(--color-accent);
+    background: var(--color-white);
+    box-shadow: 0 18px 48px rgba(13, 43, 85, 0.1);
+}
+
+.vision-mission-lines p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.65;
+}
+
+.vision-mission-lines p + p {
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid rgba(13, 43, 85, 0.08);
+}
+
+.vision-mission-lines strong {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.identity-sections {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+}
+
+.identity-card.philosophy-card,
+.identity-card.approach-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.24fr) minmax(0, 1fr);
+    gap: clamp(1rem, 2.4vw, 2rem);
+    align-items: start;
+    border-top-width: 0;
+    border-left: 6px solid var(--color-accent);
+}
+
+.identity-card.approach-card {
+    border-left-color: var(--color-primary);
+}
+
+.identity-card.philosophy-card .content-label,
+.identity-card.approach-card .content-label {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    margin-top: 0.35rem;
+}
+
+.identity-card.philosophy-card p,
+.identity-card.approach-card p {
+    grid-column: 2;
+    margin: 0;
+    max-width: 940px;
+}
+
+.identity-card.approach-card p + p {
+    margin-top: 0.8rem;
+}
+
+.identity-card .approach-phystal {
+    display: none;
+}
+
+.core-values-visual {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 1.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(13, 43, 85, 0.12);
+    border-radius: 12px;
+    background: var(--color-white);
+}
+
+.value-pillar {
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 0;
+    border-right: 1px solid rgba(13, 43, 85, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.value-pillar:last-child {
+    border-right: 0;
+}
+
+.value-pillar::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 7px;
+    background: var(--value-color, var(--color-primary));
+}
+
+.value-index {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--value-color, var(--color-primary)), transparent 88%);
+    color: var(--value-color, var(--color-primary));
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.value-icon {
+    display: none;
+}
+
+.value-pillar h3 {
+    margin: 1.1rem 0 0.3rem;
+    color: var(--color-primary);
+    font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+
+.value-pillar p {
+    color: var(--color-text);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.value-integrity {
+    --value-color: var(--color-navy-pillar);
+}
+
+.value-innovation {
+    --value-color: var(--color-gold-pillar);
+}
+
+.value-inclusion {
+    --value-color: #16826e;
+}
+
+.value-impact {
+    --value-color: var(--color-orange-pillar);
+}
+
+.value-partnership {
+    --value-color: var(--color-green-pillar);
+}
+
+@media (max-width: 980px) {
+    .identity-card.philosophy-card,
+    .identity-card.approach-card {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    .identity-card.philosophy-card .content-label,
+    .identity-card.approach-card .content-label,
+    .identity-card.philosophy-card p,
+    .identity-card.approach-card p {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .core-values-visual {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .value-pillar:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .value-pillar:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 560px) {
+    .vision-mission-lines {
+        padding: 1rem;
+    }
+
+    .core-values-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .value-pillar,
+    .value-pillar:nth-child(2n) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(13, 43, 85, 0.1);
+    }
+
+    .value-pillar:last-child {
+        grid-column: auto;
+        border-bottom: 0;
+    }
+}
