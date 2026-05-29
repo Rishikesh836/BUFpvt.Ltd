@@ -25,22 +25,22 @@
                         <span class="dropdown-chevron" aria-hidden="true"></span>
                     </button>
                     <ul class="loans-dropdown" id="loansDropdown" aria-label="Loan products">
-                        <li><a href="#school-improvement-loan" class="dropdown-link">School Improvement Loan</a></li>
-                        <li><a href="#school-fee-loan" class="dropdown-link">School Fee Loan</a></li>
-                        <li><a href="#student-loan" class="dropdown-link">Student Loan</a></li>
-                        <li><a href="#overseas-education-loan" class="dropdown-link">Overseas Education Loan</a></li>
-                        <li><a href="#vocational-skills-loan" class="dropdown-link">Vocational &amp; Skills Loan</a></li>
+                        <li><a href="#product-detail" class="dropdown-link" data-product-key="school-improvement">School Improvement Loan</a></li>
+                        <li><a href="#product-detail" class="dropdown-link" data-product-key="school-fee">School Fee Loan</a></li>
+                        <li><a href="#product-detail" class="dropdown-link" data-product-key="student">Student Loan</a></li>
+                        <li><a href="#product-detail" class="dropdown-link" data-product-key="overseas">Overseas Education Loan</a></li>
+                        <li><a href="#product-detail" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
                     </ul>
                 </li>
-                <li><a href="#school-growth" class="nav-link">Growth Program</a></li>
                 <li><a href="#emi-calculator" class="nav-link nav-link-highlight">EMI Calculator</a></li>
+                <li><a href="#eligibility" class="nav-link">Who Can Apply</a></li>
                 <li><a href="#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="#partner" class="nav-link">Partner</a></li>
-                <li class="nav-menu-cta"><a href="#partner" class="btn btn-primary">Apply Now</a></li>
+                <li class="nav-menu-cta"><a href="#loan-application" class="btn btn-primary" data-apply-loan="School Loan">Apply Now</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#partner" class="btn btn-primary nav-apply">Apply Now</a>
+                <a href="#loan-application" class="btn btn-primary nav-apply" data-apply-loan="School Loan">Apply Now</a>
                 <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
@@ -56,11 +56,11 @@
         <div class="hero-background"></div>
         <div class="hero-content">
             <span class="hero-eyebrow">Phystal EduFinance for Bharat</span>
-            <h1 class="hero-headline">Full-Spectrum Education Finance for <em>Bharat</em></h1>
+            <h1 class="hero-headline">Education Finance for <em>Bharat</em></h1>
             <p class="hero-subheadline">We combine physical reach and digital efficiency to partner with schools, parents, and financial institutions &mdash; making quality education accessible for every child.</p>
             <div class="hero-ctas">
-                <a href="#student-loan" class="btn btn-primary">Apply for a Student Loan</a>
-                <a href="#school-improvement-loan" class="btn btn-secondary">Apply for a School Loan</a>
+                <a href="#loan-application" class="btn btn-primary" data-apply-loan="College Loan">Apply for a Student Loan</a>
+                <a href="#loan-application" class="btn btn-secondary" data-apply-loan="School Loan">Apply for a School Loan</a>
             </div>
         </div>
     </section>
@@ -68,62 +68,62 @@
     <!-- Product Banner Carousel -->
     <section class="product-slider" aria-label="Education finance products">
         <div class="slider-stage" data-product-slider>
-            <article class="product-slide is-active product-slide-blue" data-slide-link="#school-improvement-loan" aria-hidden="false">
+            <article class="product-slide is-active product-slide-blue" data-slide-link="#product-detail" data-product-key="school-improvement" aria-hidden="false">
                 <div class="slide-copy">
                     <span class="slide-kicker">01</span>
                     <h2>School Improvement Capital</h2>
                     <p>Infrastructure Upgrades</p>
                 </div>
                 <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="">
+                    <img class="slide-photo" src="assets/generated/school-improvement.png" alt="">
                     <span class="slide-photo-badge">&#127979;</span>
                 </div>
             </article>
 
-            <article class="product-slide product-slide-gold" data-slide-link="#school-fee-loan" aria-hidden="true">
+            <article class="product-slide product-slide-gold" data-slide-link="#product-detail" data-product-key="school-fee" aria-hidden="true">
                 <div class="slide-copy">
                     <span class="slide-kicker">02</span>
                     <h2>Fee Finance for Parents</h2>
                     <p>Flexible Education Loans</p>
                 </div>
                 <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="">
+                    <img class="slide-photo" src="assets/generated/fee-finance.png" alt="">
                     <span class="slide-photo-badge">&#8377;</span>
                 </div>
             </article>
 
-            <article class="product-slide product-slide-navy" data-slide-link="#student-loan" aria-hidden="true">
+            <article class="product-slide product-slide-navy" data-slide-link="#product-detail" data-product-key="student" aria-hidden="true">
                 <div class="slide-copy">
                     <span class="slide-kicker">03</span>
                     <h2>Student Loans</h2>
                     <p>Higher Education Funding</p>
                 </div>
                 <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="">
+                    <img class="slide-photo" src="assets/generated/student-loan.png" alt="">
                     <span class="slide-photo-badge">&#127891;</span>
                 </div>
             </article>
 
-            <article class="product-slide product-slide-orange" data-slide-link="#vocational-skills-loan" aria-hidden="true">
+            <article class="product-slide product-slide-orange" data-slide-link="#product-detail" data-product-key="vocational" aria-hidden="true">
                 <div class="slide-copy">
                     <span class="slide-kicker">04</span>
                     <h2>Vocational &amp; Skill Loans</h2>
                     <p>Skills &amp; Training Support</p>
                 </div>
                 <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="">
+                    <img class="slide-photo" src="assets/generated/skills-loan.png" alt="">
                     <span class="slide-photo-badge">&#9881;</span>
                 </div>
             </article>
 
-            <article class="product-slide product-slide-green" data-slide-link="#school-growth" aria-hidden="true">
+            <article class="product-slide product-slide-green" data-slide-link="#product-detail" data-product-key="school-growth" aria-hidden="true">
                 <div class="slide-copy">
                     <span class="slide-kicker">05</span>
                     <h2>School Growth Program</h2>
                     <p>Leadership &amp; Development</p>
                 </div>
                 <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="">
+                    <img class="slide-photo" src="assets/generated/school-growth.png" alt="">
                     <span class="slide-photo-badge">&#128200;</span>
                 </div>
             </article>
@@ -153,53 +153,58 @@
                 <article class="vision-card">
                     <span class="content-label">Vision</span>
                     <h3>Our Vision</h3>
-                    <p>To build a future where every child in India has access to quality education, supported by sustainable financial solutions and empowered learning communities.</p>
+                    <p>Universal Quality Education enabled by sustainable financial access.</p>
                 </article>
 
                 <article class="mission-card">
                     <span class="content-label">Mission</span>
                     <h3>Our Mission</h3>
-                    <p class="mission-line">Making quality education accessible for every child.</p>
-                    <p>We partner with schools, parents, and financial institutions to provide full-spectrum education financing.</p>
+                    <p class="mission-line">Make Quality Education, Accessible for Every Child.</p>
+                    <p>We partner with schools, parents, and financial institutions to provide education financing.</p>
                     <p>Our phystal model brings physical reach and digital efficiency together so access can scale across Bharat.</p>
                 </article>
             </div>
 
             <!-- Full-Width Pillars Section -->
             <div class="pillars-section">
+                <div class="pillars-heading">
+                    <span class="section-label">INTERCONNECTED PILLARS</span>
+                    <h3>Five Interconnected Pillars</h3>
+                    <p>Capital, fee finance, higher education, skills, and school growth working together across the learning chain.</p>
+                </div>
                 <div class="pillars-visual">
                     <div class="pillars-colonnade">
-                        <a class="pillar photo-pillar photo-pillar-blue" href="#school-improvement-loan">
-                            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Students learning in a classroom">
-                            <span class="pillar-number">01</span>
+                        <a class="pillar photo-pillar photo-pillar-blue" href="#product-detail" data-product-key="school-improvement">
+                            <img src="assets/generated/school-improvement.png" alt="Students learning in a classroom">
+                            <span class="pillar-number">1</span>
                             <span class="pillar-icon">&#127979;</span>
                             <span class="pillar-label">School Improvement Capital</span>
                             <span class="pillar-subtitle">Infrastructure Upgrades</span>
                         </a>
-                        <a class="pillar photo-pillar photo-pillar-gold" href="#school-fee-loan">
-                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Family and child education support">
-                            <span class="pillar-number">02</span>
+                        <a class="pillar photo-pillar photo-pillar-gold" href="#product-detail" data-product-key="school-fee">
+                            <img src="assets/generated/fee-finance.png" alt="Family and child education support">
+                            <span class="pillar-number">2</span>
                             <span class="pillar-icon">&#8377;</span>
                             <span class="pillar-label">Fee Finance for Parents</span>
                             <span class="pillar-subtitle">Flexible Education Loans</span>
                         </a>
-                        <a class="pillar photo-pillar photo-pillar-navy" href="#student-loan">
-                            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Students on a university campus">
-                            <span class="pillar-number">03</span>
+                        <a class="pillar photo-pillar photo-pillar-navy" href="#product-detail" data-product-key="student">
+                            <img src="assets/generated/student-loan.png" alt="Students on a university campus">
+                            <span class="pillar-number">3</span>
                             <span class="pillar-icon">&#127891;</span>
                             <span class="pillar-label">Student Loans</span>
                             <span class="pillar-subtitle">Higher Education Funding</span>
                         </a>
-                        <a class="pillar photo-pillar photo-pillar-orange" href="#vocational-skills-loan">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Hands-on vocational training">
-                            <span class="pillar-number">04</span>
+                        <a class="pillar photo-pillar photo-pillar-orange" href="#product-detail" data-product-key="vocational">
+                            <img src="assets/generated/skills-loan.png" alt="Hands-on vocational training">
+                            <span class="pillar-number">4</span>
                             <span class="pillar-icon">&#9881;</span>
                             <span class="pillar-label">Vocational &amp; Skill Loans</span>
                             <span class="pillar-subtitle">Skills &amp; Training Support</span>
                         </a>
-                        <a class="pillar photo-pillar photo-pillar-green" href="#school-growth">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Education leaders planning growth">
-                            <span class="pillar-number">05</span>
+                        <a class="pillar photo-pillar photo-pillar-green" href="#product-detail" data-product-key="school-growth">
+                            <img src="assets/generated/school-growth.png" alt="Education leaders planning growth">
+                            <span class="pillar-number">5</span>
                             <span class="pillar-icon">&#128200;</span>
                             <span class="pillar-label">School Growth Program</span>
                             <span class="pillar-subtitle">Leadership &amp; Development</span>
@@ -219,12 +224,17 @@
 
                 <article class="identity-card">
                     <span class="content-label">Our Philosophy</span>
-                    <p>We operate on a simple yet powerful conviction &mdash; education is the foundation of India's growth. BUFL goes beyond traditional lending; we serve as strategic partners to schools, parents, and students, offering full-spectrum financial solutions that strengthen the entire learning ecosystem.</p>
+                    <p>We operate on a simple yet powerful conviction &mdash; education is the foundation of India's growth. BUFL goes beyond traditional lending; we serve as strategic partners to schools, parents, and students, offering comprehensive financial solutions that strengthen the entire learning ecosystem.</p>
                 </article>
 
                 <article class="identity-card">
                     <span class="content-label">Our Approach</span>
                     <p>Our model integrates funding and value enhancement through five interconnected pillars that strengthen every link in the education chain.</p>
+                    <div class="approach-phystal">
+                        <h3>The Phystal Approach</h3>
+                        <p>Phystal is BUFL's central philosophy: the integration of physical reach and digital efficiency to serve education finance across Bharat.</p>
+                        <p>Our local presence helps us understand schools, parents, students, and communities on the ground. Our digital workflows make application, underwriting, monitoring, and service faster, clearer, and easier to scale.</p>
+                    </div>
                 </article>
 
                 <article class="identity-card identity-card-wide">
@@ -258,151 +268,43 @@
                     </div>
                     <p class="suggested-image-note">Suggested image provided</p>
                 </article>
-
-                <article class="identity-card identity-card-wide">
-                    <span class="content-label">Our Impact</span>
-                    <p>From Tier-1 to Tier-3 towns, BUFL collaborates with students, parents, school proprietors, training partners, and impact investors to widen access to quality education. Every rupee we deploy multiplies into measurable learning outcomes &mdash; because success isn't defined by disbursements, but by student achievement.</p>
-                </article>
             </div>
         </div>
     </section>
 
-    <!-- Phystal Approach Section -->
-    <section class="phystal" id="phystal">
-        <div class="container">
-            <div class="phystal-layout">
-                <div class="phystal-copy">
-                    <span class="section-label">SIGNATURE PHILOSOPHY</span>
-                    <h2 class="section-title">The Phystal Approach</h2>
-                    <p>Phystal is BUFL's central philosophy: the integration of physical reach and digital efficiency to serve education finance across Bharat.</p>
-                    <p>Our local presence helps us understand schools, parents, students, and communities on the ground. Our digital workflows make application, underwriting, monitoring, and service faster, clearer, and easier to scale.</p>
-                </div>
-                <div class="phystal-diagram" aria-label="Physical reach plus digital efficiency">
-                    <div class="phystal-orbit phystal-physical">
-                        <span>Physical Reach</span>
-                    </div>
-                    <div class="phystal-core">phystal</div>
-                    <div class="phystal-orbit phystal-digital">
-                        <span>Digital Efficiency</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Loan Products Section -->
-    <section class="products" id="products">
+    <!-- Loan Detail, Calculator & Application Section -->
+    <section class="loan-hub" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">FULL-SPECTRUM EDUFINANCE</span>
-                <h2 class="section-title">Funding &amp; Value Enhancement Across the Learning Chain</h2>
-                <p class="section-subtitle">Five interlocking pillars &mdash; capital deployed where it unlocks opportunity, paired with the support that turns disbursals into student outcomes.</p>
+                <span class="section-label">LOAN DETAILS</span>
+                <h2 class="section-title">One Product View at a Time</h2>
+                <p class="section-subtitle">Select a loan from the header or the interconnected pillars to view its details, current status, and next step.</p>
             </div>
 
-            <div class="products-grid product-pillar-grid">
-                <article class="product-card product-card-blue" id="school-improvement-loan">
-                    <div class="product-card-top">
-                        <span class="product-number">01</span>
-                        <span class="product-icon">&#127979;</span>
+            <article class="product-detail-view product-card-blue" id="product-detail" data-product-detail>
+                <div class="product-detail-media">
+                    <img id="productDetailImage" src="assets/generated/school-improvement.png" alt="Students learning in an improved classroom">
+                    <span class="product-detail-number" id="productDetailNumber">01</span>
+                </div>
+                <div class="product-detail-copy">
+                    <span class="content-label" id="productDetailStatus">Applications open</span>
+                    <h3 id="productDetailTitle">School Improvement Loan</h3>
+                    <p class="product-detail-subtitle" id="productDetailSubtitle">Infrastructure Upgrades</p>
+                    <p class="product-detail-for" id="productDetailFor">For school owners building better learning environments.</p>
+                    <div class="product-detail-meta">
+                        <span id="productDetailAmount">Up to &#8377;25 Lakhs</span>
+                        <span id="productDetailTimeline">7-15 day disbursal after sanction</span>
                     </div>
-                    <h3>School Improvement Loan</h3>
-                    <div class="product-subtitle">Infrastructure Upgrades</div>
-                    <div class="product-amount">Up to &#8377;25 Lakhs</div>
-                    <div class="product-for">For school owners building better learning environments</div>
-                    <ul class="product-highlights">
-                        <li>Classrooms, labs &amp; equipment</li>
-                        <li>Water, bathrooms &amp; safe sanitation</li>
-                        <li>Desks, furniture &amp; learning materials</li>
+                    <ul class="product-detail-list" id="productDetailList">
+                        <li>Classrooms, labs, equipment, furniture, and learning materials</li>
+                        <li>Water, bathrooms, sanitation, and safety improvements</li>
                         <li>Cashflow-based underwriting with practical collateral options</li>
                     </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for a School Loan</a>
-                </article>
-
-                <article class="product-card product-card-gold" id="school-fee-loan">
-                    <div class="product-card-top">
-                        <span class="product-number">02</span>
-                        <span class="product-icon">&#128106;</span>
+                    <div class="product-detail-actions">
+                        <a href="#loan-application" class="btn btn-primary" id="productApplyButton" data-apply-loan="School Loan">Apply for School Loan</a>
+                        <a href="#emi-calculator" class="btn btn-secondary">Check EMI</a>
                     </div>
-                    <h3>School Fee Loan</h3>
-                    <div class="product-subtitle">Flexible Education Loans</div>
-                    <div class="product-amount">&#8377;5,000 - &#8377;20,000</div>
-                    <div class="product-for">For parents managing term fees so children stay in school</div>
-                    <ul class="product-highlights">
-                        <li>Helps prevent fee-driven dropouts</li>
-                        <li>Minimal documentation</li>
-                        <li>Flexible EMI aligned to income cycles</li>
-                        <li>Quick disbursal in 48-72 hours</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for Fee Loan</a>
-                </article>
-
-                <article class="product-card product-card-navy" id="student-loan">
-                    <div class="product-card-top">
-                        <span class="product-number">03</span>
-                        <span class="product-icon">&#127891;</span>
-                    </div>
-                    <h3>Student Loan</h3>
-                    <div class="product-subtitle">Higher Education Funding</div>
-                    <div class="product-amount">Up to &#8377;40 Lakhs</div>
-                    <div class="product-for">For domestic higher education across India</div>
-                    <ul class="product-highlights">
-                        <li>IITs, IIMs, AIIMS, NITs, private universities</li>
-                        <li>Moratorium through course duration</li>
-                        <li>Competitive rates with co-applicant</li>
-                        <li>End-to-end digital application</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for a Student Loan</a>
-                </article>
-
-                <article class="product-card product-card-orange" id="vocational-skills-loan">
-                    <div class="product-card-top">
-                        <span class="product-number">04</span>
-                        <span class="product-icon">&#9881;</span>
-                    </div>
-                    <h3>Vocational &amp; Skills Loan</h3>
-                    <div class="product-subtitle">Skills &amp; Training Support</div>
-                    <div class="product-amount">&#8377;12,000 - &#8377;40,000</div>
-                    <div class="product-for">For short-duration skill &amp; certification courses</div>
-                    <ul class="product-highlights">
-                        <li>NSDC-aligned skilling partners</li>
-                        <li>Data science, IT, healthcare, manufacturing</li>
-                        <li>3-day approval, no conventional collateral</li>
-                        <li>Placement-linked repayment options</li>
-                    </ul>
-                    <a href="#partner" class="btn btn-primary btn-block">Apply for Skills Loan</a>
-                </article>
-
-                <article class="product-card product-card-green" id="school-growth-product">
-                    <div class="product-card-top">
-                        <span class="product-number">05</span>
-                        <span class="product-icon">&#128200;</span>
-                    </div>
-                    <h3>School Growth Program</h3>
-                    <div class="product-subtitle">Leadership &amp; Development</div>
-                    <div class="product-amount">3-year partnership</div>
-                    <div class="product-for">For affordable private schools ready to improve learning outcomes</div>
-                    <ul class="product-highlights">
-                        <li>Annual growth plans and milestone reviews</li>
-                        <li>Teacher and leader development</li>
-                        <li>Peer school networks</li>
-                        <li>Outcome monitoring beyond capital</li>
-                    </ul>
-                    <a href="#school-growth" class="btn btn-primary btn-block">Explore Growth Program</a>
-                </article>
-            </div>
-
-            <article class="overseas-loan-panel" id="overseas-education-loan">
-                <div>
-                    <span class="content-label">Overseas Education Loan</span>
-                    <h3>Study-Abroad Financing</h3>
-                    <p>For study-abroad aspirants across the USA, UK, Canada, Australia, Germany, Ireland, and other leading education destinations.</p>
                 </div>
-                <ul>
-                    <li>Loans up to &#8377;80 Lakhs based on credit profile</li>
-                    <li>Collateral-free options available for select cases</li>
-                    <li>Visa-letter, forex, and counselling ecosystem support</li>
-                </ul>
-                <a href="#partner" class="btn btn-primary">Apply for Overseas Loan</a>
             </article>
 
             <details class="emi-calculator" id="emi-calculator">
@@ -459,6 +361,75 @@
                     </div>
                 </div>
             </details>
+
+            <section class="loan-application" id="loan-application" aria-labelledby="loanApplicationTitle">
+                <div class="application-intro">
+                    <span class="section-label">APPLICATION FORM</span>
+                    <h2 class="section-title" id="loanApplicationTitle">Unified Loan Application</h2>
+                    <p>Use one form for School Loan, College Loan, and Course Loan requests. The fields update based on the selected loan type.</p>
+                </div>
+
+                <form class="application-form" id="loanApplicationForm">
+                    <div class="form-grid">
+                        <label class="form-field form-field-wide" for="applicationLoanType">
+                            <span>Loan Type</span>
+                            <select id="applicationLoanType" name="Loan Type" required>
+                                <option value="School Loan">School Loan</option>
+                                <option value="College Loan">College Loan</option>
+                                <option value="Course Loan">Course Loan</option>
+                            </select>
+                        </label>
+
+                        <label class="form-field" for="applicantName">
+                            <span>Applicant Name</span>
+                            <input id="applicantName" name="Applicant Name" type="text" autocomplete="name" required>
+                        </label>
+
+                        <label class="form-field" for="applicantPhone">
+                            <span>Phone Number</span>
+                            <input id="applicantPhone" name="Phone Number" type="tel" autocomplete="tel" required>
+                        </label>
+
+                        <label class="form-field form-field-wide" for="applicantEmail">
+                            <span>Email ID</span>
+                            <input id="applicantEmail" name="Email ID" type="email" autocomplete="email" required>
+                        </label>
+                    </div>
+
+                    <div class="form-grid form-dynamic-fields" id="applicationDynamicFields">
+                        <label class="form-field" for="schoolName">
+                            <span>School Name</span>
+                            <input id="schoolName" name="School Name" type="text" required>
+                        </label>
+                        <label class="form-field" for="courseName">
+                            <span>Course Name</span>
+                            <input id="courseName" name="Course Name" type="text" required>
+                        </label>
+                        <label class="form-field" for="feeAmount">
+                            <span>Fee Amount</span>
+                            <input id="feeAmount" name="Fee Amount" type="number" min="0" step="100" required>
+                        </label>
+                        <label class="form-field" for="loanAmountRequired">
+                            <span>Loan Amount Required</span>
+                            <input id="loanAmountRequired" name="Loan Amount Required" type="number" min="0" step="100" required>
+                        </label>
+                        <label class="form-field" for="numberOfTerms">
+                            <span>Number of Terms</span>
+                            <input id="numberOfTerms" name="Number of Terms" type="number" min="1" step="1" required>
+                        </label>
+                    </div>
+
+                    <label class="form-field form-field-wide" for="applicationMessage">
+                        <span>Additional Details</span>
+                        <textarea id="applicationMessage" name="Additional Details" rows="4" placeholder="Share location, institution, timing, or any detail our team should know."></textarea>
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" type="submit">Send Application by Email</button>
+                        <p>No data is stored on this website. Submission opens your email app with the completed details addressed to BUFL.</p>
+                    </div>
+                </form>
+            </section>
         </div>
     </section>
 
@@ -472,47 +443,27 @@
                 <p class="flow-subtitle">Capital | Capability | Community</p>
             </div>
 
-            <div class="flow-grid growth-flow">
-                <article class="flow-card flow-blue">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#128203;</span>
-                        <span>&#128200;</span>
-                        <span>&#128176;</span>
-                    </div>
-                    <div class="flow-heading"><span>01</span><h3>3-Year Holistic Support</h3></div>
-                    <ul>
-                        <li>Annual Growth Plans</li>
-                        <li>Milestone Reviews</li>
-                        <li>Capital for Improvement</li>
-                    </ul>
-                </article>
-                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
-                <article class="flow-card flow-orange">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#128105;&#8205;&#127979;</span>
-                        <span>&#9632;</span>
-                        <span>&#128102;</span>
-                    </div>
-                    <div class="flow-heading"><span>02</span><h3>Teacher &amp; Leader Training</h3></div>
-                    <ul>
-                        <li>Pedagogy Workshops</li>
-                        <li>Classroom Management</li>
-                        <li>Child-Safe Practices</li>
-                    </ul>
-                </article>
-                <div class="flow-arrow flow-arrow-green" aria-hidden="true"></div>
-                <article class="flow-card flow-green">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#127979;</span>
-                        <span>&#128101;</span>
-                    </div>
-                    <div class="flow-heading"><span>03</span><h3>Quality in Low-Resource Schools</h3></div>
-                    <ul>
-                        <li>Tier 2 &amp; Tier 3 Schools</li>
-                        <li>Structured Frameworks</li>
-                        <li>Equity in Learning</li>
-                    </ul>
-                </article>
+            <div class="growth-showcase">
+                <figure class="growth-showcase-image">
+                    <img src="assets/generated/school-growth.png" alt="School leaders and teachers planning a growth program">
+                </figure>
+                <div class="growth-showcase-steps">
+                    <article class="growth-step flow-blue">
+                        <span>01</span>
+                        <h3>3-Year Holistic Support</h3>
+                        <p>Annual growth plans, milestone reviews, and capital for improvement.</p>
+                    </article>
+                    <article class="growth-step flow-orange">
+                        <span>02</span>
+                        <h3>Teacher &amp; Leader Training</h3>
+                        <p>Pedagogy workshops, classroom management, and child-safe practices.</p>
+                    </article>
+                    <article class="growth-step flow-green">
+                        <span>03</span>
+                        <h3>Quality in Low-Resource Schools</h3>
+                        <p>Structured frameworks for Tier 2 and Tier 3 schools with equity in learning.</p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -526,13 +477,9 @@
                 <p class="section-subtitle">School leaders learn fastest from each other. Partner schools form local clusters that share challenges, solutions, and accountability.</p>
             </div>
 
-            <div class="flow-grid network-flow">
+            <div class="flow-grid network-flow network-photo-flow">
                 <article class="flow-card flow-blue">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#127979;</span>
-                        <span>&#127979;</span>
-                        <span>&#127979;</span>
-                    </div>
+                    <img class="flow-photo" src="assets/generated/school-network.png" alt="School leaders in a peer learning discussion">
                     <div class="flow-heading"><span>01</span><h3>Local Peer Clusters</h3></div>
                     <ul>
                         <li>Small networks of 8-12 nearby schools</li>
@@ -541,11 +488,7 @@
                 </article>
                 <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
                 <article class="flow-card flow-orange">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#128161;</span>
-                        <span>&#9881;</span>
-                        <span>&#128172;</span>
-                    </div>
+                    <img class="flow-photo" src="assets/generated/school-growth.png" alt="Education team exchanging best practices">
                     <div class="flow-heading"><span>02</span><h3>Best-Practice Exchange</h3></div>
                     <ul>
                         <li>Sharing Innovations &amp; Strategies</li>
@@ -554,10 +497,7 @@
                 </article>
                 <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
                 <article class="flow-card flow-green">
-                    <div class="flow-illustration" aria-hidden="true">
-                        <span>&#128188;</span>
-                        <span>&#128104;&#8205;&#128105;&#8205;&#128103;</span>
-                    </div>
+                    <img class="flow-photo" src="assets/generated/why-bufl.png" alt="Education specialist guiding parents and school owners">
                     <div class="flow-heading"><span>03</span><h3>Education Specialists</h3></div>
                     <ul>
                         <li>Expert Facilitation &amp; Support</li>
@@ -642,7 +582,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">WHO CAN APPLY</span>
-                <h2 class="section-title">Requirements</h2>
+                <h2 class="section-title">Who Can Apply</h2>
             </div>
 
             <div class="eligibility-grid">
@@ -694,41 +634,51 @@
                 <h2 class="section-title">Why Bharat Uday Finserve (BUFL)?</h2>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Loan decisions in 48 hours, disbursal in 7-15 days</p>
-                </div>
+            <div class="why-visual-grid">
+                <figure class="why-visual">
+                    <img src="assets/generated/why-bufl.png" alt="BUFL advisor helping a school owner and parent review education finance">
+                    <figcaption>
+                        <strong>48-hour decisions</strong>
+                        <span>Digital process with local relationship support</span>
+                    </figcaption>
+                </figure>
 
-                <div class="feature-box">
-                    <div class="feature-icon">&#128196;</div>
-                    <h3>Paperless Process</h3>
-                    <p>100% digital application, no branch visit needed</p>
-                </div>
+                <div class="why-benefits">
+                    <div class="feature-box">
+                        <div class="feature-icon">&#9889;</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Loan decisions in 48 hours, disbursal in 7-15 days</p>
+                    </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">&#128275;</div>
-                    <h3>Collateral-Free</h3>
-                    <p>No security required for loans up to &#8377;40 Lakhs</p>
-                </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">&#128196;</div>
+                        <h3>Paperless Process</h3>
+                        <p>100% digital application, no branch visit needed</p>
+                    </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">&#127760;</div>
-                    <h3>Pan-India Reach</h3>
-                    <p>Serving 200+ cities across 15+ states</p>
-                </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">&#128275;</div>
+                        <h3>Collateral-Free</h3>
+                        <p>No security required for loans up to &#8377;40 Lakhs</p>
+                    </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">&#128172;</div>
-                    <h3>Personal Manager</h3>
-                    <p>A dedicated relationship manager for every borrower</p>
-                </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">&#127760;</div>
+                        <h3>Pan-India Reach</h3>
+                        <p>Serving 200+ cities across 15+ states</p>
+                    </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">&#128200;</div>
-                    <h3>Value Enhancement</h3>
-                    <p>Beyond loans &mdash; capacity building, mentorship, and outcome support</p>
+                    <div class="feature-box">
+                        <div class="feature-icon">&#128172;</div>
+                        <h3>Personal Manager</h3>
+                        <p>A dedicated relationship manager for every borrower</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon">&#128200;</div>
+                        <h3>Value Enhancement</h3>
+                        <p>Beyond loans &mdash; capacity building, mentorship, and outcome support</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -760,60 +710,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title">Questions Borrowers Ask Most</h2>
-                <p class="section-subtitle">Quick answers for schools, parents, students, and skill learners.</p>
-            </div>
-
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Who is eligible for each loan type?</summary>
-                    <p>School proprietors can apply for school improvement loans, parents can apply for school fee finance, students with confirmed admission can apply for student or overseas education loans, and learners enrolled with eligible training partners can apply for vocational and skills loans.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What documents are required to apply?</summary>
-                    <p>Typical documents include Aadhaar, PAN, address proof, bank statements, income proof, admission or fee documents, and school or course details. School loans may also require registration, fee collection, and operating records.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What are the interest rates and repayment terms?</summary>
-                    <p>Rates and tenures depend on product type, borrower profile, loan amount, and credit assessment. BUFL shares the applicable rate, EMI, fees, and repayment schedule before sanction.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How long does the approval process take?</summary>
-                    <p>Fee finance and skill loans may move in 48-72 hours once documents are complete. Student, overseas, and school improvement loans can take longer depending on verification and underwriting.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Can schools apply for the School Growth Program?</summary>
-                    <p>Yes. Affordable private schools can express interest in the School Growth Program, especially if they are ready for a structured 3-year improvement journey across capital, capability, and community.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Is there a moratorium period for student loans?</summary>
-                    <p>Eligible student loans may include a moratorium during the course period, subject to loan structure, institution, co-applicant profile, and final sanction terms.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How is the loan disbursed?</summary>
-                    <p>Disbursal can be made directly to the school, college, university, training provider, or borrower account depending on the approved product, fee schedule, and compliance requirements.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What makes BUFL different from traditional banks?</summary>
-                    <p>BUFL combines education-first underwriting, local relationship support, digital workflows, and value enhancement programs so funding is connected to measurable learning outcomes.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Can parents apply for fee financing mid-year?</summary>
-                    <p>Yes. Parents may request fee financing mid-year if the child is enrolled in a recognized school and the fee requirement, income profile, and KYC documents meet BUFL's criteria.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How do I contact BUFL or request a callback?</summary>
-                    <p>Use the Apply Now or Partner With Us links, email info@bharatudayfinserve.in, or call 1800-200-UDAY (8329) from Monday to Saturday, 9 AM to 6 PM.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -823,7 +719,7 @@
                         <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img" />
                     </div>
                     <div class="footer-tagline">Empowering India, One Education at a Time</div>
-                    <p class="footer-description">Full-spectrum EduFinance for India &mdash; funding paired with value enhancement, from student aspirations to school transformation.</p>
+                    <p class="footer-description">EduFinance for India &mdash; funding paired with value enhancement, from student aspirations to school transformation.</p>
                 </div>
 
                 <div class="footer-col">
@@ -831,13 +727,12 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#phystal">The Phystal Approach</a></li>
                         <li><a href="#products">Loan Products</a></li>
                         <li><a href="#emi-calculator">EMI Calculator</a></li>
-                        <li><a href="#school-growth">School Growth Program</a></li>
+                        <li><a href="#eligibility">Who Can Apply</a></li>
                         <li><a href="#school-network">School Network</a></li>
                         <li><a href="#data-monitoring">Data &amp; Monitoring</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="assets/faqs-bufl.pdf" download>Download FAQs (PDF)</a></li>
                         <li><a href="#partner">Partner With Us</a></li>
                     </ul>
                 </div>

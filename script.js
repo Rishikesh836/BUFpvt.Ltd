@@ -75,7 +75,12 @@ if (loansDropdownToggle) {
 }
 
 dropdownLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+        const productKey = link.dataset.productKey;
+        if (productKey) {
+            event.preventDefault();
+            showProductDetail(productKey, true);
+        }
         closeLoansDropdown();
         closeMenu();
     });
@@ -124,16 +129,12 @@ window.addEventListener('scroll', () => {
 });
 
 function updateActiveNavLink() {
-    const trackedElements = document.querySelectorAll('section[id], .product-card[id], .overseas-loan-panel[id], #emi-calculator');
+    const trackedElements = document.querySelectorAll('section[id], .product-detail-view[id], .product-card[id], #emi-calculator');
     const scrollPosition = window.scrollY + 140;
     const loanIds = new Set([
         'products',
-        'school-improvement-loan',
-        'school-fee-loan',
-        'student-loan',
-        'overseas-education-loan',
-        'vocational-skills-loan',
-        'school-growth-product'
+        'product-detail',
+        'loan-application'
     ]);
     let activeId = '';
 
@@ -162,6 +163,294 @@ function updateActiveNavLink() {
     if (loansDropdownToggle && loanIds.has(activeId)) {
         loansDropdownToggle.classList.add('active');
     }
+}
+
+// ===========================
+// Single Product Detail View
+// ===========================
+
+const productCatalog = {
+    'school-improvement': {
+        colorClass: 'product-card-blue',
+        number: '01',
+        status: 'Applications open',
+        title: 'School Improvement Loan',
+        subtitle: 'Infrastructure Upgrades',
+        audience: 'For school owners building better learning environments.',
+        amount: 'Up to ₹25 Lakhs',
+        timeline: '7-15 day disbursal after sanction',
+        image: 'assets/generated/school-improvement.png',
+        alt: 'Students learning in an improved classroom',
+        highlights: [
+            'Classrooms, labs, equipment, furniture, and learning materials',
+            'Water, bathrooms, sanitation, and safety improvements',
+            'Cashflow-based underwriting with practical collateral options'
+        ],
+        applyLabel: 'Apply for School Loan',
+        applyType: 'School Loan'
+    },
+    'school-fee': {
+        colorClass: 'product-card-gold',
+        number: '02',
+        status: 'Applications open',
+        title: 'School Fee Loan',
+        subtitle: 'Flexible Education Loans',
+        audience: 'For parents managing term fees so children stay in school.',
+        amount: '₹5,000 - ₹20,000',
+        timeline: '48-72 hour movement after documents',
+        image: 'assets/generated/fee-finance.png',
+        alt: 'Parent and child reviewing school fee documents',
+        highlights: [
+            'Helps prevent fee-driven dropouts',
+            'Minimal documentation with flexible EMI options',
+            'Designed for mid-year or term-wise fee needs'
+        ],
+        applyLabel: 'Apply for School Loan',
+        applyType: 'School Loan'
+    },
+    student: {
+        colorClass: 'product-card-navy',
+        number: '03',
+        status: 'Applications open',
+        title: 'Student Loan',
+        subtitle: 'Higher Education Funding',
+        audience: 'For domestic higher education across India.',
+        amount: 'Up to ₹40 Lakhs',
+        timeline: 'Moratorium available for eligible cases',
+        image: 'assets/generated/student-loan.png',
+        alt: 'Students walking on a college campus',
+        highlights: [
+            'Supports recognized colleges, universities, and professional programs',
+            'Competitive rates with eligible co-applicant',
+            'End-to-end digital application support'
+        ],
+        applyLabel: 'Apply for College Loan',
+        applyType: 'College Loan'
+    },
+    overseas: {
+        colorClass: 'product-card-navy',
+        number: 'OS',
+        status: 'Applications open',
+        title: 'Overseas Education Loan',
+        subtitle: 'Study-Abroad Financing',
+        audience: 'For study-abroad aspirants across leading education destinations.',
+        amount: 'Up to ₹80 Lakhs',
+        timeline: 'Subject to admission, visa, and credit assessment',
+        image: 'assets/generated/student-loan.png',
+        alt: 'Students on a modern college campus',
+        highlights: [
+            'USA, UK, Canada, Australia, Germany, Ireland, and other destinations',
+            'Collateral-free options for select cases',
+            'Visa-letter, forex, and counselling ecosystem support'
+        ],
+        applyLabel: 'Apply for College Loan',
+        applyType: 'College Loan'
+    },
+    vocational: {
+        colorClass: 'product-card-orange',
+        number: '04',
+        status: 'Applications open',
+        title: 'Vocational & Skills Loan',
+        subtitle: 'Skills & Training Support',
+        audience: 'For short-duration skill, certification, and employability courses.',
+        amount: '₹12,000 - ₹40,000',
+        timeline: '3-day approval for eligible programs',
+        image: 'assets/generated/skills-loan.png',
+        alt: 'Learners in a vocational skills workshop',
+        highlights: [
+            'Supports eligible skilling and training partners',
+            'Useful for IT, healthcare, manufacturing, and practical programs',
+            'Placement-linked repayment options for eligible courses'
+        ],
+        applyLabel: 'Apply for Course Loan',
+        applyType: 'Course Loan'
+    },
+    'school-growth': {
+        colorClass: 'product-card-green',
+        number: '05',
+        status: 'Expression of interest open',
+        title: 'School Growth Program',
+        subtitle: 'Leadership & Development',
+        audience: 'For affordable private schools ready to improve learning outcomes.',
+        amount: '3-year partnership',
+        timeline: 'Capital | Capability | Community',
+        image: 'assets/generated/school-growth.png',
+        alt: 'School leaders and teachers planning growth',
+        highlights: [
+            'Annual growth plans and milestone reviews',
+            'Teacher and leader development',
+            'Peer school networks and outcome monitoring beyond capital'
+        ],
+        applyLabel: 'Apply for School Loan',
+        applyType: 'School Loan'
+    }
+};
+
+const productDetailView = document.querySelector('[data-product-detail]');
+const productDetailImage = document.getElementById('productDetailImage');
+const productDetailNumber = document.getElementById('productDetailNumber');
+const productDetailStatus = document.getElementById('productDetailStatus');
+const productDetailTitle = document.getElementById('productDetailTitle');
+const productDetailSubtitle = document.getElementById('productDetailSubtitle');
+const productDetailFor = document.getElementById('productDetailFor');
+const productDetailAmount = document.getElementById('productDetailAmount');
+const productDetailTimeline = document.getElementById('productDetailTimeline');
+const productDetailList = document.getElementById('productDetailList');
+const productApplyButton = document.getElementById('productApplyButton');
+const productColorClasses = ['product-card-blue', 'product-card-gold', 'product-card-navy', 'product-card-orange', 'product-card-green'];
+
+function showProductDetail(productKey, shouldScroll = false) {
+    const product = productCatalog[productKey];
+    if (!product || !productDetailView) return;
+
+    productDetailView.classList.remove(...productColorClasses);
+    productDetailView.classList.add(product.colorClass);
+    productDetailView.dataset.productKey = productKey;
+
+    productDetailImage.src = product.image;
+    productDetailImage.alt = product.alt;
+    productDetailNumber.textContent = product.number;
+    productDetailStatus.textContent = product.status;
+    productDetailTitle.textContent = product.title;
+    productDetailSubtitle.textContent = product.subtitle;
+    productDetailFor.textContent = product.audience;
+    productDetailAmount.textContent = product.amount;
+    productDetailTimeline.textContent = product.timeline;
+    productApplyButton.textContent = product.applyLabel;
+    productApplyButton.dataset.applyLoan = product.applyType;
+
+    productDetailList.replaceChildren();
+    product.highlights.forEach(highlight => {
+        const item = document.createElement('li');
+        item.textContent = highlight;
+        productDetailList.appendChild(item);
+    });
+
+    if (shouldScroll) {
+        scrollToTarget('#product-detail');
+    }
+}
+
+document.querySelectorAll('[data-product-key]').forEach(trigger => {
+    if (trigger.classList.contains('dropdown-link') || trigger.classList.contains('product-slide')) return;
+    trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        showProductDetail(trigger.dataset.productKey, true);
+    });
+});
+
+// ===========================
+// Unified Email-Only Loan Application
+// ===========================
+
+const clientEmail = 'info@bharatudayfinserve.in';
+const loanApplicationForm = document.getElementById('loanApplicationForm');
+const applicationLoanType = document.getElementById('applicationLoanType');
+const applicationDynamicFields = document.getElementById('applicationDynamicFields');
+
+const applicationFieldSets = {
+    'School Loan': [
+        { id: 'schoolName', label: 'School Name', name: 'School Name', type: 'text' },
+        { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
+        { id: 'feeAmount', label: 'Fee Amount', name: 'Fee Amount', type: 'number' },
+        { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
+        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+    ],
+    'College Loan': [
+        { id: 'collegeName', label: 'College / University Name', name: 'College / University Name', type: 'text' },
+        { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
+        { id: 'feeAmount', label: 'Fee Amount', name: 'Fee Amount', type: 'number' },
+        { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
+        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+    ],
+    'Course Loan': [
+        { id: 'trainingProvider', label: 'Training Institute / Course Provider', name: 'Training Institute / Course Provider', type: 'text' },
+        { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
+        { id: 'feeAmount', label: 'Course Fee Amount', name: 'Course Fee Amount', type: 'number' },
+        { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
+        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+    ]
+};
+
+function createApplicationField(field) {
+    const label = document.createElement('label');
+    label.className = 'form-field';
+    label.setAttribute('for', field.id);
+
+    const labelText = document.createElement('span');
+    labelText.textContent = field.label;
+
+    const input = document.createElement('input');
+    input.id = field.id;
+    input.name = field.name;
+    input.type = field.type;
+    input.required = true;
+
+    if (field.type === 'number') {
+        input.min = field.id === 'numberOfTerms' ? '1' : '0';
+        input.step = field.id === 'numberOfTerms' ? '1' : '100';
+    }
+
+    label.append(labelText, input);
+    return label;
+}
+
+function renderApplicationFields(loanType) {
+    if (!applicationDynamicFields) return;
+    const fields = applicationFieldSets[loanType] || applicationFieldSets['School Loan'];
+    applicationDynamicFields.replaceChildren(...fields.map(createApplicationField));
+}
+
+function setApplicationLoanType(loanType, shouldScroll = false) {
+    if (!applicationLoanType) return;
+    applicationLoanType.value = applicationFieldSets[loanType] ? loanType : 'School Loan';
+    renderApplicationFields(applicationLoanType.value);
+
+    if (shouldScroll) {
+        scrollToTarget('#loan-application');
+    }
+}
+
+if (applicationLoanType) {
+    applicationLoanType.addEventListener('change', () => {
+        renderApplicationFields(applicationLoanType.value);
+    });
+    renderApplicationFields(applicationLoanType.value);
+}
+
+document.addEventListener('click', (event) => {
+    const applyTrigger = event.target.closest('[data-apply-loan]');
+    if (!applyTrigger) return;
+    event.preventDefault();
+    closeMenu();
+    closeLoansDropdown();
+    setApplicationLoanType(applyTrigger.dataset.applyLoan || 'School Loan', true);
+});
+
+if (loanApplicationForm) {
+    loanApplicationForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!loanApplicationForm.reportValidity()) return;
+
+        const formData = new FormData(loanApplicationForm);
+        const lines = [];
+        formData.forEach((value, key) => {
+            lines.push(`${key}: ${value}`);
+        });
+
+        const loanType = formData.get('Loan Type') || 'Loan';
+        const subject = `BUFL ${loanType} Application`;
+        const body = [
+            'New loan application submitted from the Bharat Uday Finserve website.',
+            '',
+            ...lines,
+            '',
+            'No website database storage was used for this submission.'
+        ].join('\n');
+
+        window.location.href = `mailto:${clientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
 }
 
 // ===========================
@@ -223,7 +512,11 @@ if (slider) {
 
     slides.forEach(slide => {
         slide.addEventListener('click', () => {
-            scrollToTarget(slide.dataset.slideLink);
+            if (slide.dataset.productKey) {
+                showProductDetail(slide.dataset.productKey, true);
+            } else {
+                scrollToTarget(slide.dataset.slideLink);
+            }
         });
     });
 
@@ -358,7 +651,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.querySelectorAll(
-    '.section-header, .product-card, .director-card, .eligibility-column, .feature-box, .footer-col, .data-card, .cta-card, .identity-card, .vision-card, .mission-card, .flow-card, .overseas-loan-panel, .emi-calculator, .faq-item, .phystal-layout'
+    '.section-header, .product-detail-view, .loan-application, .director-card, .eligibility-column, .feature-box, .footer-col, .data-card, .cta-card, .identity-card, .vision-card, .mission-card, .flow-card, .growth-step, .why-visual, .emi-calculator'
 ).forEach(element => {
     observer.observe(element);
 });
