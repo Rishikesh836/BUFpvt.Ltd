@@ -318,7 +318,14 @@ function showProductDetail(productKey, shouldScroll = false) {
     productDetailAmount.textContent = product.amount;
     productDetailTimeline.textContent = product.timeline;
     productApplyButton.textContent = product.applyLabel;
-    productApplyButton.dataset.applyLoan = product.applyType;
+    const hasApplicationForm = Boolean(document.getElementById('loanApplicationForm'));
+    if (hasApplicationForm) {
+        productApplyButton.href = '#loan-application';
+        productApplyButton.dataset.applyLoan = product.applyType;
+    } else {
+        productApplyButton.href = `loan-detail.html?product=${productKey}#loan-application`;
+        delete productApplyButton.dataset.applyLoan;
+    }
 
     productDetailList.replaceChildren();
     product.highlights.forEach(highlight => {

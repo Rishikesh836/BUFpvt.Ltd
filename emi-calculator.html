@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator &mdash; Bharat Uday Finserve Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-logo">
+                <img src="logo-transparent.png" alt="Bharat Uday Finserve Pvt Ltd" class="logo-img" />
+                <span class="logo-abbr">BUFL</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-dropdown" id="loansNavItem">
+                    <button class="nav-link nav-dropdown-toggle" id="loansDropdownToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="loansDropdown">
+                        Loans
+                        <span class="dropdown-chevron" aria-hidden="true"></span>
+                    </button>
+                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Loan products">
+                        <li><a href="loan-detail.html?product=school-improvement" class="dropdown-link" data-product-key="school-improvement">School Improvement Loan</a></li>
+                        <li><a href="loan-detail.html?product=school-fee" class="dropdown-link" data-product-key="school-fee">School Fee Loan</a></li>
+                        <li><a href="loan-detail.html?product=student" class="dropdown-link" data-product-key="student">Student Loan</a></li>
+                        <li><a href="loan-detail.html?product=overseas" class="dropdown-link" data-product-key="overseas">Overseas Education Loan</a></li>
+                        <li><a href="loan-detail.html?product=vocational" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
+                    </ul>
+                </li>
+                <li><a href="emi-calculator.html" class="nav-link nav-link-highlight active">EMI Calculator</a></li>
+                <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="index.html#partner" class="nav-link">Partner</a></li>
+                <li class="nav-menu-cta"><a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply Now</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <main class="standalone-page emi-page">
+        <section class="standalone-hero">
+            <div class="container">
+                <span class="section-label">EMI CALCULATOR</span>
+                <h1>Plan Your Education Finance</h1>
+                <p>Estimate monthly repayment, total interest, and total payable amount before you apply.</p>
+            </div>
+        </section>
+
+        <section class="emi-standalone-section">
+            <div class="container">
+                <div class="emi-standalone-panel">
+                    <div class="emi-standalone-inputs">
+                        <span class="content-label">Inputs</span>
+                        <h2>Loan Assumptions</h2>
+                        <label for="loanAmount">Loan Amount</label>
+                        <div class="range-row">
+                            <input type="range" id="loanAmountRange" min="5000" max="8000000" step="5000" value="500000">
+                            <input type="number" id="loanAmount" min="5000" max="8000000" step="5000" value="500000">
+                        </div>
+
+                        <label for="interestRate">Rate of Interest (% per annum)</label>
+                        <input type="number" id="interestRate" min="1" max="36" step="0.1" value="11.5">
+
+                        <div class="tenure-header">
+                            <label for="loanTenure">Loan Tenure</label>
+                            <div class="tenure-toggle" role="group" aria-label="Tenure unit">
+                                <input type="radio" name="tenureUnit" id="tenureYears" value="years" checked>
+                                <label for="tenureYears">Years</label>
+                                <input type="radio" name="tenureUnit" id="tenureMonths" value="months">
+                                <label for="tenureMonths">Months</label>
+                            </div>
+                        </div>
+                        <input type="number" id="loanTenure" min="1" max="30" step="1" value="5">
+                    </div>
+
+                    <div class="emi-standalone-results" aria-live="polite">
+                        <span class="content-label">Results</span>
+                        <h2>Repayment Estimate</h2>
+                        <div class="emi-result-card">
+                            <span>Monthly EMI</span>
+                            <strong id="monthlyEmi">&#8377;0</strong>
+                        </div>
+                        <div class="emi-result-card">
+                            <span>Total Interest Payable</span>
+                            <strong id="totalInterest">&#8377;0</strong>
+                        </div>
+                        <div class="emi-result-card">
+                            <span>Total Amount Payable</span>
+                            <strong id="totalPayable">&#8377;0</strong>
+                        </div>
+                        <div class="emi-split" aria-label="Principal and interest split">
+                            <div class="emi-split-bar">
+                                <span class="principal-bar" id="principalBar"></span>
+                                <span class="interest-bar" id="interestBar"></span>
+                            </div>
+                            <div class="emi-split-legend">
+                                <span><i class="legend-principal"></i>Principal</span>
+                                <span><i class="legend-interest"></i>Interest</span>
+                            </div>
+                        </div>
+                        <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

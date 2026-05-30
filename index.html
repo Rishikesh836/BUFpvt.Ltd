@@ -32,15 +32,15 @@
                         <li><a href="loan-detail.html?product=vocational" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
                     </ul>
                 </li>
-                <li><a href="#emi-calculator" class="nav-link nav-link-highlight">EMI Calculator</a></li>
-                <li><a href="#eligibility" class="nav-link">Who Can Apply</a></li>
+                <li><a href="emi-calculator.html" class="nav-link nav-link-highlight" target="_blank" rel="noopener">EMI Calculator</a></li>
+                <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
                 <li><a href="#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="#partner" class="nav-link">Partner</a></li>
-                <li class="nav-menu-cta"><a href="#loan-application" class="btn btn-primary" data-apply-loan="School Loan">Apply Now</a></li>
+                <li class="nav-menu-cta"><a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply Now</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#loan-application" class="btn btn-primary nav-apply" data-apply-loan="School Loan">Apply Now</a>
+                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
                 <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
@@ -59,8 +59,8 @@
             <h1 class="hero-headline">Education Finance for <em>Bharat</em></h1>
             <p class="hero-subheadline">We combine physical reach and digital efficiency to partner with schools, parents, and financial institutions &mdash; making quality education accessible for every child.</p>
             <div class="hero-ctas">
-                <a href="#loan-application" class="btn btn-primary" data-apply-loan="College Loan">Apply for a Student Loan</a>
-                <a href="#loan-application" class="btn btn-secondary" data-apply-loan="School Loan">Apply for a School Loan</a>
+                <a href="loan-detail.html?product=student#loan-application" class="btn btn-primary">Apply for a Student Loan</a>
+                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-secondary">Apply for a School Loan</a>
             </div>
         </div>
     </section>
@@ -144,51 +144,57 @@
     <!-- About Us Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="vision-mission-lines">
-                <p><strong>Vision:</strong> Universal quality education enabled by sustainable financial access</p>
-                <p><strong>Mission:</strong> Make quality education accessible for every child</p>
+            <div class="vision-mission-showcase">
+                <article class="vm-panel vm-vision">
+                    <div class="vm-icon" aria-hidden="true">🌟</div>
+                    <span>Vision</span>
+                    <p>Universal quality education enabled by sustainable financial access</p>
+                </article>
+                <article class="vm-panel vm-mission">
+                    <div class="vm-icon" aria-hidden="true">🎯</div>
+                    <span>Mission</span>
+                    <p>Make quality education accessible for every child</p>
+                </article>
             </div>
 
             <!-- Full-Width Pillars Section -->
             <div class="pillars-section">
                 <div class="pillars-heading">
                     <span class="section-label">INTERCONNECTED PILLARS</span>
-                    <h3>Five Interconnected Pillars</h3>
-                    <p>Capital, fee finance, higher education, skills, and school growth working together across the learning chain.</p>
+                    <h3>End to End Education Financing System</h3>
                 </div>
                 <div class="pillars-visual">
                     <div class="pillars-colonnade">
                         <a class="pillar photo-pillar photo-pillar-blue" href="#product-detail" data-product-key="school-improvement">
                             <img src="assets/generated/school-improvement.png" alt="Students learning in a classroom">
-                            <span class="pillar-number">1</span>
                             <span class="pillar-icon">&#127979;</span>
                             <span class="pillar-label">School Improvement Capital</span>
                             <span class="pillar-subtitle">Infrastructure Upgrades</span>
                         </a>
+                        <span class="pillar-connector" style="--i: 1" aria-hidden="true"></span>
                         <a class="pillar photo-pillar photo-pillar-gold" href="#product-detail" data-product-key="school-fee">
                             <img src="assets/generated/fee-finance.png" alt="Family and child education support">
-                            <span class="pillar-number">2</span>
                             <span class="pillar-icon">&#8377;</span>
                             <span class="pillar-label">Fee Finance for Parents</span>
                             <span class="pillar-subtitle">Flexible Education Loans</span>
                         </a>
+                        <span class="pillar-connector" style="--i: 2" aria-hidden="true"></span>
                         <a class="pillar photo-pillar photo-pillar-navy" href="#product-detail" data-product-key="student">
                             <img src="assets/generated/student-loan.png" alt="Students on a university campus">
-                            <span class="pillar-number">3</span>
                             <span class="pillar-icon">&#127891;</span>
                             <span class="pillar-label">Student Loans</span>
                             <span class="pillar-subtitle">Higher Education Funding</span>
                         </a>
+                        <span class="pillar-connector" style="--i: 3" aria-hidden="true"></span>
                         <a class="pillar photo-pillar photo-pillar-orange" href="#product-detail" data-product-key="vocational">
                             <img src="assets/generated/skills-loan.png" alt="Hands-on vocational training">
-                            <span class="pillar-number">4</span>
                             <span class="pillar-icon">&#9881;</span>
                             <span class="pillar-label">Vocational &amp; Skill Loans</span>
                             <span class="pillar-subtitle">Skills &amp; Training Support</span>
                         </a>
+                        <span class="pillar-connector" style="--i: 4" aria-hidden="true"></span>
                         <a class="pillar photo-pillar photo-pillar-green" href="#product-detail" data-product-key="school-growth">
                             <img src="assets/generated/school-growth.png" alt="Education leaders planning growth">
-                            <span class="pillar-number">5</span>
                             <span class="pillar-icon">&#128200;</span>
                             <span class="pillar-label">School Growth Program</span>
                             <span class="pillar-subtitle">Leadership &amp; Development</span>
@@ -222,27 +228,27 @@
                     <span class="content-label">Our Core Values</span>
                     <div class="core-values-visual" aria-label="Our Core Values">
                         <div class="value-pillar value-integrity">
-                            <div class="value-index">01</div>
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Professional handshake representing integrity">
                             <h3>Integrity</h3>
                             <p>Transparency &amp; Ethics</p>
                         </div>
                         <div class="value-pillar value-innovation">
-                            <div class="value-index">02</div>
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Creative idea session representing innovation">
                             <h3>Innovation</h3>
                             <p>Creative Solutions</p>
                         </div>
                         <div class="value-pillar value-inclusion">
-                            <div class="value-index">03</div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Diverse group learning together representing inclusion">
                             <h3>Inclusion</h3>
                             <p>Access for All</p>
                         </div>
                         <div class="value-pillar value-impact">
-                            <div class="value-index">04</div>
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Graduation celebration representing student success">
                             <h3>Impact</h3>
                             <p>Student Success</p>
                         </div>
                         <div class="value-pillar value-partnership">
-                            <div class="value-index">05</div>
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Team collaboration representing partnership">
                             <h3>Partnership</h3>
                             <p>Collaborative Growth</p>
                         </div>
@@ -255,12 +261,6 @@
     <!-- Loan Detail, Calculator & Application Section -->
     <section class="loan-hub" id="products">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">LOAN DETAILS</span>
-                <h2 class="section-title">One Product View at a Time</h2>
-                <p class="section-subtitle">Select a loan from the header or the interconnected pillars to view its details, current status, and next step.</p>
-            </div>
-
             <article class="product-detail-view product-card-blue" id="product-detail" data-product-detail>
                 <div class="product-detail-media">
                     <img id="productDetailImage" src="assets/generated/school-improvement.png" alt="Students learning in an improved classroom">
@@ -281,135 +281,11 @@
                         <li>Cashflow-based underwriting with practical collateral options</li>
                     </ul>
                     <div class="product-detail-actions">
-                        <a href="#loan-application" class="btn btn-primary" id="productApplyButton" data-apply-loan="School Loan">Apply for School Loan</a>
-                        <a href="#emi-calculator" class="btn btn-secondary">Check EMI</a>
+                        <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary" id="productApplyButton">Apply for School Loan</a>
                     </div>
                 </div>
             </article>
 
-            <details class="emi-calculator" id="emi-calculator">
-                <summary>
-                    <span>EMI Calculator</span>
-                    <small>Estimate monthly repayment before you apply</small>
-                </summary>
-                <div class="emi-calculator-body">
-                    <div class="emi-inputs">
-                        <label for="loanAmount">Loan Amount</label>
-                        <div class="range-row">
-                            <input type="range" id="loanAmountRange" min="5000" max="8000000" step="5000" value="500000">
-                            <input type="number" id="loanAmount" min="5000" max="8000000" step="5000" value="500000">
-                        </div>
-
-                        <label for="interestRate">Rate of Interest (% per annum)</label>
-                        <input type="number" id="interestRate" min="1" max="36" step="0.1" value="11.5">
-
-                        <div class="tenure-header">
-                            <label for="loanTenure">Loan Tenure</label>
-                            <div class="tenure-toggle" role="group" aria-label="Tenure unit">
-                                <input type="radio" name="tenureUnit" id="tenureYears" value="years" checked>
-                                <label for="tenureYears">Years</label>
-                                <input type="radio" name="tenureUnit" id="tenureMonths" value="months">
-                                <label for="tenureMonths">Months</label>
-                            </div>
-                        </div>
-                        <input type="number" id="loanTenure" min="1" max="30" step="1" value="5">
-                    </div>
-
-                    <div class="emi-results" aria-live="polite">
-                        <div class="emi-result-card">
-                            <span>Monthly EMI</span>
-                            <strong id="monthlyEmi">&#8377;0</strong>
-                        </div>
-                        <div class="emi-result-card">
-                            <span>Total Interest Payable</span>
-                            <strong id="totalInterest">&#8377;0</strong>
-                        </div>
-                        <div class="emi-result-card">
-                            <span>Total Amount Payable</span>
-                            <strong id="totalPayable">&#8377;0</strong>
-                        </div>
-                        <div class="emi-split" aria-label="Principal and interest split">
-                            <div class="emi-split-bar">
-                                <span class="principal-bar" id="principalBar"></span>
-                                <span class="interest-bar" id="interestBar"></span>
-                            </div>
-                            <div class="emi-split-legend">
-                                <span><i class="legend-principal"></i>Principal</span>
-                                <span><i class="legend-interest"></i>Interest</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </details>
-
-            <section class="loan-application" id="loan-application" aria-labelledby="loanApplicationTitle">
-                <div class="application-intro">
-                    <span class="section-label">APPLICATION FORM</span>
-                    <h2 class="section-title" id="loanApplicationTitle">Unified Loan Application</h2>
-                    <p>Use one form for School Loan, College Loan, and Course Loan requests. The fields update based on the selected loan type.</p>
-                </div>
-
-                <form class="application-form" id="loanApplicationForm">
-                    <div class="form-grid">
-                        <label class="form-field form-field-wide" for="applicationLoanType">
-                            <span>Loan Type</span>
-                            <select id="applicationLoanType" name="Loan Type" required>
-                                <option value="School Loan">School Loan</option>
-                                <option value="College Loan">College Loan</option>
-                                <option value="Course Loan">Course Loan</option>
-                            </select>
-                        </label>
-
-                        <label class="form-field" for="applicantName">
-                            <span>Applicant Name</span>
-                            <input id="applicantName" name="Applicant Name" type="text" autocomplete="name" required>
-                        </label>
-
-                        <label class="form-field" for="applicantPhone">
-                            <span>Phone Number</span>
-                            <input id="applicantPhone" name="Phone Number" type="tel" autocomplete="tel" required>
-                        </label>
-
-                        <label class="form-field form-field-wide" for="applicantEmail">
-                            <span>Email ID</span>
-                            <input id="applicantEmail" name="Email ID" type="email" autocomplete="email" required>
-                        </label>
-                    </div>
-
-                    <div class="form-grid form-dynamic-fields" id="applicationDynamicFields">
-                        <label class="form-field" for="schoolName">
-                            <span>School Name</span>
-                            <input id="schoolName" name="School Name" type="text" required>
-                        </label>
-                        <label class="form-field" for="courseName">
-                            <span>Course Name</span>
-                            <input id="courseName" name="Course Name" type="text" required>
-                        </label>
-                        <label class="form-field" for="feeAmount">
-                            <span>Fee Amount</span>
-                            <input id="feeAmount" name="Fee Amount" type="number" min="0" step="100" required>
-                        </label>
-                        <label class="form-field" for="loanAmountRequired">
-                            <span>Loan Amount Required</span>
-                            <input id="loanAmountRequired" name="Loan Amount Required" type="number" min="0" step="100" required>
-                        </label>
-                        <label class="form-field" for="numberOfTerms">
-                            <span>Number of Terms</span>
-                            <input id="numberOfTerms" name="Number of Terms" type="number" min="1" step="1" required>
-                        </label>
-                    </div>
-
-                    <label class="form-field form-field-wide" for="applicationMessage">
-                        <span>Additional Details</span>
-                        <textarea id="applicationMessage" name="Additional Details" rows="4" placeholder="Share location, institution, timing, or any detail our team should know."></textarea>
-                    </label>
-
-                    <div class="form-actions">
-                        <button class="btn btn-primary" type="submit">Send Application by Email</button>
-                        <p>No data is stored on this website. Submission opens your email app with the completed details addressed to BUFL.</p>
-                    </div>
-                </form>
-            </section>
         </div>
     </section>
 
@@ -423,27 +299,42 @@
                 <p class="flow-subtitle">Capital | Capability | Community</p>
             </div>
 
-            <div class="growth-showcase">
-                <figure class="growth-showcase-image">
-                    <img src="assets/generated/school-growth.png" alt="School leaders and teachers planning a growth program">
-                </figure>
-                <div class="growth-showcase-steps">
-                    <article class="growth-step flow-blue">
-                        <span>01</span>
+            <div class="flow-grid network-flow network-photo-flow growth-photo-flow">
+                <article class="flow-card flow-blue">
+                    <img class="flow-photo" src="assets/generated/school-growth.png" alt="School leaders and teachers planning a growth program">
+                    <div class="flow-heading">
                         <h3>3-Year Holistic Support</h3>
-                        <p>Annual growth plans, milestone reviews, and capital for improvement.</p>
-                    </article>
-                    <article class="growth-step flow-orange">
-                        <span>02</span>
+                    </div>
+                    <ul>
+                        <li>Annual growth plans</li>
+                        <li>Milestone reviews</li>
+                        <li>Capital for improvement</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
+                <article class="flow-card flow-orange">
+                    <img class="flow-photo" src="assets/generated/school-network.png" alt="Teachers and leaders exchanging school improvement practices">
+                    <div class="flow-heading">
                         <h3>Teacher &amp; Leader Training</h3>
-                        <p>Pedagogy workshops, classroom management, and child-safe practices.</p>
-                    </article>
-                    <article class="growth-step flow-green">
-                        <span>03</span>
+                    </div>
+                    <ul>
+                        <li>Pedagogy workshops</li>
+                        <li>Classroom management</li>
+                        <li>Child-safe practices</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
+                <article class="flow-card flow-green">
+                    <img class="flow-photo" src="assets/generated/school-improvement.png" alt="Students in a quality classroom environment">
+                    <div class="flow-heading">
                         <h3>Quality in Low-Resource Schools</h3>
-                        <p>Structured frameworks for Tier 2 and Tier 3 schools with equity in learning.</p>
-                    </article>
-                </div>
+                    </div>
+                    <ul>
+                        <li>Tier 2 &amp; Tier 3 schools</li>
+                        <li>Structured frameworks</li>
+                        <li>Equity in learning</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -460,7 +351,7 @@
             <div class="flow-grid network-flow network-photo-flow">
                 <article class="flow-card flow-blue">
                     <img class="flow-photo" src="assets/generated/school-network.png" alt="School leaders in a peer learning discussion">
-                    <div class="flow-heading"><span>01</span><h3>Local Peer Clusters</h3></div>
+                    <div class="flow-heading"><h3>Local Peer Clusters</h3></div>
                     <ul>
                         <li>Small networks of 8-12 nearby schools</li>
                         <li>Regular meetings to share &amp; improve</li>
@@ -469,7 +360,7 @@
                 <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
                 <article class="flow-card flow-orange">
                     <img class="flow-photo" src="assets/generated/school-growth.png" alt="Education team exchanging best practices">
-                    <div class="flow-heading"><span>02</span><h3>Best-Practice Exchange</h3></div>
+                    <div class="flow-heading"><h3>Best-Practice Exchange</h3></div>
                     <ul>
                         <li>Sharing Innovations &amp; Strategies</li>
                         <li>Operational &amp; Parent Engagement</li>
@@ -478,7 +369,7 @@
                 <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
                 <article class="flow-card flow-green">
                     <img class="flow-photo" src="assets/generated/why-bufl.png" alt="Education specialist guiding parents and school owners">
-                    <div class="flow-heading"><span>03</span><h3>Education Specialists</h3></div>
+                    <div class="flow-heading"><h3>Education Specialists</h3></div>
                     <ul>
                         <li>Expert Facilitation &amp; Support</li>
                         <li>On-the-Ground Guidance</li>
@@ -497,22 +388,39 @@
                 <p class="section-subtitle">We measure the things that matter and we publish what we find.</p>
             </div>
 
-            <div class="data-grid">
-                <div class="data-card">
-                    <div class="data-icon">&#128202;</div>
+            <div class="flow-grid network-flow network-photo-flow data-photo-flow">
+                <article class="flow-card flow-blue">
+                    <img class="flow-photo" src="assets/generated/why-bufl.png" alt="Education finance advisor reviewing school data dashboard">
+                    <div class="flow-heading">
                     <h3>Track Every Loan, Every School</h3>
-                    <p>From application through repayment and learning outcomes &mdash; each loan is monitored against a defined set of educational and financial indicators.</p>
-                </div>
-                <div class="data-card">
-                    <div class="data-icon">&#128196;</div>
+                    </div>
+                    <ul>
+                        <li>Application-to-repayment tracking</li>
+                        <li>Defined educational and financial indicators</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
+                <article class="flow-card flow-orange">
+                    <img class="flow-photo" src="assets/generated/school-network.png" alt="School team reviewing reports and evaluation material">
+                    <div class="flow-heading">
                     <h3>Regular Reporting &amp; Evaluation</h3>
-                    <p>Quarterly impact dashboards, annual third-party evaluations, and transparent disclosures to investors, partner schools, and the public.</p>
-                </div>
-                <div class="data-card">
-                    <div class="data-icon">&#8635;</div>
+                    </div>
+                    <ul>
+                        <li>Quarterly impact dashboards</li>
+                        <li>Annual third-party evaluations</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
+                <article class="flow-card flow-green">
+                    <img class="flow-photo" src="assets/generated/school-growth.png" alt="School leadership team planning continuous improvement">
+                    <div class="flow-heading">
                     <h3>Continuous Improvement</h3>
-                    <p>Findings feed back into product design, underwriting, and the School Growth Program &mdash; so the model gets sharper with every cohort.</p>
-                </div>
+                    </div>
+                    <ul>
+                        <li>Feedback into product design</li>
+                        <li>Sharper underwriting and program support</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -558,10 +466,9 @@
     </section>
 
     <!-- Eligibility Section -->
-    <section class="eligibility" id="eligibility">
+    <section class="eligibility homepage-eligibility" id="eligibility">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">WHO CAN APPLY</span>
                 <h2 class="section-title">Who Can Apply</h2>
             </div>
 
@@ -614,52 +521,54 @@
                 <h2 class="section-title">Why Bharat Uday Finserve (BUFL)?</h2>
             </div>
 
-            <div class="why-visual-grid">
-                <figure class="why-visual">
-                    <img src="assets/generated/why-bufl.png" alt="BUFL advisor helping a school owner and parent review education finance">
-                    <figcaption>
-                        <strong>48-hour decisions</strong>
-                        <span>Digital process with local relationship support</span>
-                    </figcaption>
-                </figure>
-
-                <div class="why-benefits">
-                    <div class="feature-box">
-                        <div class="feature-icon">&#9889;</div>
+            <div class="why-card-grid">
+                <article class="why-image-card">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fast loan processing desk">
+                    <div>
                         <h3>Lightning Fast</h3>
                         <p>Loan decisions in 48 hours, disbursal in 7-15 days</p>
                     </div>
+                </article>
 
-                    <div class="feature-box">
-                        <div class="feature-icon">&#128196;</div>
+                <article class="why-image-card">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Paperless digital documentation">
+                    <div>
                         <h3>Paperless Process</h3>
                         <p>100% digital application, no branch visit needed</p>
                     </div>
+                </article>
 
-                    <div class="feature-box">
-                        <div class="feature-icon">&#128275;</div>
+                <article class="why-image-card">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Secure collateral-free digital finance">
+                    <div>
                         <h3>Collateral-Free</h3>
                         <p>No security required for loans up to &#8377;40 Lakhs</p>
                     </div>
+                </article>
 
-                    <div class="feature-box">
-                        <div class="feature-icon">&#127760;</div>
+                <article class="why-image-card">
+                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="India reach and national access">
+                    <div>
                         <h3>Pan-India Reach</h3>
                         <p>Serving 200+ cities across 15+ states</p>
                     </div>
+                </article>
 
-                    <div class="feature-box">
-                        <div class="feature-icon">&#128172;</div>
+                <article class="why-image-card">
+                    <img src="assets/generated/why-bufl.png" alt="Advisor meeting with a school owner and parent">
+                    <div>
                         <h3>Personal Manager</h3>
                         <p>A dedicated relationship manager for every borrower</p>
                     </div>
+                </article>
 
-                    <div class="feature-box">
-                        <div class="feature-icon">&#128200;</div>
+                <article class="why-image-card">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Capacity building workshop">
+                    <div>
                         <h3>Value Enhancement</h3>
                         <p>Beyond loans &mdash; capacity building, mentorship, and outcome support</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -708,8 +617,8 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#products">Loan Products</a></li>
-                        <li><a href="#emi-calculator">EMI Calculator</a></li>
-                        <li><a href="#eligibility">Who Can Apply</a></li>
+                        <li><a href="emi-calculator.html" target="_blank" rel="noopener">EMI Calculator</a></li>
+                        <li><a href="who-can-apply.html">Who Can Apply</a></li>
                         <li><a href="#school-network">School Network</a></li>
                         <li><a href="#data-monitoring">Data &amp; Monitoring</a></li>
                         <li><a href="assets/faqs-bufl.pdf" download>Download FAQs (PDF)</a></li>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Can Apply &mdash; Bharat Uday Finserve Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-logo">
+                <img src="logo-transparent.png" alt="Bharat Uday Finserve Pvt Ltd" class="logo-img" />
+                <span class="logo-abbr">BUFL</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-dropdown" id="loansNavItem">
+                    <button class="nav-link nav-dropdown-toggle" id="loansDropdownToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="loansDropdown">
+                        Loans
+                        <span class="dropdown-chevron" aria-hidden="true"></span>
+                    </button>
+                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Loan products">
+                        <li><a href="loan-detail.html?product=school-improvement" class="dropdown-link" data-product-key="school-improvement">School Improvement Loan</a></li>
+                        <li><a href="loan-detail.html?product=school-fee" class="dropdown-link" data-product-key="school-fee">School Fee Loan</a></li>
+                        <li><a href="loan-detail.html?product=student" class="dropdown-link" data-product-key="student">Student Loan</a></li>
+                        <li><a href="loan-detail.html?product=overseas" class="dropdown-link" data-product-key="overseas">Overseas Education Loan</a></li>
+                        <li><a href="loan-detail.html?product=vocational" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
+                    </ul>
+                </li>
+                <li><a href="emi-calculator.html" class="nav-link nav-link-highlight" target="_blank" rel="noopener">EMI Calculator</a></li>
+                <li><a href="who-can-apply.html" class="nav-link active">Who Can Apply</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="index.html#partner" class="nav-link">Partner</a></li>
+                <li class="nav-menu-cta"><a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply Now</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <main class="standalone-page apply-page">
+        <section class="standalone-hero">
+            <div class="container">
+                <span class="section-label">WHO CAN APPLY</span>
+                <h1>Eligibility at a Glance</h1>
+                <p>Choose the applicant profile that best matches your education finance need.</p>
+            </div>
+        </section>
+
+        <section class="apply-eligibility-section">
+            <div class="container">
+                <div class="apply-card-grid">
+                    <article class="apply-card apply-card-navy">
+                        <div class="apply-card-top">
+                            <span>Students</span>
+                            <strong>Higher Education</strong>
+                        </div>
+                        <ul>
+                            <li>Indian citizen aged 18-35</li>
+                            <li>Admission confirmed at a recognized institution</li>
+                            <li>Co-applicant required above &#8377;7.5L</li>
+                            <li>No minimum income requirement for student</li>
+                        </ul>
+                        <a href="loan-detail.html?product=student#loan-application" class="btn btn-primary">Apply as Student</a>
+                    </article>
+
+                    <article class="apply-card apply-card-gold">
+                        <div class="apply-card-top">
+                            <span>School Proprietors</span>
+                            <strong>School Improvement</strong>
+                        </div>
+                        <ul>
+                            <li>Privately operated school</li>
+                            <li>Minimum 3 years in operation</li>
+                            <li>Fee collection proof available</li>
+                            <li>No existing loan default history</li>
+                        </ul>
+                        <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply for School Loan</a>
+                    </article>
+
+                    <article class="apply-card apply-card-green">
+                        <div class="apply-card-top">
+                            <span>Parents</span>
+                            <strong>Fee Finance</strong>
+                        </div>
+                        <ul>
+                            <li>Monthly income above &#8377;15,000</li>
+                            <li>Child enrolled in a recognized institution</li>
+                            <li>Valid Aadhaar, PAN, and address proof</li>
+                            <li>Age between 25-60 years</li>
+                        </ul>
+                        <a href="loan-detail.html?product=school-fee#loan-application" class="btn btn-primary">Apply as Parent</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
