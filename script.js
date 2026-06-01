@@ -298,7 +298,34 @@ const productDetailAmount = document.getElementById('productDetailAmount');
 const productDetailTimeline = document.getElementById('productDetailTimeline');
 const productDetailList = document.getElementById('productDetailList');
 const productApplyButton = document.getElementById('productApplyButton');
+const loanApplicationSection = document.getElementById('loan-application');
 const productColorClasses = ['product-card-blue', 'product-card-gold', 'product-card-navy', 'product-card-orange', 'product-card-green'];
+
+function updateApplyTriggerState() {
+    const isApplicationOpen = Boolean(loanApplicationSection && !loanApplicationSection.hidden);
+    document.querySelectorAll('[data-apply-loan]').forEach(trigger => {
+        trigger.setAttribute('aria-controls', 'loan-application');
+        trigger.setAttribute('aria-expanded', String(isApplicationOpen));
+    });
+}
+
+function setLoanApplicationOpen(isOpen, shouldScroll = false) {
+    if (!loanApplicationSection) return;
+    loanApplicationSection.hidden = !isOpen;
+    loanApplicationSection.setAttribute('aria-hidden', String(!isOpen));
+    updateApplyTriggerState();
+
+    if (isOpen && shouldScroll) {
+        requestAnimationFrame(() => scrollToTarget('#loan-application'));
+    }
+}
+
+function syncApplyTriggers(product) {
+    document.querySelectorAll('[data-apply-loan]').forEach(trigger => {
+        trigger.dataset.applyLoan = product.applyType;
+    });
+    updateApplyTriggerState();
+}
 
 function showProductDetail(productKey, shouldScroll = false) {
     const product = productCatalog[productKey];
@@ -317,14 +344,16 @@ function showProductDetail(productKey, shouldScroll = false) {
     productDetailFor.textContent = product.audience;
     productDetailAmount.textContent = product.amount;
     productDetailTimeline.textContent = product.timeline;
-    productApplyButton.textContent = product.applyLabel;
-    const hasApplicationForm = Boolean(document.getElementById('loanApplicationForm'));
-    if (hasApplicationForm) {
-        productApplyButton.href = '#loan-application';
-        productApplyButton.dataset.applyLoan = product.applyType;
-    } else {
-        productApplyButton.href = `loan-detail.html?product=${productKey}#loan-application`;
-        delete productApplyButton.dataset.applyLoan;
+    if (productApplyButton) {
+        productApplyButton.textContent = product.applyLabel;
+        const hasApplicationForm = Boolean(document.getElementById('loanApplicationForm'));
+        if (hasApplicationForm) {
+            productApplyButton.href = '#loan-application';
+            syncApplyTriggers(product);
+        } else {
+            productApplyButton.href = `loan-detail.html?product=${productKey}#loan-application`;
+            delete productApplyButton.dataset.applyLoan;
+        }
     }
 
     productDetailList.replaceChildren();
@@ -335,6 +364,7 @@ function showProductDetail(productKey, shouldScroll = false) {
     });
 
     if (shouldScroll) {
+        setLoanApplicationOpen(false);
         scrollToTarget('#product-detail');
     }
 }
@@ -446,7 +476,7 @@ function setApplicationLoanType(loanType, shouldScroll = false) {
     renderApplicationFields(applicationLoanType.value);
 
     if (shouldScroll) {
-        scrollToTarget('#loan-application');
+        setLoanApplicationOpen(true, true);
     }
 }
 
@@ -460,6 +490,11 @@ if (applicationLoanType) {
     if (activeProduct) {
         setApplicationLoanType(activeProduct.applyType, false);
     }
+}
+
+if (loanApplicationSection) {
+    const shouldOpenApplication = window.location.hash === '#loan-application';
+    setLoanApplicationOpen(shouldOpenApplication, shouldOpenApplication);
 }
 
 document.addEventListener('click', (event) => {
