@@ -366,6 +366,12 @@ const clientEmail = 'info@bharatudayfinserve.in';
 const loanApplicationForm = document.getElementById('loanApplicationForm');
 const applicationLoanType = document.getElementById('applicationLoanType');
 const applicationDynamicFields = document.getElementById('applicationDynamicFields');
+const applicantPhone = document.getElementById('applicantPhone');
+const applicantEmail = document.getElementById('applicantEmail');
+const applicationSubmitFrame = document.getElementById('applicationSubmitFrame');
+const applicationSubmitStatus = document.getElementById('applicationSubmitStatus');
+const applicationSubmitSubject = document.getElementById('applicationSubmitSubject');
+const applicationReplyEmail = document.getElementById('applicationReplyEmail');
 
 const applicationFieldSets = {
     'School Loan': [
@@ -373,21 +379,21 @@ const applicationFieldSets = {
         { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
         { id: 'feeAmount', label: 'Fee Amount', name: 'Fee Amount', type: 'number' },
         { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
-        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+        { id: 'numberOfTerms', label: 'Number of Terms (Years)', name: 'Number of Terms', type: 'number', min: 1, max: 10, placeholder: '1-10 years' }
     ],
     'College Loan': [
         { id: 'collegeName', label: 'College / University Name', name: 'College / University Name', type: 'text' },
         { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
         { id: 'feeAmount', label: 'Fee Amount', name: 'Fee Amount', type: 'number' },
         { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
-        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+        { id: 'numberOfTerms', label: 'Number of Terms (Years)', name: 'Number of Terms', type: 'number', min: 1, max: 10, placeholder: '1-10 years' }
     ],
     'Course Loan': [
         { id: 'trainingProvider', label: 'Training Institute / Course Provider', name: 'Training Institute / Course Provider', type: 'text' },
         { id: 'courseName', label: 'Course Name', name: 'Course Name', type: 'text' },
         { id: 'feeAmount', label: 'Course Fee Amount', name: 'Course Fee Amount', type: 'number' },
         { id: 'loanAmountRequired', label: 'Loan Amount Required', name: 'Loan Amount Required', type: 'number' },
-        { id: 'numberOfTerms', label: 'Number of Terms', name: 'Number of Terms', type: 'number' }
+        { id: 'numberOfTerms', label: 'Number of Terms (Years)', name: 'Number of Terms', type: 'number', min: 1, max: 5, placeholder: '1-5 years' }
     ]
 };
 
@@ -404,10 +410,24 @@ function createApplicationField(field) {
     input.name = field.name;
     input.type = field.type;
     input.required = true;
+    if (field.placeholder) input.placeholder = field.placeholder;
 
     if (field.type === 'number') {
-        input.min = field.id === 'numberOfTerms' ? '1' : '0';
-        input.step = field.id === 'numberOfTerms' ? '1' : '100';
+        input.min = String(field.min ?? 0);
+        input.max = field.max ? String(field.max) : '';
+        input.step = '1';
+        input.inputMode = 'numeric';
+        input.addEventListener('keydown', (event) => {
+            if (['e', 'E', '+', '-', '.'].includes(event.key)) {
+                event.preventDefault();
+            }
+        });
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, '');
+            if (field.max && Number(input.value) > field.max) {
+                input.value = String(field.max);
+            }
+        });
     }
 
     label.append(labelText, input);
@@ -451,29 +471,41 @@ document.addEventListener('click', (event) => {
     setApplicationLoanType(applyTrigger.dataset.applyLoan || 'School Loan', true);
 });
 
+if (applicantPhone) {
+    applicantPhone.addEventListener('input', () => {
+        applicantPhone.value = applicantPhone.value.replace(/\D/g, '').slice(0, 10);
+    });
+}
+
+let applicationSubmitStarted = false;
+
 if (loanApplicationForm) {
-    loanApplicationForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        if (!loanApplicationForm.reportValidity()) return;
-
+    loanApplicationForm.addEventListener('submit', () => {
         const formData = new FormData(loanApplicationForm);
-        const lines = [];
-        formData.forEach((value, key) => {
-            lines.push(`${key}: ${value}`);
-        });
-
         const loanType = formData.get('Loan Type') || 'Loan';
-        const subject = `BUFL ${loanType} Application`;
-        const body = [
-            'New loan application submitted from the Bharat Uday Finserve website.',
-            '',
-            ...lines,
-            '',
-            'No website database storage was used for this submission.'
-        ].join('\n');
 
-        window.location.href = `mailto:${clientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        if (applicationSubmitSubject) {
+            applicationSubmitSubject.value = `BUFL ${loanType} Application`;
+        }
+        if (applicationReplyEmail && applicantEmail) {
+            applicationReplyEmail.value = applicantEmail.value;
+        }
+        if (applicationSubmitStatus) {
+            applicationSubmitStatus.textContent = 'Sending application...';
+        }
+        applicationSubmitStarted = true;
+    });
+}
+
+if (applicationSubmitFrame) {
+    applicationSubmitFrame.addEventListener('load', () => {
+        if (!applicationSubmitStarted || !applicationSubmitStatus) return;
+        applicationSubmitStatus.textContent = 'Application submitted. Our team will contact you shortly.';
+        applicationSubmitStarted = false;
+        if (loanApplicationForm) {
+            loanApplicationForm.reset();
+            renderApplicationFields(applicationLoanType ? applicationLoanType.value : 'School Loan');
+        }
     });
 }
 

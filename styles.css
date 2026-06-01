@@ -4640,6 +4640,27 @@ section,
     line-height: 1.55;
 }
 
+.form-submit-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--color-green-pillar);
+    font-weight: 800;
+}
+
+.form-submit-frame,
+.form-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
 .growth-showcase {
     display: grid;
     grid-template-columns: minmax(320px, 1.25fr) minmax(280px, 0.75fr);

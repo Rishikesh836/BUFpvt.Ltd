@@ -94,7 +94,12 @@
                         <p>Use one form for School Loan, College Loan, and Course Loan requests. The fields update based on the selected loan type.</p>
                     </div>
 
-                    <form class="application-form" id="loanApplicationForm">
+                    <form class="application-form" id="loanApplicationForm" action="https://formsubmit.co/info@bharatudayfinserve.in" method="POST" target="applicationSubmitFrame">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" id="applicationSubmitSubject" value="BUFL Loan Application">
+                        <input type="hidden" name="email" id="applicationReplyEmail">
                         <div class="form-grid">
                             <label class="form-field form-field-wide" for="applicationLoanType">
                                 <span>Loan Type</span>
@@ -112,7 +117,7 @@
 
                             <label class="form-field" for="applicantPhone">
                                 <span>Phone Number</span>
-                                <input id="applicantPhone" name="Phone Number" type="tel" autocomplete="tel" required>
+                                <input id="applicantPhone" name="Phone Number" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" title="Enter a valid 10-digit mobile number" required>
                             </label>
 
                             <label class="form-field form-field-wide" for="applicantEmail">
@@ -130,8 +135,10 @@
 
                         <div class="form-actions">
                             <button class="btn btn-primary" type="submit">Submit Form</button>
+                            <span class="form-submit-status" id="applicationSubmitStatus" role="status" aria-live="polite"></span>
                         </div>
                     </form>
+                    <iframe class="form-submit-frame" name="applicationSubmitFrame" id="applicationSubmitFrame" title="Application submission status"></iframe>
                 </section>
             </div>
         </section>
