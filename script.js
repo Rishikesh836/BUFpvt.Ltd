@@ -351,6 +351,8 @@ if (productDetailView) {
 document.querySelectorAll('[data-product-key]').forEach(trigger => {
     if (trigger.classList.contains('dropdown-link') || trigger.classList.contains('product-slide')) return;
     trigger.addEventListener('click', (event) => {
+        const linkTarget = trigger.getAttribute('href') || '';
+        if (linkTarget && !linkTarget.startsWith('#')) return;
         event.preventDefault();
         showProductDetail(trigger.dataset.productKey, true);
     });
@@ -534,10 +536,13 @@ if (slider) {
 
     slides.forEach(slide => {
         slide.addEventListener('click', () => {
-            if (slide.dataset.productKey) {
+            const slideLink = slide.dataset.slideLink || '';
+            if (slideLink && !slideLink.startsWith('#')) {
+                window.location.href = slideLink;
+            } else if (slide.dataset.productKey && productDetailView) {
                 showProductDetail(slide.dataset.productKey, true);
             } else {
-                scrollToTarget(slide.dataset.slideLink);
+                scrollToTarget(slideLink);
             }
         });
     });

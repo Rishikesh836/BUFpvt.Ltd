@@ -5823,3 +5823,211 @@ section,
         min-height: 220px;
     }
 }
+
+/* Compact homepage vertical rhythm after removing the inline loan detail block */
+.about,
+.school-growth,
+.school-network,
+.data-monitoring,
+.directors,
+.why-us,
+.partner-cta {
+    padding-top: clamp(2.5rem, 4.5vw, 3.75rem);
+    padding-bottom: clamp(2.5rem, 4.5vw, 3.75rem);
+}
+
+.about {
+    padding-top: clamp(2.25rem, 4vw, 3rem);
+}
+
+.about + .school-growth,
+.school-growth + .school-network,
+.school-network + .data-monitoring,
+.data-monitoring + .directors,
+.directors + .why-us,
+.why-us + .partner-cta {
+    padding-top: clamp(2rem, 3.5vw, 3rem);
+}
+
+.section-header {
+    margin-bottom: clamp(1.8rem, 3.2vw, 2.75rem);
+}
+
+.vision-mission-showcase,
+.pillars-section,
+.identity-sections {
+    margin-bottom: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.identity-sections {
+    margin-top: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.growth-photo-flow,
+.data-photo-flow {
+    margin-top: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+/* Distinct section bands so the repeated 3-card flows do not blend together */
+.school-growth {
+    background:
+        linear-gradient(180deg, #fff7e8 0%, #fffaf2 100%);
+    border-top: 1px solid rgba(201, 146, 42, 0.24);
+    border-bottom: 1px solid rgba(201, 146, 42, 0.22);
+}
+
+.school-network {
+    background:
+        linear-gradient(180deg, #eef6ff 0%, #f8fbff 100%);
+    border-top: 1px solid rgba(13, 76, 134, 0.16);
+    border-bottom: 1px solid rgba(13, 76, 134, 0.14);
+}
+
+.data-monitoring {
+    background:
+        linear-gradient(180deg, #eef8f1 0%, #f9fff9 100%);
+    border-top: 1px solid rgba(31, 107, 45, 0.18);
+    border-bottom: 1px solid rgba(31, 107, 45, 0.16);
+}
+
+.school-growth .section-label,
+.school-growth .flow-subtitle {
+    color: var(--color-gold-pillar);
+}
+
+.school-network .section-label {
+    color: var(--color-blue-pillar);
+}
+
+.data-monitoring .section-label {
+    color: var(--color-green-pillar);
+}
+
+.school-growth .section-title,
+.school-network .section-title,
+.data-monitoring .section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.school-growth .section-title::after,
+.school-network .section-title::after,
+.data-monitoring .section-title::after {
+    content: '';
+    display: block;
+    width: min(180px, 42vw);
+    height: 4px;
+    margin: 0.85rem auto 0;
+    border-radius: 999px;
+}
+
+.school-growth .section-title::after {
+    background: linear-gradient(90deg, transparent, var(--color-gold-pillar), transparent);
+}
+
+.school-network .section-title::after {
+    background: linear-gradient(90deg, transparent, var(--color-blue-pillar), transparent);
+}
+
+.data-monitoring .section-title::after {
+    background: linear-gradient(90deg, transparent, var(--color-green-pillar), transparent);
+}
+
+.school-growth .flow-card,
+.school-network .flow-card,
+.data-monitoring .flow-card {
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+.school-growth .section-label,
+.school-network .section-label,
+.data-monitoring .section-label {
+    display: block;
+    width: max-content;
+    margin: 0 auto 0.65rem;
+}
+
+/* Card header colors are intentionally different in each repeated flow section */
+.school-growth .flow-blue {
+    --flow-color: var(--color-gold-pillar);
+}
+
+.school-growth .flow-orange {
+    --flow-color: var(--color-primary);
+}
+
+.school-growth .flow-green {
+    --flow-color: var(--color-green-pillar);
+}
+
+.school-growth .flow-arrow-blue {
+    background: var(--color-gold-pillar);
+}
+
+.school-growth .flow-arrow-blue::after {
+    border-left-color: var(--color-gold-pillar);
+}
+
+.school-growth .flow-arrow-orange {
+    background: var(--color-primary);
+}
+
+.school-growth .flow-arrow-orange::after {
+    border-left-color: var(--color-primary);
+}
+
+.school-network .flow-blue {
+    --flow-color: var(--color-blue-pillar);
+}
+
+.school-network .flow-orange {
+    --flow-color: #16826e;
+}
+
+.school-network .flow-green {
+    --flow-color: #4656a0;
+}
+
+.school-network .flow-arrow-blue {
+    background: var(--color-blue-pillar);
+}
+
+.school-network .flow-arrow-blue::after {
+    border-left-color: var(--color-blue-pillar);
+}
+
+.school-network .flow-arrow-orange {
+    background: #16826e;
+}
+
+.school-network .flow-arrow-orange::after {
+    border-left-color: #16826e;
+}
+
+.data-monitoring .flow-blue {
+    --flow-color: #061c38;
+}
+
+.data-monitoring .flow-orange {
+    --flow-color: #2f7f78;
+}
+
+.data-monitoring .flow-green {
+    --flow-color: var(--color-gold-pillar);
+}
+
+.data-monitoring .flow-arrow-blue {
+    background: #061c38;
+}
+
+.data-monitoring .flow-arrow-blue::after {
+    border-left-color: #061c38;
+}
+
+.data-monitoring .flow-arrow-orange {
+    background: #2f7f78;
+}
+
+.data-monitoring .flow-arrow-orange::after {
+    border-left-color: #2f7f78;
+}
