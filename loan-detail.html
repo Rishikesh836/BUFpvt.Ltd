@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loan Details &mdash; Bharat Uday Finserve Pvt. Ltd.</title>
+    <title>Product Offering &mdash; Bharat Uday Finserve Pvt. Ltd.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,18 +20,17 @@
                 <li><a href="index.html#about" class="nav-link">About</a></li>
                 <li class="nav-dropdown" id="loansNavItem">
                     <button class="nav-link nav-dropdown-toggle active" id="loansDropdownToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="loansDropdown">
-                        Loans
+                        Products
                         <span class="dropdown-chevron" aria-hidden="true"></span>
                     </button>
-                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Loan products">
-                        <li><a href="loan-detail.html?product=school-improvement" class="dropdown-link" data-product-key="school-improvement">School Improvement Loan</a></li>
-                        <li><a href="loan-detail.html?product=school-fee" class="dropdown-link" data-product-key="school-fee">School Fee Loan</a></li>
-                        <li><a href="loan-detail.html?product=student" class="dropdown-link" data-product-key="student">Student Loan</a></li>
-                        <li><a href="loan-detail.html?product=overseas" class="dropdown-link" data-product-key="overseas">Overseas Education Loan</a></li>
-                        <li><a href="loan-detail.html?product=vocational" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
+                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Product offerings">
+                        <li><a href="loan-detail.html?product=msme" class="dropdown-link" data-product-key="msme">MSME &amp; Enterprise Finance</a></li>
+                        <li><a href="loan-detail.html?product=microfinance" class="dropdown-link" data-product-key="microfinance">Financial Inclusion (Microfinance)</a></li>
+                        <li><a href="loan-detail.html?product=secured" class="dropdown-link" data-product-key="secured">Secured Credit</a></li>
+                        <li><a href="loan-detail.html?product=edufinance" class="dropdown-link" data-product-key="edufinance">Education Finance</a></li>
+                        <li><a href="loan-detail.html?product=healthcare" class="dropdown-link" data-product-key="healthcare">Healthcare Finance</a></li>
                     </ul>
                 </li>
-                <li><a href="emi-calculator.html" class="nav-link nav-link-highlight">EMI Calculator</a></li>
                 <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
                 <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="index.html#partner" class="nav-link">Partner</a></li>
@@ -39,6 +38,7 @@
             </ul>
 
             <div class="nav-actions">
+                <a href="mailto:contact@bharatuday.in" class="nav-contact-icon" aria-label="Email contact@bharatuday.in" title="contact@bharatuday.in">&#9993;</a>
                 <a href="#loan-application" class="btn btn-primary nav-apply" data-apply-loan="School Loan">Apply Now</a>
                 <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -53,36 +53,38 @@
     <main class="loan-detail-page">
         <section class="loan-detail-hero">
             <div class="container">
-                <a class="detail-back-link" href="index.html#products">Back to products</a>
-                <span class="section-label">LOAN PRODUCT</span>
-                <h1>Loan Details</h1>
-                <p>Review the selected product, status, eligibility direction, and application next step.</p>
+                <a class="detail-back-link" href="index.html#products">Back to product offering</a>
+                <span class="section-label">PRODUCT VERTICAL</span>
+                <h1>Product Offering</h1>
+                <p>Review the selected vertical, current status, and available next steps.</p>
             </div>
         </section>
 
         <section class="loan-hub loan-detail-main" id="products">
             <div class="container">
-                <article class="product-detail-view product-card-blue" id="product-detail" data-product-detail data-product-key="school-improvement">
+                <article class="product-detail-view product-card-blue" id="product-detail" data-product-detail data-product-key="edufinance">
                     <div class="product-detail-media">
-                        <img id="productDetailImage" src="assets/generated/school-improvement.png" alt="Students learning in an improved classroom">
+                        <img id="productDetailImage" src="assets/generated/student-loan.png" alt="Learners and institutions supported through Edufinance">
                         <span class="product-detail-number" id="productDetailNumber">01</span>
                     </div>
                     <div class="product-detail-copy">
                         <span class="content-label" id="productDetailStatus">Applications open</span>
-                        <h3 id="productDetailTitle">School Improvement Loan</h3>
-                        <p class="product-detail-subtitle" id="productDetailSubtitle">Infrastructure Upgrades</p>
-                        <p class="product-detail-for" id="productDetailFor">For school owners building better learning environments.</p>
+                        <h3 id="productDetailTitle">Bharat Uday Edufinance</h3>
+                        <p class="product-detail-subtitle" id="productDetailSubtitle">Edufinance Products</p>
+                        <p class="product-detail-for" id="productDetailFor">Expanding access to quality learning through a phygital approach.</p>
                         <div class="product-detail-meta">
-                            <span id="productDetailAmount">Up to &#8377;25 Lakhs</span>
-                            <span id="productDetailTimeline">7-15 day disbursal after sanction</span>
+                            <span id="productDetailAmount">Schools | Parents | Learners</span>
+                            <span id="productDetailTimeline">Application support available</span>
                         </div>
                         <ul class="product-detail-list" id="productDetailList">
-                            <li>Classrooms, labs, equipment, furniture, and learning materials</li>
-                            <li>Water, bathrooms, sanitation, and safety improvements</li>
-                            <li>Cashflow-based underwriting with practical collateral options</li>
+                            <li>School infrastructure and development support</li>
+                            <li>Parent and fee enablement pathways</li>
+                            <li>Higher education and skills financing products</li>
                         </ul>
                         <div class="product-detail-actions">
-                            <a href="#loan-application" class="btn btn-primary" id="productApplyButton" data-apply-loan="School Loan">Apply for School Loan</a>
+                            <a href="#loan-application" class="btn btn-primary" id="productApplyButton" data-apply-loan="School Loan">Apply for Edufinance</a>
+                            <a href="emi-calculator.html" class="btn btn-secondary product-inner-link">EMI Calculator</a>
+                            <a href="who-can-apply.html" class="btn btn-secondary product-inner-link">Who Can Apply</a>
                         </div>
                     </div>
                 </article>
@@ -146,9 +148,45 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img" />
+                    </div>
+                    <div class="footer-tagline">The Finance Behind Bharat's Future</div>
+                    <p class="footer-description">A connected financial ecosystem where digital capability meets deep on-ground reach across Bharat.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#products">Product Offering</a></li>
+                        <li><a href="index.html#integrated-ecosystem">Integrated Ecosystem</a></li>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="who-can-apply.html">Who Can Apply</a></li>
+                        <li><a href="index.html#school-network">School Network</a></li>
+                        <li><a href="index.html#data-monitoring">Data &amp; Monitoring</a></li>
+                        <li><a href="assets/faqs-bufl.pdf" download>Download FAQs (PDF)</a></li>
+                        <li><a href="index.html#partner">Partner With Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><strong>Registered Office:</strong> 7th Floor, Uday Bhavan, Bandra Kurla Complex, Mumbai - 400051</p>
+                    <p><strong>Gurgaon Office:</strong> Gurgaon, Haryana, India</p>
+                    <p><strong>Toll Free:</strong> 1800-200-UDAY (8329)</p>
+                    <p><strong>Email:</strong> contact@bharatuday.in</p>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2026 Bharat Uday Finserve Pvt. Ltd. (BUFL) All Rights Reserved.</p>
-                <p class="footer-disclaimer">All loan products are subject to credit assessment, KYC verification, and eligibility criteria.</p>
+                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is building connected product pathways across Bharat. Product availability, terms, and partner processes may vary by vertical and eligibility.</p>
             </div>
         </div>
     </footer>

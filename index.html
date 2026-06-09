@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharat Uday Finserve Pvt. Ltd. &mdash; Education Loans for India</title>
+    <title>Bharat Uday Finserve Pvt. Ltd. &mdash; Connected Financial Ecosystem for Bharat</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,26 +21,26 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-dropdown" id="loansNavItem">
                     <button class="nav-link nav-dropdown-toggle" id="loansDropdownToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="loansDropdown">
-                        Loans
+                        Products
                         <span class="dropdown-chevron" aria-hidden="true"></span>
                     </button>
-                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Loan products">
-                        <li><a href="loan-detail.html?product=school-improvement" class="dropdown-link" data-product-key="school-improvement">School Improvement Loan</a></li>
-                        <li><a href="loan-detail.html?product=school-fee" class="dropdown-link" data-product-key="school-fee">School Fee Loan</a></li>
-                        <li><a href="loan-detail.html?product=student" class="dropdown-link" data-product-key="student">Student Loan</a></li>
-                        <li><a href="loan-detail.html?product=overseas" class="dropdown-link" data-product-key="overseas">Overseas Education Loan</a></li>
-                        <li><a href="loan-detail.html?product=vocational" class="dropdown-link" data-product-key="vocational">Vocational &amp; Skills Loan</a></li>
+                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Product offerings">
+                        <li><a href="loan-detail.html?product=msme" class="dropdown-link" data-product-key="msme">MSME &amp; Enterprise Finance</a></li>
+                        <li><a href="loan-detail.html?product=microfinance" class="dropdown-link" data-product-key="microfinance">Financial Inclusion (Microfinance)</a></li>
+                        <li><a href="loan-detail.html?product=secured" class="dropdown-link" data-product-key="secured">Secured Credit</a></li>
+                        <li><a href="loan-detail.html?product=edufinance" class="dropdown-link" data-product-key="edufinance">Education Finance</a></li>
+                        <li><a href="loan-detail.html?product=healthcare" class="dropdown-link" data-product-key="healthcare">Healthcare Finance</a></li>
                     </ul>
                 </li>
-                <li><a href="emi-calculator.html" class="nav-link nav-link-highlight">EMI Calculator</a></li>
                 <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
                 <li><a href="#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="#partner" class="nav-link">Partner</a></li>
-                <li class="nav-menu-cta"><a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary">Apply Now</a></li>
+                <li class="nav-menu-cta"><a href="loan-detail.html?product=edufinance#loan-application" class="btn btn-primary">Apply Now</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
+                <a href="mailto:contact@bharatuday.in" class="nav-contact-icon" aria-label="Email contact@bharatuday.in" title="contact@bharatuday.in">&#9993;</a>
+                <a href="loan-detail.html?product=edufinance#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
                 <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
@@ -55,88 +55,165 @@
     <section class="hero" id="home">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <span class="hero-eyebrow">Phystal EduFinance for Bharat</span>
-            <h1 class="hero-headline">Education Finance for <em>Bharat</em></h1>
-            <p class="hero-subheadline">We combine physical reach and digital efficiency to partner with schools, parents, and financial institutions &mdash; making quality education accessible for every child.</p>
+            <span class="hero-eyebrow">Connected Financial Ecosystem for Bharat</span>
+            <h1 class="hero-headline">The Finance Behind <em>Bharat's Future</em></h1>
+            <p class="hero-tagline">Access defines opportunity</p>
+            <p class="hero-subheadline">Bharat Uday Finserve is a connected financial ecosystem where digital capability meets deep on-ground reach &mdash; unlocking possibilities and enabling access across Bharat.</p>
+            <p class="hero-support-line">Enabling inclusive, scalable, and sustainable growth</p>
             <div class="hero-ctas">
-                <a href="loan-detail.html?product=student#loan-application" class="btn btn-primary">Apply for a Student Loan</a>
-                <a href="loan-detail.html?product=school-improvement#loan-application" class="btn btn-secondary">Apply for a School Loan</a>
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="mailto:contact@bharatuday.in" class="btn btn-secondary">Connect With Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Product Banner Carousel -->
-    <section class="product-slider" id="products" aria-label="Education finance products">
-        <div class="slider-stage" data-product-slider>
-            <article class="product-slide is-active product-slide-blue" data-slide-link="loan-detail.html?product=school-improvement" data-product-key="school-improvement" aria-hidden="false">
-                <div class="slide-copy">
-                    <span class="slide-kicker">01</span>
-                    <h2>School Improvement Capital</h2>
-                    <p>Infrastructure Upgrades</p>
-                </div>
-                <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="assets/generated/school-improvement.png" alt="">
-                    <span class="slide-photo-badge">&#127979;</span>
-                </div>
-            </article>
+    <!-- Product Offering -->
+    <section class="product-overview" id="products" aria-label="Product offering">
+        <div class="container">
+            <div class="section-header compact-section-header">
+                <span class="section-label">PRODUCT OFFERING</span>
+                <h2 class="section-title">Connected Product Verticals</h2>
+            </div>
 
-            <article class="product-slide product-slide-gold" data-slide-link="loan-detail.html?product=school-fee" data-product-key="school-fee" aria-hidden="true">
-                <div class="slide-copy">
-                    <span class="slide-kicker">02</span>
-                    <h2>Fee Finance for Parents</h2>
-                    <p>Flexible Education Loans</p>
-                </div>
-                <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="assets/generated/fee-finance.png" alt="">
-                    <span class="slide-photo-badge">&#8377;</span>
-                </div>
-            </article>
+            <div class="vertical-card-grid">
+                <a class="vertical-card vertical-card-blue" href="loan-detail.html?product=edufinance" data-product-key="edufinance">
+                    <div class="vertical-card-media">
+                        <img src="assets/generated/student-loan.png" alt="Graduation cap and learning materials">
+                        <span class="vertical-card-icon">&#127891;</span>
+                    </div>
+                    <div class="vertical-card-copy">
+                        <h3>Education Finance</h3>
+                        <span class="vertical-divider"></span>
+                        <p>Empowering learners to achieve their goals and build a brighter future.</p>
+                    </div>
+                </a>
 
-            <article class="product-slide product-slide-navy" data-slide-link="loan-detail.html?product=student" data-product-key="student" aria-hidden="true">
-                <div class="slide-copy">
-                    <span class="slide-kicker">03</span>
-                    <h2>Student Loans</h2>
-                    <p>Higher Education Funding</p>
-                </div>
-                <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="assets/generated/student-loan.png" alt="">
-                    <span class="slide-photo-badge">&#127891;</span>
-                </div>
-            </article>
+                <a class="vertical-card vertical-card-green" href="loan-detail.html?product=microfinance" data-product-key="microfinance">
+                    <div class="vertical-card-media">
+                        <img src="assets/generated/fee-finance.png" alt="Community finance discussion">
+                        <span class="vertical-card-icon">&#128101;</span>
+                    </div>
+                    <div class="vertical-card-copy">
+                        <h3>Microfinance</h3>
+                        <span class="vertical-divider"></span>
+                        <p>Empowering individuals and communities with accessible finance to build a better life.</p>
+                    </div>
+                </a>
 
-            <article class="product-slide product-slide-orange" data-slide-link="loan-detail.html?product=vocational" data-product-key="vocational" aria-hidden="true">
-                <div class="slide-copy">
-                    <span class="slide-kicker">04</span>
-                    <h2>Vocational &amp; Skill Loans</h2>
-                    <p>Skills &amp; Training Support</p>
-                </div>
-                <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="assets/generated/skills-loan.png" alt="">
-                    <span class="slide-photo-badge">&#9881;</span>
-                </div>
-            </article>
+                <a class="vertical-card vertical-card-indigo" href="loan-detail.html?product=msme" data-product-key="msme">
+                    <div class="vertical-card-media">
+                        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Manufacturing workspace for enterprise growth">
+                        <span class="vertical-card-icon">&#127970;</span>
+                    </div>
+                    <div class="vertical-card-copy">
+                        <h3>MSME and Enterprise Finance</h3>
+                        <span class="vertical-divider"></span>
+                        <p>Fueling businesses to grow, innovate and create lasting impact.</p>
+                    </div>
+                </a>
 
-            <article class="product-slide product-slide-green" data-slide-link="loan-detail.html?product=school-growth" data-product-key="school-growth" aria-hidden="true">
-                <div class="slide-copy">
-                    <span class="slide-kicker">05</span>
-                    <h2>School Growth Program</h2>
-                    <p>Leadership &amp; Development</p>
-                </div>
-                <div class="slide-visual" aria-hidden="true">
-                    <img class="slide-photo" src="assets/generated/school-growth.png" alt="">
-                    <span class="slide-photo-badge">&#128200;</span>
-                </div>
-            </article>
+                <a class="vertical-card vertical-card-teal" href="loan-detail.html?product=secured" data-product-key="secured">
+                    <div class="vertical-card-media">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Home model representing secured credit">
+                        <span class="vertical-card-icon">&#128737;</span>
+                    </div>
+                    <div class="vertical-card-copy">
+                        <h3>Secured Credit</h3>
+                        <span class="vertical-divider"></span>
+                        <p>Unlock higher opportunities with the security of your assets.</p>
+                    </div>
+                </a>
 
-            <button class="slider-arrow slider-arrow-prev" type="button" data-slider-prev aria-label="Previous product">&#8249;</button>
-            <button class="slider-arrow slider-arrow-next" type="button" data-slider-next aria-label="Next product">&#8250;</button>
+                <a class="vertical-card vertical-card-orange" href="loan-detail.html?product=healthcare" data-product-key="healthcare">
+                    <div class="vertical-card-media">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Healthcare corridor and wellness facility">
+                        <span class="vertical-card-icon">&#9825;</span>
+                    </div>
+                    <div class="vertical-card-copy">
+                        <h3>Healthcare Finance</h3>
+                        <span class="vertical-divider"></span>
+                        <p>Access financial support for a healthier and happier tomorrow.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <div class="slider-dots" role="tablist" aria-label="Product slides">
-                <button class="slider-dot is-active" type="button" data-slide-to="0" aria-label="Show School Improvement Capital"></button>
-                <button class="slider-dot" type="button" data-slide-to="1" aria-label="Show Fee Finance for Parents"></button>
-                <button class="slider-dot" type="button" data-slide-to="2" aria-label="Show Student Loans"></button>
-                <button class="slider-dot" type="button" data-slide-to="3" aria-label="Show Vocational and Skill Loans"></button>
-                <button class="slider-dot" type="button" data-slide-to="4" aria-label="Show School Growth Program"></button>
+    <!-- Integrated Education Finance Ecosystem -->
+    <section class="integrated-ecosystem" id="integrated-ecosystem" aria-labelledby="ecosystemTitle">
+        <div class="container ecosystem-layout">
+            <div class="ecosystem-showcase">
+                <div class="ecosystem-intro">
+                    <span class="ecosystem-intro-icon" aria-hidden="true">&#127963;</span>
+                    <span class="section-label">INTEGRATED EDUCATION FINANCE ECOSYSTEM</span>
+                    <h2 class="section-title" id="ecosystemTitle">A Connected Education Finance Ecosystem</h2>
+                    <span class="ecosystem-intro-rule" aria-hidden="true"></span>
+                    <div class="ecosystem-taglines">
+                        <p>Empowering Institutions.</p>
+                        <p>Enabling Access.</p>
+                        <p>Financing Futures.</p>
+                    </div>
+                </div>
+
+                <div class="ecosystem-diagram" aria-label="Integrated education finance pillars">
+                    <div class="ecosystem-wheel">
+                        <article class="wheel-segment wheel-segment-01">
+                            <span class="wheel-segment-number">01</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#127979;</span>
+                            <h3>School Infrastructure &amp; Development</h3>
+                            <p>Finance and support for modern, future-ready learning environments.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-02">
+                            <span class="wheel-segment-number">02</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128106;</span>
+                            <h3>Parent &amp; Fee Enablement</h3>
+                            <p>Flexible fee financing and payment solutions for every family.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-03">
+                            <span class="wheel-segment-number">03</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#127891;</span>
+                            <h3>Higher Education Financing</h3>
+                            <p>Loans and financial support for higher education dreams.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-04">
+                            <span class="wheel-segment-number">04</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128188;</span>
+                            <h3>Skill &amp; Vocational Financing</h3>
+                            <p>Financing skills and vocational programs for better careers and livelihoods.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-05">
+                            <span class="wheel-segment-number">05</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#129309;</span>
+                            <h3>Institutional Growth &amp; Partnerships</h3>
+                            <p>Strategic partnerships to drive growth, reach and impact.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-06">
+                            <span class="wheel-segment-number">06</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128187;</span>
+                            <h3>Institutional ERP &amp; Digital Enablement</h3>
+                            <p>Digital solutions and ERP systems to streamline operations and improve outcomes.</p>
+                        </article>
+                        <div class="wheel-hub">
+                            <span class="wheel-hub-icon" aria-hidden="true">&#127891;</span>
+                            <p>ONE ECOSYSTEM.<br>ENDLESS POSSIBILITIES.</p>
+                            <div class="wheel-hub-dots" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ecosystem-banner">
+                <strong>STRONGER TOGETHER. BUILDING THE FUTURE OF EDUCATION.</strong>
+                <ul>
+                    <li><span aria-hidden="true">&#127979;</span> Stronger Institutions</li>
+                    <li><span aria-hidden="true">&#128106;</span> Empowered Parents</li>
+                    <li><span aria-hidden="true">&#127891;</span> Supported Learners</li>
+                    <li><span aria-hidden="true">&#128200;</span> Future-Ready Workforce</li>
+                    <li><span aria-hidden="true">&#129309;</span> Collaborative Ecosystem</li>
+                    <li><span aria-hidden="true">&#128737;</span> Digital-First Transformation</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -144,6 +221,11 @@
     <!-- About Us Section -->
     <section class="about" id="about">
         <div class="container">
+            <div class="section-header compact-section-header">
+                <span class="section-label">ABOUT BHARAT UDAY</span>
+                <h2 class="section-title">Built for Access Across Bharat</h2>
+            </div>
+
             <div class="vision-mission-showcase">
                 <article class="vm-panel vm-vision">
                     <div class="vm-icon" aria-hidden="true">🌟</div>
@@ -206,52 +288,54 @@
                 </div>
             </div>
 
-            <div class="identity-sections">
+            <div class="identity-sections about-identity">
                 <article class="identity-card identity-card-wide">
                     <span class="content-label">Who We Are</span>
-                    <p>Bharat Uday Finserv (BUFL) is an EduFinance institution built on the principle that India's long-term growth is inseparable from the quality and accessibility of education. We operate not merely as lenders, but as comprehensive partners, delivering integrated financial solutions that strengthen and sustain the nation's educational ecosystem.</p>
+                    <p>Bharat Uday Finserve (BUFL) is a connected financial ecosystem built for Bharat. We bring together digital capability, partner networks, and local presence to make access simpler, faster, and more meaningful for communities and institutions.</p>
                 </article>
 
                 <article class="identity-card identity-card-wide philosophy-card">
-                    <span class="content-label">Our Philosophy</span>
-                    <p>We operate on a simple yet powerful conviction &mdash; education is the foundation of India's growth. BUFL goes beyond traditional lending; we serve as strategic partners to schools, parents, and students, offering comprehensive financial solutions that strengthen the entire learning ecosystem.</p>
+                    <span class="content-label">Our Platform Approach</span>
+                    <p>We work as an enabler across product verticals, aligning capital pathways, operational support, and on-ground relationships so people and enterprises can move from need to opportunity with clarity.</p>
                 </article>
 
                 <article class="identity-card identity-card-wide approach-card">
-                    <span class="content-label">Our Approach</span>
-                    <p>Our model integrates funding and value enhancement through five interconnected pillars that strengthen every link in the education chain.</p>
-                    <p>Phystal is BUFL's central philosophy: the integration of physical reach and digital efficiency to serve education finance across Bharat.</p>
-                    <p>Our local presence helps us understand schools, parents, students, and communities on the ground. Our digital workflows make application, underwriting, monitoring, and service faster, clearer, and easier to scale.</p>
+                    <span class="content-label">How We Build</span>
+                    <p>We combine structured products, partner-led distribution, responsible digital workflows, and relationship-led service. The result is an ecosystem that can scale while staying close to the realities of Bharat.</p>
                 </article>
 
-                <article class="identity-card identity-card-wide">
-                    <span class="content-label">Our Core Values</span>
-                    <div class="core-values-visual" aria-label="Our Core Values">
-                        <div class="value-pillar value-integrity">
-                            <img src="assets/core-values/integrity.jpg" alt="Professional handshake representing integrity">
-                            <h3>Integrity</h3>
-                            <p>Transparency &amp; Ethics</p>
-                        </div>
-                        <div class="value-pillar value-innovation">
-                            <img src="assets/core-values/innovation.jpg" alt="Creative idea session representing innovation">
-                            <h3>Innovation</h3>
-                            <p>Creative Solutions</p>
-                        </div>
-                        <div class="value-pillar value-inclusion">
-                            <img src="assets/core-values/inclusion.jpg" alt="Diverse group learning together representing inclusion">
-                            <h3>Inclusion</h3>
-                            <p>Access for All</p>
-                        </div>
-                        <div class="value-pillar value-impact">
-                            <img src="assets/core-values/impact.png" alt="Students on campus representing student success">
-                            <h3>Impact</h3>
-                            <p>Student Success</p>
-                        </div>
-                        <div class="value-pillar value-partnership">
-                            <img src="assets/core-values/partnership.jpg" alt="Team collaboration representing partnership">
-                            <h3>Partnership</h3>
-                            <p>Collaborative Growth</p>
-                        </div>
+                <article class="identity-card identity-card-wide core-values-card">
+                    <div class="core-values-heading">
+                        <span class="content-label">Core Values</span>
+                        <h3>What We Stand For</h3>
+                        <p>Five principles that guide how we build trust, expand access, and create lasting outcomes across Bharat.</p>
+                    </div>
+                    <div class="core-values-grid" aria-label="Core values">
+                        <article class="core-value-item core-value-integrity">
+                            <div class="core-value-icon-wrap" aria-hidden="true">&#9878;</div>
+                            <h4>Integrity</h4>
+                            <p>Transparent, ethical, and accountable in every partnership and decision.</p>
+                        </article>
+                        <article class="core-value-item core-value-inclusion">
+                            <div class="core-value-icon-wrap" aria-hidden="true">&#127758;</div>
+                            <h4>Inclusion</h4>
+                            <p>Designing finance that reaches families and communities often left behind.</p>
+                        </article>
+                        <article class="core-value-item core-value-innovation">
+                            <div class="core-value-icon-wrap" aria-hidden="true">&#9889;</div>
+                            <h4>Innovation</h4>
+                            <p>Combining digital tools with practical solutions built for real-world needs.</p>
+                        </article>
+                        <article class="core-value-item core-value-partnership">
+                            <div class="core-value-icon-wrap" aria-hidden="true">&#129309;</div>
+                            <h4>Partnership</h4>
+                            <p>Growing together with institutions, lenders, and communities for shared success.</p>
+                        </article>
+                        <article class="core-value-item core-value-impact">
+                            <div class="core-value-icon-wrap" aria-hidden="true">&#127919;</div>
+                            <h4>Impact</h4>
+                            <p>Measuring progress by the opportunities unlocked and lives meaningfully changed.</p>
+                        </article>
                     </div>
                 </article>
             </div>
@@ -400,35 +484,32 @@
             <div class="section-header">
                 <span class="section-label">LEADERSHIP</span>
                 <h2 class="section-title">Our Board of Directors</h2>
-                <p class="section-subtitle">Guided by decades of experience in banking, education policy, and financial technology</p>
+                <p class="section-subtitle">Director profiles are being updated as confirmed details are received.</p>
             </div>
 
             <div class="directors-grid">
                 <div class="director-card">
                     <div class="director-avatar">RM</div>
-                    <h3 class="director-name">Mr. Rajiv Mehta</h3>
-                    <p class="director-designation">Chairman &amp; Managing Director</p>
+                    <h3 class="director-name">Rena Matu</h3>
+                    <p class="director-designation">Director</p>
                     <div class="director-divider"></div>
-                    <p class="director-bio">28+ years in Indian banking and financial services. Former Executive Director at a leading public sector bank. Visionary behind Bharat Uday Finserve (BUFL)'s education-first lending model.</p>
-                    <a href="#" class="director-linkedin">in</a>
+                    <p class="director-bio">Brings strategic vision and deep impact expertise to Bharat Uday's mission of connected financial inclusion across Bharat.</p>
                 </div>
 
                 <div class="director-card">
-                    <div class="director-avatar">SK</div>
-                    <h3 class="director-name">Dr. Sunita Krishnamurthy</h3>
-                    <p class="director-designation">Independent Director</p>
+                    <div class="director-avatar">VK</div>
+                    <h3 class="director-name">Vikas K.</h3>
+                    <p class="director-designation">Director</p>
                     <div class="director-divider"></div>
-                    <p class="director-bio">PhD in Economics, Delhi School of Economics. Former policy advisor to the Ministry of Education, GoI. Expert in rural credit access and education finance for Bharat.</p>
-                    <a href="#" class="director-linkedin">in</a>
+                    <p class="director-bio">Drives operational excellence and strategic partnerships to scale Bharat Uday's connected financial ecosystem across India.</p>
                 </div>
 
                 <div class="director-card">
-                    <div class="director-avatar">AS</div>
-                    <h3 class="director-name">Mr. Arjun Singhania</h3>
-                    <p class="director-designation">Director &mdash; Technology &amp; Operations</p>
+                    <div class="director-avatar">BU</div>
+                    <h3 class="director-name">Board Member</h3>
+                    <p class="director-designation">Leadership Team</p>
                     <div class="director-divider"></div>
-                    <p class="director-bio">IIT Bombay alumnus. 20+ years in fintech and digital lending. Former CTO of a leading Indian financial-services platform. Drives Bharat Uday's digital-first, AI-powered loan processing engine.</p>
-                    <a href="#" class="director-linkedin">in</a>
+                    <p class="director-bio">Additional leadership information available. Contact us to learn more about our full board and advisory team.</p>
                 </div>
             </div>
         </div>
@@ -568,6 +649,20 @@
         </div>
     </section>
 
+    <!-- Mission / Vision -->
+    <section class="mission-vision-simple" id="mission-vision">
+        <div class="container mission-vision-simple-grid">
+            <article>
+                <span class="content-label">Vision</span>
+                <p>Universal access to opportunity through connected, responsible, and scalable financial ecosystems.</p>
+            </article>
+            <article>
+                <span class="content-label">Mission</span>
+                <p>Enable inclusive growth across Bharat by pairing digital capability with deep on-ground reach.</p>
+            </article>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -576,8 +671,8 @@
                     <div class="footer-logo">
                         <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img" />
                     </div>
-                    <div class="footer-tagline">Empowering India, One Education at a Time</div>
-                    <p class="footer-description">EduFinance for India &mdash; funding paired with value enhancement, from student aspirations to school transformation.</p>
+                    <div class="footer-tagline">The Finance Behind Bharat's Future</div>
+                    <p class="footer-description">A connected financial ecosystem where digital capability meets deep on-ground reach across Bharat.</p>
                 </div>
 
                 <div class="footer-col">
@@ -585,7 +680,8 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Loan Products</a></li>
+                        <li><a href="#products">Product Offering</a></li>
+                        <li><a href="#integrated-ecosystem">Integrated Ecosystem</a></li>
                         <li><a href="emi-calculator.html">EMI Calculator</a></li>
                         <li><a href="who-can-apply.html">Who Can Apply</a></li>
                         <li><a href="#school-network">School Network</a></li>
@@ -598,8 +694,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <p><strong>Registered Office:</strong> 7th Floor, Uday Bhavan, Bandra Kurla Complex, Mumbai - 400051</p>
+                    <p><strong>Gurgaon Office:</strong> Gurgaon, Haryana, India</p>
                     <p><strong>Toll Free:</strong> 1800-200-UDAY (8329)</p>
-                    <p><strong>Email:</strong> info@bharatudayfinserve.in</p>
+                    <p><strong>Email:</strong> contact@bharatuday.in</p>
                 </div>
             </div>
 
@@ -607,7 +704,7 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2026 Bharat Uday Finserve Pvt. Ltd. (BUFL) All Rights Reserved.</p>
-                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is a private limited education-finance company operating across India. All loan products are subject to credit assessment, KYC verification, and eligibility criteria. Indicative rates and tenures may be revised based on borrower profile and prevailing market conditions.</p>
+                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is building connected product pathways across Bharat. Product availability, terms, and partner processes may vary by vertical and eligibility.</p>
             </div>
         </div>
     </footer>

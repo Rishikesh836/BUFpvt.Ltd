@@ -171,6 +171,101 @@ function updateActiveNavLink() {
 // ===========================
 
 const productCatalog = {
+    edufinance: {
+        colorClass: 'product-card-blue',
+        number: '01',
+        status: 'Active vertical',
+        title: 'Bharat Uday Edufinance',
+        subtitle: 'Edufinance Products',
+        audience: 'Expanding access to quality learning through a phygital approach.',
+        amount: 'Schools | Parents | Learners',
+        timeline: 'Application support available',
+        image: 'assets/generated/student-loan.png',
+        alt: 'Learners and institutions supported through Edufinance',
+        highlights: [
+            'School infrastructure and development support',
+            'Parent and fee enablement pathways',
+            'Higher education and skills financing products'
+        ],
+        applyLabel: 'Apply for Edufinance',
+        applyType: 'School Loan'
+    },
+    microfinance: {
+        colorClass: 'product-card-green',
+        number: '02',
+        status: 'Coming soon',
+        title: 'Bharat Uday Micro',
+        subtitle: 'Financial Inclusion',
+        audience: 'Small steps. Big futures.',
+        amount: 'Community-focused access',
+        timeline: 'Future vertical',
+        image: 'assets/generated/fee-finance.png',
+        alt: 'Community finance discussion',
+        highlights: [
+            'Accessible and community-focused lending',
+            'Designed for financial inclusion pathways',
+            'Placeholder vertical for future rollout'
+        ],
+        applyLabel: 'Coming Soon',
+        comingSoon: true
+    },
+    msme: {
+        colorClass: 'product-card-navy',
+        number: '03',
+        status: 'Coming soon',
+        title: 'Bharat Uday MSME',
+        subtitle: 'MSME & Enterprise Finance',
+        audience: 'Supporting business growth with tailored financing for every stage of expansion.',
+        amount: 'Enterprise pathways',
+        timeline: 'Future vertical',
+        image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80',
+        alt: 'Manufacturing workspace for enterprise growth',
+        highlights: [
+            'Growth support for MSME and enterprise needs',
+            'Structured products for different expansion stages',
+            'Placeholder vertical for future rollout'
+        ],
+        applyLabel: 'Coming Soon',
+        comingSoon: true
+    },
+    secured: {
+        colorClass: 'product-card-blue',
+        number: '04',
+        status: 'Coming soon',
+        title: 'Bharat Uday Secured',
+        subtitle: 'Secured Credit',
+        audience: 'Unlock greater financial opportunities through asset-backed lending solutions.',
+        amount: 'Asset-backed pathways',
+        timeline: 'Future vertical',
+        image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80',
+        alt: 'Home model representing secured credit',
+        highlights: [
+            'Asset-backed credit pathways',
+            'Designed for larger financial opportunities',
+            'Placeholder vertical for future rollout'
+        ],
+        applyLabel: 'Coming Soon',
+        comingSoon: true
+    },
+    healthcare: {
+        colorClass: 'product-card-orange',
+        number: '05',
+        status: 'Coming soon',
+        title: 'Bharat Uday Healthcare',
+        subtitle: 'Healthcare Finance',
+        audience: 'Providing timely financial support for medical needs and wellness goals.',
+        amount: 'Healthcare access',
+        timeline: 'Future vertical',
+        image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80',
+        alt: 'Healthcare corridor and wellness facility',
+        highlights: [
+            'Support for medical needs and wellness goals',
+            'Designed for timely healthcare access',
+            'Placeholder vertical for future rollout'
+        ],
+        applyLabel: 'Coming Soon',
+        comingSoon: true
+    },
     'school-improvement': {
         colorClass: 'product-card-blue',
         number: '01',
@@ -321,6 +416,7 @@ function setLoanApplicationOpen(isOpen, shouldScroll = false) {
 }
 
 function syncApplyTriggers(product) {
+    if (!product.applyType) return;
     document.querySelectorAll('[data-apply-loan]').forEach(trigger => {
         trigger.dataset.applyLoan = product.applyType;
     });
@@ -346,13 +442,22 @@ function showProductDetail(productKey, shouldScroll = false) {
     productDetailTimeline.textContent = product.timeline;
     if (productApplyButton) {
         productApplyButton.textContent = product.applyLabel;
+        productApplyButton.classList.toggle('btn-disabled', Boolean(product.comingSoon));
         const hasApplicationForm = Boolean(document.getElementById('loanApplicationForm'));
-        if (hasApplicationForm) {
+        if (product.comingSoon) {
+            productApplyButton.href = '#product-detail';
+            productApplyButton.removeAttribute('data-apply-loan');
+            productApplyButton.setAttribute('aria-disabled', 'true');
+            setLoanApplicationOpen(false);
+        } else if (hasApplicationForm) {
             productApplyButton.href = '#loan-application';
+            productApplyButton.dataset.applyLoan = product.applyType;
+            productApplyButton.removeAttribute('aria-disabled');
             syncApplyTriggers(product);
         } else {
             productApplyButton.href = `loan-detail.html?product=${productKey}#loan-application`;
             delete productApplyButton.dataset.applyLoan;
+            productApplyButton.removeAttribute('aria-disabled');
         }
     }
 
@@ -374,7 +479,7 @@ if (productDetailView) {
     if (initialProductKey && productCatalog[initialProductKey]) {
         showProductDetail(initialProductKey, false);
     } else {
-        showProductDetail(productDetailView.dataset.productKey || 'school-improvement', false);
+        showProductDetail(productDetailView.dataset.productKey || 'edufinance', false);
     }
 }
 
@@ -493,7 +598,8 @@ if (applicationLoanType) {
 }
 
 if (loanApplicationSection) {
-    const shouldOpenApplication = window.location.hash === '#loan-application';
+    const activeProduct = productDetailView ? productCatalog[productDetailView.dataset.productKey] : null;
+    const shouldOpenApplication = window.location.hash === '#loan-application' && !(activeProduct && activeProduct.comingSoon);
     setLoanApplicationOpen(shouldOpenApplication, shouldOpenApplication);
 }
 
@@ -876,6 +982,34 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
     });
+});
+
+// ===========================
+// Accordion Functionality
+// ===========================
+
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach((item, index) => {
+    const header = item.querySelector('.accordion-header');
+    
+    if (index === 0) {
+        item.classList.add('active');
+    }
+    
+    if (header) {
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            accordionItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    }
 });
 
 updateActiveNavLink();
