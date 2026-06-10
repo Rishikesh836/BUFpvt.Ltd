@@ -24,11 +24,11 @@
                         <span class="dropdown-chevron" aria-hidden="true"></span>
                     </button>
                     <ul class="loans-dropdown" id="loansDropdown" aria-label="Product offerings">
-                        <li><a href="loan-detail.html?product=msme" class="dropdown-link" data-product-key="msme">MSME &amp; Enterprise Finance</a></li>
-                        <li><a href="loan-detail.html?product=microfinance" class="dropdown-link" data-product-key="microfinance">Financial Inclusion (Microfinance)</a></li>
-                        <li><a href="loan-detail.html?product=secured" class="dropdown-link" data-product-key="secured">Secured Credit</a></li>
-                        <li><a href="loan-detail.html?product=edufinance" class="dropdown-link" data-product-key="edufinance">Education Finance</a></li>
+                        <li><a href="loan-detail.html?product=edufinance" class="dropdown-link" data-product-key="edufinance">EduFinance</a></li>
+                        <li><a href="loan-detail.html?product=microfinance" class="dropdown-link" data-product-key="microfinance">Microfinance</a></li>
                         <li><a href="loan-detail.html?product=healthcare" class="dropdown-link" data-product-key="healthcare">Healthcare Finance</a></li>
+                        <li><a href="loan-detail.html?product=msme" class="dropdown-link" data-product-key="msme">MSME &amp; Enterprise Finance</a></li>
+                        <li><a href="loan-detail.html?product=secured" class="dropdown-link" data-product-key="secured">Secured Credit</a></li>
                     </ul>
                 </li>
                 <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
@@ -63,10 +63,44 @@
         <section class="loan-hub loan-detail-main" id="products">
             <div class="container">
                 <article class="product-detail-view product-card-blue" id="product-detail" data-product-detail data-product-key="edufinance">
+
                     <div class="product-detail-media">
-                        <img id="productDetailImage" src="assets/generated/student-loan.png" alt="Learners and institutions supported through Edufinance">
-                        <span class="product-detail-number" id="productDetailNumber">01</span>
+                        <div class="product-hero-card" id="productHeroCard">
+                            <span class="product-hero-badge">
+                                <span class="product-hero-badge-dot"></span>
+                                <span id="productHeroBadgeText">EDUCATION FINANCE</span>
+                            </span>
+                            <div class="product-hero-title">
+                                <span id="productHeroTitleMain">EduFinance</span>
+                                <span class="product-hero-title-accent" id="productHeroTitleAccent">Loan</span>
+                            </div>
+                            <div class="product-hero-tags" id="productHeroTags">
+                                <span class="product-hero-tag pht-teal">Student</span>
+                                <span class="product-hero-tag pht-green">School</span>
+                                <span class="product-hero-tag pht-amber">Parent</span>
+                            </div>
+                            <p class="product-hero-desc" id="productHeroDesc">Empowering dreams through education financing.</p>
+                            <hr class="product-hero-rule">
+                            <div class="product-hero-subcards" id="productHeroSubcards">
+                                <div class="product-hero-subcard">
+                                    <div class="product-hero-subcard-icon phsi-teal">&#127891;</div>
+                                    <span class="product-hero-subcard-title phst-teal">For Students</span>
+                                    <p>Fund your higher education dreams</p>
+                                </div>
+                                <div class="product-hero-subcard">
+                                    <div class="product-hero-subcard-icon phsi-green">&#127979;</div>
+                                    <span class="product-hero-subcard-title phst-green">For Schools</span>
+                                    <p>Support growth and better learning</p>
+                                </div>
+                                <div class="product-hero-subcard">
+                                    <div class="product-hero-subcard-icon phsi-amber">&#128106;</div>
+                                    <span class="product-hero-subcard-title phst-amber">For Parents</span>
+                                    <p>Plan and finance your child's future</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="product-detail-copy">
                         <span class="content-label" id="productDetailStatus">Applications open</span>
                         <h3 id="productDetailTitle">Bharat Uday Edufinance</h3>

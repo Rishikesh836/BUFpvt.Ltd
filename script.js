@@ -177,7 +177,7 @@ const productCatalog = {
         status: 'Active vertical',
         title: 'Bharat Uday Edufinance',
         subtitle: 'Edufinance Products',
-        audience: 'Expanding access to quality learning through a phygital approach.',
+        audience: 'Building a connected education finance ecosystem through a strong phygital model that combines digital capability with deep on-ground reach.',
         amount: 'Schools | Parents | Learners',
         timeline: 'Application support available',
         image: 'assets/generated/student-loan.png',
@@ -188,15 +188,32 @@ const productCatalog = {
             'Higher education and skills financing products'
         ],
         applyLabel: 'Apply for Edufinance',
-        applyType: 'School Loan'
+        applyType: 'School Loan',
+        heroCard: {
+            badge: 'EDUCATION FINANCE',
+            titleMain: 'EduFinance',
+            titleAccent: 'Loan',
+            accentColor: '#7B6CF6',
+            tags: [
+                { label: 'Student', cls: 'pht-teal' },
+                { label: 'School',  cls: 'pht-green' },
+                { label: 'Parent',  cls: 'pht-amber' }
+            ],
+            desc: 'Empowering dreams through education financing.',
+            subcards: [
+                { icon: '&#127891;', iconCls: 'phsi-teal',  titleCls: 'phst-teal',  title: 'For Students', desc: 'Fund your higher education dreams' },
+                { icon: '&#127979;', iconCls: 'phsi-green', titleCls: 'phst-green', title: 'For Schools',   desc: 'Support growth and better learning' },
+                { icon: '&#128106;', iconCls: 'phsi-amber', titleCls: 'phst-amber', title: 'For Parents',  desc: "Plan and finance your child's future" }
+            ]
+        }
     },
     microfinance: {
         colorClass: 'product-card-green',
         number: '02',
         status: 'Coming soon',
         title: 'Bharat Uday Micro',
-        subtitle: 'Financial Inclusion',
-        audience: 'Small steps. Big futures.',
+        subtitle: 'Microfinance',
+        audience: 'Expanding financial inclusion through accessible, community-driven lending solutions designed to empower underserved segments.',
         amount: 'Community-focused access',
         timeline: 'Future vertical',
         image: 'assets/generated/fee-finance.png',
@@ -207,7 +224,24 @@ const productCatalog = {
             'Placeholder vertical for future rollout'
         ],
         applyLabel: 'Coming Soon',
-        comingSoon: true
+        comingSoon: true,
+        heroCard: {
+            badge: 'MICROFINANCE',
+            titleMain: 'Microfinance',
+            titleAccent: 'Loan',
+            accentColor: '#22c55e',
+            tags: [
+                { label: 'Individual',  cls: 'pht-teal' },
+                { label: 'Community',   cls: 'pht-green' },
+                { label: 'Group',       cls: 'pht-amber' }
+            ],
+            desc: 'Expanding financial inclusion through accessible, community-driven lending.',
+            subcards: [
+                { icon: '&#128100;', iconCls: 'phsi-teal',  titleCls: 'phst-teal',  title: 'For Individuals', desc: 'Access personal microloans' },
+                { icon: '&#127968;', iconCls: 'phsi-green', titleCls: 'phst-green', title: 'For Communities', desc: 'Build stronger local economies' },
+                { icon: '&#128101;', iconCls: 'phsi-amber', titleCls: 'phst-amber', title: 'For Groups',      desc: 'Joint liability group lending' }
+            ]
+        }
     },
     msme: {
         colorClass: 'product-card-navy',
@@ -215,7 +249,7 @@ const productCatalog = {
         status: 'Coming soon',
         title: 'Bharat Uday MSME',
         subtitle: 'MSME & Enterprise Finance',
-        audience: 'Supporting business growth with tailored financing for every stage of expansion.',
+        audience: 'Enabling sustainable business growth with tailored financial solutions across every stage of enterprise expansion.',
         amount: 'Enterprise pathways',
         timeline: 'Future vertical',
         image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80',
@@ -226,7 +260,24 @@ const productCatalog = {
             'Placeholder vertical for future rollout'
         ],
         applyLabel: 'Coming Soon',
-        comingSoon: true
+        comingSoon: true,
+        heroCard: {
+            badge: 'MSME & ENTERPRISE',
+            titleMain: 'MSME & Enterprise',
+            titleAccent: 'Finance',
+            accentColor: '#3b82f6',
+            tags: [
+                { label: 'MSME',       cls: 'pht-teal' },
+                { label: 'Enterprise', cls: 'pht-green' },
+                { label: 'Business',   cls: 'pht-amber' }
+            ],
+            desc: 'Enabling sustainable business growth with tailored financial solutions.',
+            subcards: [
+                { icon: '&#128295;', iconCls: 'phsi-teal',  titleCls: 'phst-teal',  title: 'For MSMEs',      desc: 'Kick-start your micro business' },
+                { icon: '&#127981;', iconCls: 'phsi-green', titleCls: 'phst-green', title: 'For Enterprise', desc: 'Scale your enterprise operations' },
+                { icon: '&#128200;', iconCls: 'phsi-amber', titleCls: 'phst-amber', title: 'For Business',   desc: 'Drive medium-scale expansion' }
+            ]
+        }
     },
     secured: {
         colorClass: 'product-card-blue',
@@ -234,7 +285,7 @@ const productCatalog = {
         status: 'Coming soon',
         title: 'Bharat Uday Secured',
         subtitle: 'Secured Credit',
-        audience: 'Unlock greater financial opportunities through asset-backed lending solutions.',
+        audience: 'Unlocking financial potential through structured asset-backed lending solutions built on stability and trust.',
         amount: 'Asset-backed pathways',
         timeline: 'Future vertical',
         image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80',
@@ -245,7 +296,24 @@ const productCatalog = {
             'Placeholder vertical for future rollout'
         ],
         applyLabel: 'Coming Soon',
-        comingSoon: true
+        comingSoon: true,
+        heroCard: {
+            badge: 'SECURED CREDIT',
+            titleMain: 'Secured',
+            titleAccent: 'Credit',
+            accentColor: '#f59e0b',
+            tags: [
+                { label: 'Home',     cls: 'pht-teal' },
+                { label: 'Business', cls: 'pht-green' },
+                { label: 'Property', cls: 'pht-amber' }
+            ],
+            desc: 'Unlocking financial potential through structured asset-backed lending solutions.',
+            subcards: [
+                { icon: '&#127968;', iconCls: 'phsi-teal',  titleCls: 'phst-teal',  title: 'Home Loan',     desc: 'Finance your dream home' },
+                { icon: '&#128188;', iconCls: 'phsi-green', titleCls: 'phst-green', title: 'Business Loan', desc: 'Secure capital for growth' },
+                { icon: '&#127959;', iconCls: 'phsi-amber', titleCls: 'phst-amber', title: 'Property Loan', desc: 'Leverage your property assets' }
+            ]
+        }
     },
     healthcare: {
         colorClass: 'product-card-orange',
@@ -253,7 +321,7 @@ const productCatalog = {
         status: 'Coming soon',
         title: 'Bharat Uday Healthcare',
         subtitle: 'Healthcare Finance',
-        audience: 'Providing timely financial support for medical needs and wellness goals.',
+        audience: 'Enhancing access to healthcare through timely and flexible financial solutions supporting medical and wellness needs.',
         amount: 'Healthcare access',
         timeline: 'Future vertical',
         image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80',
@@ -264,7 +332,24 @@ const productCatalog = {
             'Placeholder vertical for future rollout'
         ],
         applyLabel: 'Coming Soon',
-        comingSoon: true
+        comingSoon: true,
+        heroCard: {
+            badge: 'HEALTHCARE FINANCE',
+            titleMain: 'Healthcare',
+            titleAccent: 'Finance',
+            accentColor: '#f43f5e',
+            tags: [
+                { label: 'Patient',  cls: 'pht-teal' },
+                { label: 'Hospital', cls: 'pht-green' },
+                { label: 'Wellness', cls: 'pht-amber' }
+            ],
+            desc: 'Enhancing access to healthcare through timely and flexible financial solutions.',
+            subcards: [
+                { icon: '&#128137;', iconCls: 'phsi-teal',  titleCls: 'phst-teal',  title: 'For Patients',  desc: 'Cover medical expenses easily' },
+                { icon: '&#127973;', iconCls: 'phsi-green', titleCls: 'phst-green', title: 'For Hospitals', desc: 'Support healthcare infrastructure' },
+                { icon: '&#128138;', iconCls: 'phsi-amber', titleCls: 'phst-amber', title: 'For Wellness',  desc: 'Fund wellness and preventive care' }
+            ]
+        }
     },
     'school-improvement': {
         colorClass: 'product-card-blue',
@@ -385,6 +470,33 @@ const productCatalog = {
 const productDetailView = document.querySelector('[data-product-detail]');
 const productDetailImage = document.getElementById('productDetailImage');
 const productDetailNumber = document.getElementById('productDetailNumber');
+const productHeroCard = document.getElementById('productHeroCard');
+const productHeroBadgeText = document.getElementById('productHeroBadgeText');
+const productHeroTitleMain = document.getElementById('productHeroTitleMain');
+const productHeroTitleAccent = document.getElementById('productHeroTitleAccent');
+const productHeroTags = document.getElementById('productHeroTags');
+const productHeroDesc = document.getElementById('productHeroDesc');
+const productHeroSubcards = document.getElementById('productHeroSubcards');
+
+function updateHeroCard(product) {
+    if (!productHeroCard || !product.heroCard) return;
+    const c = product.heroCard;
+    productHeroCard.style.setProperty('--hero-accent', c.accentColor);
+    productHeroBadgeText.textContent = c.badge;
+    productHeroTitleMain.textContent = c.titleMain;
+    productHeroTitleAccent.textContent = c.titleAccent;
+    productHeroTags.innerHTML = c.tags.map(t =>
+        `<span class="product-hero-tag ${t.cls}">${t.label}</span>`
+    ).join('');
+    productHeroDesc.textContent = c.desc;
+    productHeroSubcards.innerHTML = c.subcards.map(s =>
+        `<div class="product-hero-subcard">
+            <div class="product-hero-subcard-icon ${s.iconCls}">${s.icon}</div>
+            <span class="product-hero-subcard-title ${s.titleCls}">${s.title}</span>
+            <p>${s.desc}</p>
+        </div>`
+    ).join('');
+}
 const productDetailStatus = document.getElementById('productDetailStatus');
 const productDetailTitle = document.getElementById('productDetailTitle');
 const productDetailSubtitle = document.getElementById('productDetailSubtitle');
@@ -431,9 +543,8 @@ function showProductDetail(productKey, shouldScroll = false) {
     productDetailView.classList.add(product.colorClass);
     productDetailView.dataset.productKey = productKey;
 
-    productDetailImage.src = product.image;
-    productDetailImage.alt = product.alt;
-    productDetailNumber.textContent = product.number;
+    if (productDetailImage) { productDetailImage.src = product.image; productDetailImage.alt = product.alt; }
+    if (productDetailNumber) productDetailNumber.textContent = product.number;
     productDetailStatus.textContent = product.status;
     productDetailTitle.textContent = product.title;
     productDetailSubtitle.textContent = product.subtitle;
@@ -460,6 +571,8 @@ function showProductDetail(productKey, shouldScroll = false) {
             productApplyButton.removeAttribute('aria-disabled');
         }
     }
+
+    updateHeroCard(product);
 
     productDetailList.replaceChildren();
     product.highlights.forEach(highlight => {
