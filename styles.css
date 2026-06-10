@@ -759,6 +759,7 @@ section {
    =========================== */
 .product-overview {
     background: var(--color-bg-cream);
+    padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .compact-section-header {
@@ -774,8 +775,8 @@ section {
 .vertical-card {
     --vertical-color: var(--color-primary);
     display: grid;
-    grid-template-rows: 170px 1fr;
-    min-height: 420px;
+    grid-template-rows: auto 1fr;
+    min-height: 280px;
     background: var(--color-white);
     border: 1px solid rgba(13, 43, 85, 0.12);
     border-top: 6px solid var(--vertical-color);
@@ -796,22 +797,15 @@ section {
 }
 
 .vertical-card-media {
-    position: relative;
-    min-height: 170px;
-    background: #eef2f6;
-}
-
-.vertical-card-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem 1rem 0.5rem;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--vertical-color), white 92%) 0%, var(--color-white) 100%);
 }
 
 .vertical-card-icon {
-    position: absolute;
-    left: 50%;
-    bottom: -34px;
-    transform: translateX(-50%);
+    position: relative;
     width: 68px;
     height: 68px;
     border-radius: 50%;
@@ -826,7 +820,7 @@ section {
 }
 
 .vertical-card-copy {
-    padding: 2.35rem 1.2rem 1.35rem;
+    padding: 1.1rem 1.2rem 1.35rem;
     text-align: center;
     display: grid;
     align-content: start;
@@ -907,8 +901,7 @@ section {
     }
 
     .vertical-card {
-        min-height: 380px;
-        grid-template-rows: 150px 1fr;
+        min-height: 260px;
     }
 }
 
@@ -1147,15 +1140,19 @@ section {
     background: linear-gradient(135deg, var(--color-primary) 0%, rgba(13, 43, 85, 0.95) 100%);
     color: var(--color-white);
     border-radius: 16px;
-    padding: 3rem 2.5rem;
+    padding: clamp(1.5rem, 2.5vw, 2rem) 1.75rem;
     display: grid;
-    gap: 2.2rem;
+    gap: 0;
     box-shadow: 0 16px 48px rgba(13, 43, 85, 0.2);
     text-align: center;
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: clamp(1.75rem, 3vw, 2.25rem) auto 0;
     position: relative;
     overflow: hidden;
+}
+
+.product-overview + .integrated-ecosystem {
+    padding-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .ecosystem-banner::before {
@@ -1462,23 +1459,20 @@ section {
 
 .ecosystem-banner li {
     min-height: 58px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.82rem;
-    font-weight: 700;
-    line-height: 1.25;
+    justify-content: center;
 }
 
 .ecosystem-banner li span {
-    width: 34px;
-    height: 34px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.14);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
 }
 
 .about .vision-mission-showcase,
@@ -6823,7 +6817,14 @@ section,
 .school-growth .flow-card,
 .school-network .flow-card,
 .data-monitoring .flow-card {
+    grid-template-rows: auto 1fr;
     background-color: rgba(255, 255, 255, 0.96);
+}
+
+.school-growth .flow-heading,
+.school-network .flow-heading,
+.data-monitoring .flow-heading {
+    min-height: 82px;
 }
 
 .school-growth .section-label,
