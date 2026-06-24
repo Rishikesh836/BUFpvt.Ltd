@@ -1128,3 +1128,117 @@ accordionItems.forEach((item, index) => {
 updateActiveNavLink();
 
 console.log('Bharat Uday Finserve website loaded successfully!');
+
+// ===========================
+// Director Profile Modal
+// ===========================
+
+const DIRECTOR_DATA = {
+    rowena: {
+        photo: 'rowena-muttoo.jpg',
+        name: 'Rowena Muttoo',
+        title: 'Promoter & Founder · Early Years Specialist · IB PYP · Montessori',
+        stats: [
+            { value: '3', label: 'Decades of Career' },
+            { value: '18 Yrs', label: 'In Education' },
+            { value: '~10 Yrs', label: 'Foreign Banking' },
+        ],
+        bio: 'Rowena Muttoo is an accomplished Early Years Specialist with 18 years of experience across Montessori, IB PYP, and play-based learning frameworks, backed by a distinguished career spanning three decades across education, banking, and hospitality. A qualified Montessori trainer (Modern Montessori UK) and seasoned IB educator, she has led Early Years programmes at some of India\'s most respected international schools — including Indus International School and The Gaudium School, Hyderabad. Prior to her journey in education, Rowena spent close to a decade as a senior banker with Standard Chartered Bank, rising to Regional Manager and building deep expertise in credit, operations, and customer leadership.',
+        roles: [
+            { title: 'Promoter & Founder', org: 'Bharat Uday Finserve Pvt Ltd' },
+        ],
+        tags: ['IB PYP', 'Montessori', 'Play-Based', 'Curriculum', 'Leadership'],
+    },
+    vikas: {
+        photo: 'vikas-muttoo.jpg',
+        name: 'Vikas U. Muttoo',
+        title: 'Managing Director · Financial Services Institution Builder · Chairman | Board Advisor',
+        stats: [
+            { value: '30+', label: 'Years Leadership' },
+            { value: 'US$5B+', label: 'Portfolio Led' },
+            { value: '10M+', label: 'Customers Served' },
+            { value: '21,000+', label: 'Professionals Led' },
+        ],
+        bio: 'Vikas U. Muttoo is a senior financial services executive with more than three decades of leadership experience across banking, financial services, institutional transformation and entrepreneurship. He is recognised for building institutions rather than simply managing businesses. Having led a banking network of 2,700 branches across 4 global banking institutions and 2 NBFCs, he brings unmatched depth in corporate governance, AI & digital transformation, financial inclusion, and operational excellence.',
+        roles: [
+            { title: 'Managing Director', org: 'Bharat Uday Finserve Pvt Ltd' },
+            { title: 'Chairman', org: 'Credible Edge Pvt Ltd' },
+        ],
+        tags: ['Institution Building', 'Banking', 'Financial Inclusion', 'Corporate Governance', 'AI & Digital'],
+    },
+};
+
+(function () {
+    const overlay = document.getElementById('directorModal');
+    const closeBtn = document.getElementById('directorModalClose');
+    if (!overlay) return;
+
+    function openModal(key) {
+        const d = DIRECTOR_DATA[key];
+        if (!d) return;
+
+        document.getElementById('modalPhoto').src = d.photo;
+        document.getElementById('modalPhoto').alt = d.name;
+        document.getElementById('modalName').textContent = d.name;
+        document.getElementById('modalTitle').textContent = d.title;
+
+        const statsEl = document.getElementById('modalStats');
+        statsEl.innerHTML = d.stats.map(s =>
+            `<div class="director-modal-stat"><strong>${s.value}</strong><span>${s.label}</span></div>`
+        ).join('');
+
+        document.getElementById('modalBio').textContent = d.bio;
+
+        document.getElementById('modalRoles').innerHTML = '';
+        document.getElementById('modalTags').innerHTML = '';
+
+        overlay.classList.add('active');
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+    }
+
+    function closeModal() {
+        overlay.classList.remove('active');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.director-card[data-director]').forEach(card => {
+        card.addEventListener('click', () => openModal(card.dataset.director));
+        card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.director); }
+        });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
+
+// ===========================
+// Scroll Entrance Animations
+// ===========================
+(function () {
+    if (!window.IntersectionObserver) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.about-bufl-card, .advantage-card, .why-bufl-card, .core-value-item, .feco-tile, .director-card, .digital-infra-card, .flow-card').forEach((el, i) => {
+        el.classList.add('fade-up');
+        const delay = (i % 4);
+        if (delay > 0) el.classList.add('fade-up-delay-' + delay);
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('.section-header, .section-quote-banner').forEach(el => {
+        el.classList.add('fade-up');
+        observer.observe(el);
+    });
+})();

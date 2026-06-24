@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Finance Ecosystem &mdash; Bharat Uday Finserve</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-transparent.png" alt="Bharat Uday Finserve Pvt Ltd" class="logo-img" />
+                <span class="logo-abbr">BUFL</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-dropdown" id="loansNavItem">
+                    <button class="nav-link nav-dropdown-toggle" id="loansDropdownToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="loansDropdown">
+                        Products
+                        <span class="dropdown-chevron" aria-hidden="true"></span>
+                    </button>
+                    <ul class="loans-dropdown" id="loansDropdown" aria-label="Product offerings">
+                        <li><a href="loan-detail.html?product=edufinance" class="dropdown-link" data-product-key="edufinance">EduFinance</a></li>
+                        <li><a href="loan-detail.html?product=microfinance" class="dropdown-link" data-product-key="microfinance">Microfinance</a></li>
+                        <li><a href="loan-detail.html?product=healthcare" class="dropdown-link" data-product-key="healthcare">Healthcare Finance</a></li>
+                        <li><a href="loan-detail.html?product=msme" class="dropdown-link" data-product-key="msme">MSME &amp; Enterprise Finance</a></li>
+                        <li><a href="loan-detail.html?product=secured" class="dropdown-link" data-product-key="secured">Secured Credit</a></li>
+                    </ul>
+                </li>
+                <li><a href="who-can-apply.html" class="nav-link">Who Can Apply</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="mailto:contact@bharatuday.in" class="nav-link">Partner</a></li>
+                <li class="nav-menu-cta"><a href="loan-detail.html?product=edufinance#loan-application" class="btn btn-primary">Apply Now</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="mailto:contact@bharatuday.in" class="nav-contact-icon" aria-label="Email contact@bharatuday.in" title="contact@bharatuday.in">&#9993;</a>
+                <a href="loan-detail.html?product=edufinance#loan-application" class="btn btn-primary nav-apply">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <!-- Page Hero -->
+    <div class="edu-page-hero">
+        <div class="container">
+            <span class="section-label">EDUCATION FINANCE ECOSYSTEM</span>
+            <h1>A Connected Education Finance Ecosystem</h1>
+            <p>Empowering Institutions. Enabling Access. Financing Futures.</p>
+        </div>
+    </div>
+
+    <!-- 1. Integrated EduFinance Ecosystem -->
+    <section class="integrated-ecosystem" id="integrated-ecosystem" aria-labelledby="ecosystemTitle">
+        <div class="container ecosystem-layout">
+            <div class="ecosystem-showcase">
+                <div class="ecosystem-intro">
+                    <span class="ecosystem-intro-icon" aria-hidden="true">&#127963;</span>
+                    <span class="section-label">INTEGRATED EDUFINANCE ECOSYSTEM</span>
+                    <h2 class="section-title" id="ecosystemTitle">A Connected EduFinance Ecosystem</h2>
+                    <span class="ecosystem-intro-rule" aria-hidden="true"></span>
+                    <div class="ecosystem-taglines">
+                        <p>Empowering Institutions.</p>
+                        <p>Enabling Access.</p>
+                        <p>Financing Futures.</p>
+                    </div>
+                </div>
+
+                <div class="ecosystem-diagram" aria-label="Integrated EduFinance pillars">
+                    <div class="ecosystem-wheel">
+                        <article class="wheel-segment wheel-segment-01">
+                            <span class="wheel-segment-number">01</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#127979;</span>
+                            <h3>School Infrastructure &amp; Development</h3>
+                            <p>Finance and support for modern, future-ready learning environments.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-02">
+                            <span class="wheel-segment-number">02</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128106;</span>
+                            <h3>Parent &amp; Fee Enablement</h3>
+                            <p>Flexible fee financing and payment solutions for every family.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-03">
+                            <span class="wheel-segment-number">03</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#127891;</span>
+                            <h3>Higher Education Financing</h3>
+                            <p>Loans and financial support for higher education dreams.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-04">
+                            <span class="wheel-segment-number">04</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128188;</span>
+                            <h3>Skill &amp; Vocational Financing</h3>
+                            <p>Financing skills and vocational programs for better careers and livelihoods.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-05">
+                            <span class="wheel-segment-number">05</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#129309;</span>
+                            <h3>Institutional Growth &amp; Partnerships</h3>
+                            <p>Strategic partnerships to drive growth, reach and impact.</p>
+                        </article>
+                        <article class="wheel-segment wheel-segment-06">
+                            <span class="wheel-segment-number">06</span>
+                            <span class="wheel-segment-icon" aria-hidden="true">&#128187;</span>
+                            <h3>Institutional ERP &amp; Digital Enablement</h3>
+                            <p>School ERP | Student Lifecycle Management | Academics Administration | Stakeholder Engagement</p>
+                        </article>
+                        <div class="wheel-hub">
+                            <span class="wheel-hub-icon" aria-hidden="true">&#127891;</span>
+                            <p>ONE ECOSYSTEM.<br>ENDLESS POSSIBILITIES.</p>
+                            <div class="wheel-hub-dots" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Digital Infrastructure for Future-Ready Institutions -->
+    <section class="digital-infra" id="digital-infra">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">DIGITAL ENABLEMENT</span>
+                <h2 class="section-title">Digital Infrastructure for Future-Ready Institutions</h2>
+                <p class="section-subtitle">Beyond financing, BUFL enables educational institutions through integrated digital infrastructure that enhances operational efficiency, stakeholder engagement, and long-term institutional growth</p>
+            </div>
+            <div class="digital-infra-grid">
+                <article class="digital-infra-card">
+                    <h3>&#127979; &nbsp;Student Management</h3>
+                    <p>Centralized student lifecycle, records, and engagement management</p>
+                </article>
+                <article class="digital-infra-card">
+                    <h3>&#128218; &nbsp;Academics Management</h3>
+                    <p>Unified management of curriculum, assignments, and academic activities</p>
+                </article>
+                <article class="digital-infra-card">
+                    <h3>&#128197; &nbsp;Attendance &amp; Timetable</h3>
+                    <p>Digital attendance monitoring and timetable administration</p>
+                </article>
+                <article class="digital-infra-card">
+                    <h3>&#128221; &nbsp;Exam &amp; Assessment Management</h3>
+                    <p>Management of examinations, assessments, and performance tracking</p>
+                </article>
+                <article class="digital-infra-card">
+                    <h3>&#128104;&#8205;&#127979; &nbsp;Teacher Administration</h3>
+                    <p>Streamlined faculty and institutional administration</p>
+                </article>
+                <article class="digital-infra-card">
+                    <h3>&#128172; &nbsp;Parent &amp; Institution Engagement</h3>
+                    <p>Strengthening communication, visibility, and engagement across institutions, students, and parents</p>
+                </article>
+            </div>
+            <p class="digital-infra-tagline">Enabling Smarter, Connected Educational Institutions</p>
+            <div class="section-quote-banner">
+                <p class="section-quote-banner-quote">&ldquo;Empowering Education Through Finance &amp; Technology&rdquo;</p>
+                <p class="section-quote-banner-sub">BUFL's integrated education ecosystem combines financial access, digital infrastructure, and institutional enablement to strengthen educational institutions, improve learner outcomes, and create sustainable growth opportunities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. School Network Collaboration -->
+    <section class="school-network" id="school-network">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">PEER LEARNING</span>
+                <h2 class="section-title">School Network &amp; Collaboration</h2>
+                <p class="section-subtitle">School leaders learn fastest from each other. Partner schools form local clusters that share challenges, solutions, and accountability.</p>
+            </div>
+
+            <div class="flow-grid network-flow">
+                <article class="flow-card flow-blue">
+                    <div class="flow-heading"><h3>Local Peer Clusters</h3></div>
+                    <ul>
+                        <li>Small networks of 8-12 nearby schools</li>
+                        <li>Regular meetings to share &amp; improve</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
+                <article class="flow-card flow-orange">
+                    <div class="flow-heading"><h3>Best-Practice Exchange</h3></div>
+                    <ul>
+                        <li>Sharing Innovations &amp; Strategies</li>
+                        <li>Operational &amp; Parent Engagement</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
+                <article class="flow-card flow-green">
+                    <div class="flow-heading"><h3>Education Specialists</h3></div>
+                    <ul>
+                        <li>Expert Facilitation &amp; Support</li>
+                        <li>On-the-Ground Guidance</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. School Growth Program -->
+    <section class="school-growth" id="school-growth">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">BEYOND CAPITAL</span>
+                <h2 class="section-title">School Growth Program</h2>
+                <p class="section-subtitle">A 3-year partnership with affordable private schools</p>
+                <p class="flow-subtitle">Capital | Capability | Community</p>
+            </div>
+
+            <div class="flow-grid network-flow">
+                <article class="flow-card flow-blue">
+                    <div class="flow-heading">
+                        <h3>3-Year Holistic Support</h3>
+                    </div>
+                    <ul>
+                        <li>Annual growth plans</li>
+                        <li>Milestone reviews</li>
+                        <li>Capital for improvement</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
+                <article class="flow-card flow-orange">
+                    <div class="flow-heading">
+                        <h3>Teacher &amp; Leader Training</h3>
+                    </div>
+                    <ul>
+                        <li>Pedagogy workshops</li>
+                        <li>Classroom management</li>
+                        <li>Child-safe practices</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
+                <article class="flow-card flow-green">
+                    <div class="flow-heading">
+                        <h3>Quality in Low-Resource Schools</h3>
+                    </div>
+                    <ul>
+                        <li>Tier 2 &amp; Tier 3 schools</li>
+                        <li>Structured frameworks</li>
+                        <li>Equity in learning</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Data-Driven Impact -->
+    <section class="data-monitoring" id="data-monitoring">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">ACCOUNTABILITY</span>
+                <h2 class="section-title">Data-Driven Impact</h2>
+                <p class="section-subtitle">We measure the things that matter and we publish what we find.</p>
+            </div>
+
+            <div class="flow-grid network-flow">
+                <article class="flow-card flow-blue">
+                    <div class="flow-heading">
+                        <h3>Track Every Loan, Every School</h3>
+                    </div>
+                    <ul>
+                        <li>Application-to-repayment tracking</li>
+                        <li>Defined educational and financial indicators</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-blue" aria-hidden="true"></div>
+                <article class="flow-card flow-orange">
+                    <div class="flow-heading">
+                        <h3>Regular Reporting &amp; Evaluation</h3>
+                    </div>
+                    <ul>
+                        <li>Quarterly impact dashboards</li>
+                        <li>Annual third-party evaluations</li>
+                    </ul>
+                </article>
+                <div class="flow-arrow flow-arrow-orange" aria-hidden="true"></div>
+                <article class="flow-card flow-green">
+                    <div class="flow-heading">
+                        <h3>Continuous Improvement</h3>
+                    </div>
+                    <ul>
+                        <li>Feedback into product design</li>
+                        <li>Sharper underwriting and program support</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Bharat Uday Finserve Pvt Ltd" class="footer-logo-img" />
+                    </div>
+                    <div class="footer-tagline">The Finance Behind Bharat's Future</div>
+                    <p class="footer-description">A connected financial ecosystem where digital capability meets deep on-ground reach across Bharat.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#products">Product Offering</a></li>
+                        <li><a href="loan-detail.html?product=edufinance">Education Finance</a></li>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="who-can-apply.html">Who Can Apply</a></li>
+                        <li><a href="assets/faqs-bufl.pdf" download>Download FAQs (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><strong>Registered Office:</strong> 7th Floor, Uday Bhavan, Bandra Kurla Complex, Mumbai - 400051</p>
+                    <p><strong>Gurgaon Office:</strong> Gurgaon, Haryana, India</p>
+                    <p><strong>Toll Free:</strong> 1800-200-UDAY (8329)</p>
+                    <p><strong>Email:</strong> contact@bharatuday.in</p>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Bharat Uday Finserve Pvt. Ltd. (BUFL) All Rights Reserved.</p>
+                <p class="footer-disclaimer">Bharat Uday Finserve Pvt. Ltd. (BUFL) is building connected product pathways across Bharat. Product availability, terms, and partner processes may vary by vertical and eligibility.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
