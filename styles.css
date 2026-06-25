@@ -4816,7 +4816,7 @@ section,
     position: fixed;
     right: 1.25rem;
     bottom: 1.25rem;
-    z-index: 1100;
+    z-index: 900;
     font-family: var(--font-body);
 }
 
@@ -8511,10 +8511,11 @@ section,
 }
 
 /* ===========================
-   Button Standardization
+   Button Standardization (Fix 8 — 44px min touch target)
    =========================== */
-.btn {
+.btn, .cta, a.cta, button.cta {
     min-height: 48px;
+    min-width: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -8532,6 +8533,28 @@ section,
 .btn-primary:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 20px rgba(13, 43, 85, 0.25);
+}
+
+/* Fix 4 — scroll-margin-top prevents sticky navbar covering CTA */
+.featured-ecosystem {
+    scroll-margin-top: 80px;
+}
+
+/* Fix 6 — transparent overlay button on director cards */
+.director-card {
+    position: relative;
+}
+
+.director-card-btn {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
 }
 
 /* ===========================
@@ -8553,4 +8576,32 @@ section,
 .why-bufl {
     background: #F5F6FA;
     background-image: none;
+}
+
+/* FIX 11 — Mobile CTA minimum touch target */
+@media (max-width: 480px) {
+    .cta, .btn-cta, a.cta, button.cta,
+    .btn, a.btn, button.btn {
+        min-height: 44px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+/* FIX 6 — feco CTA above fixed chatbot widget */
+.feco-cta {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Mobile touch targets for specific CTA anchors */
+@media (max-width: 768px) {
+    a[href='/edu-ecosystem'],
+    a[href='#products'] {
+        min-height: 44px;
+        padding: 14px 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

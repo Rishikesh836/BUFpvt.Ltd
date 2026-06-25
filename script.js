@@ -1209,6 +1209,8 @@ const DIRECTOR_DATA = {
         card.addEventListener('keydown', e => {
             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.director); }
         });
+        const btn = card.querySelector('.director-card-btn');
+        if (btn) btn.addEventListener('click', (e) => { e.stopPropagation(); openModal(card.dataset.director); });
     });
 
     closeBtn.addEventListener('click', closeModal);
@@ -1230,7 +1232,8 @@ const DIRECTOR_DATA = {
         });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.about-bufl-card, .advantage-card, .why-bufl-card, .core-value-item, .feco-tile, .director-card, .digital-infra-card, .flow-card').forEach((el, i) => {
+    // director-card intentionally excluded — must remain visible for accessibility/tests (Fix 5)
+    document.querySelectorAll('.about-bufl-card, .advantage-card, .why-bufl-card, .core-value-item, .feco-tile, .digital-infra-card, .flow-card').forEach((el, i) => {
         el.classList.add('fade-up');
         const delay = (i % 4);
         if (delay > 0) el.classList.add('fade-up-delay-' + delay);
