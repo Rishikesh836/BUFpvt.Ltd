@@ -4846,7 +4846,7 @@ section,
     width: min(380px, calc(100vw - 2rem));
     max-height: min(620px, calc(100vh - 8rem));
     display: grid;
-    grid-template-rows: auto minmax(220px, 1fr) auto;
+    grid-template-rows: auto 1fr auto;
     background: var(--color-white);
     border: 1px solid rgba(13, 43, 85, 0.14);
     border-radius: 8px;
@@ -4898,6 +4898,7 @@ section,
     padding: 1rem;
     overflow-y: auto;
     background: #f6f8fb;
+    min-height: 0;
 }
 
 .chat-message {
